@@ -121,12 +121,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed -top-2 left-0 right-0 transition-all duration-300 py-6"
+      className="fixed -top-2 left-0 right-0 transition-all duration-300 py-4"
       style={{ zIndex: 9998 }}
     >
-      <div className="max-w-8xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-20">
+      <div className="max-w-[1024px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-20">
         {/* Rounded Navbar Container */}
-        <div className="bg-gradient-to-r from-white/95 to-white/90 backdrop-blur-md rounded-full px-4 sm:px-6 lg:px-8 py-3 lg:py-3 shadow border border-gray-200/30">
+        <div className="bg-gradient-to-r from-gray-50 to-gray-50 backdrop-blur-md rounded-[20px] px-4 sm:px-6 lg:px-8 py-1 lg:py-1 shadow-4xl border border-gray-200/30">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
@@ -149,7 +149,7 @@ const Navbar = () => {
                   pathname === "/services"
                     ? "text-primary bg-gradient-to-r from-primary/10 to-transparent px-3 py-1 rounded-full"
                     : "text-primary/80"
-                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
+                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-medium`}
               >
                 Services
               </Link>
@@ -159,19 +159,9 @@ const Navbar = () => {
                   pathname === "/project"
                     ? "text-primary bg-gradient-to-r from-primary/10 to-transparent px-3 py-1 rounded-full"
                     : "text-primary/80"
-                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
+                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-medium`}
               >
                 Project
-              </Link>
-              <Link
-                href="/career"
-                className={`${
-                  pathname === "/career"
-                    ? "text-primary bg-gradient-to-r from-primary/10 to-transparent px-3 py-1 rounded-full"
-                    : "text-primary/80"
-                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
-              >
-                Career
               </Link>
               <Link
                 href="/blogs"
@@ -179,7 +169,7 @@ const Navbar = () => {
                   pathname === "/blogs"
                     ? "text-primary bg-gradient-to-r from-primary/10 to-transparent px-3 py-1 rounded-full"
                     : "text-primary/80"
-                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
+                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-medium`}
               >
                 Blogs
               </Link>
@@ -189,7 +179,7 @@ const Navbar = () => {
                   pathname === "/about-us"
                     ? "text-primary bg-gradient-to-r from-primary/10 to-transparent px-3 py-1 rounded-full"
                     : "text-primary/80"
-                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
+                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-medium`}
               >
                 About
               </Link>
@@ -199,7 +189,7 @@ const Navbar = () => {
             <div className="hidden lg:block">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white px-4 lg:px-6 py-2 rounded-full text-sm lg:text-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="bg-gradient-to-r from-primary to-[#1c1c84] hover:from-primary/90 hover:to-primary/70 text-white px-4 lg:px-6 py-2 rounded-full text-sm lg:text-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Get Quote
               </Link>
@@ -298,7 +288,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
               className={`${
                 pathname === "/services" ? "text-primary" : "text-white/80"
-              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
+              } hover:text-white font-medium transition-colors text-xl py-2 font-anek`}
             >
               Services
             </Link>
@@ -307,7 +297,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
               className={`${
                 pathname === "/project" ? "text-primary" : "text-white/80"
-              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
+              } hover:text-white font-medium transition-colors text-xl py-2 font-anek`}
             >
               Project
             </Link>
@@ -320,15 +310,6 @@ const Navbar = () => {
             >
               Media
             </Link> */}
-            <Link
-              href="/career"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`${
-                pathname === "/career" ? "text-primary" : "text-white/80"
-              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
-            >
-              Career
-            </Link>
             {/* <Link
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -343,7 +324,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
               className={`${
                 pathname === "/about-us" ? "text-primary" : "text-white/80"
-              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
+              } hover:text-white font-medium transition-colors text-xl py-2 font-anek`}
             >
               About
             </Link>
@@ -352,7 +333,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
               className={`${
                 pathname === "/blogs" ? "text-primary" : "text-white/80"
-              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
+              } hover:text-white font-medium transition-colors text-xl py-2 font-anek`}
             >
               Blogs
             </Link>

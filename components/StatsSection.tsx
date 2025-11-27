@@ -80,10 +80,10 @@ const StatsSection = () => {
       <div className="p-20">
         <div className="relative max-w-8xl h-[500px] lg:h-96 overflow-hidden rounded-[32px] shadow">
           {/* Perfect Gradient Background */}
-          <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80" />
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary via-primary/90 to-[#1c1c84]" />
 
           {/* Content Container */}
-          <div className="relative z-10 max-w-8xl mx-auto h-full px-4 sm:px-6 md:px-12 lg:px-[90px]">
+          <div className="relative z-10 max-w-8xl mx-auto h-full sm:px-6 md:px-12 ">
             <div className="h-full flex flex-col items-center justify-center">
               {/* Header Section */}
               <motion.div
@@ -192,7 +192,7 @@ const StatCard = ({ stat, index }: { stat: StatItem; index: number }) => {
           className="relative z-10"
         >
           <Icon
-            className="w-10 h-10 text-teal-400 group-hover:text-white transition-colors duration-300 drop-shadow-lg"
+            className="w-10 h-10 text-white group-hover:text-white transition-colors duration-300 drop-shadow-lg"
             strokeWidth={1.5}
           />
         </motion.div>
