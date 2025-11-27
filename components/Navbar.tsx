@@ -1,0 +1,398 @@
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
+import ExpandableSearchBar from "./Common/ExpandableSearchBar";
+
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const langRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
+  // Search suggestions - you can customize these
+  const searchSuggestions = [
+    "Services",
+    "Web Development",
+    "Mobile Apps",
+    "UI/UX Design",
+    "Digital Marketing",
+    "E-commerce Solutions",
+    "About Us",
+    "Contact",
+    "Career Opportunities",
+    "Blog Posts",
+    "Projects",
+    "Portfolio",
+  ];
+
+  // Handle search functionality
+  const handleSearch = (query: string) => {
+    console.log("Searching for:", query);
+    // Add your search logic here - navigate to search results, filter content, etc.
+    // Example: router.push(`/search?q=${encodeURIComponent(query)}`);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Handle escape key and outside click
+  useEffect(() => {
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+      if (event.key === "Escape" && isLangDropdownOpen) {
+        setIsLangDropdownOpen(false);
+      }
+    };
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isMobileMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+      if (
+        isLangDropdownOpen &&
+        langRef.current &&
+        !langRef.current.contains(event.target as Node)
+      ) {
+        setIsLangDropdownOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener("keydown", handleEscapeKey);
+      document.addEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    if (isLangDropdownOpen) {
+      document.addEventListener("keydown", handleEscapeKey);
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKey);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen, isLangDropdownOpen]);
+
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024 && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isMobileMenuOpen]);
+
+  // Determine navbar background and text colors - all pages follow home page style
+  const getNavbarStyles = () => {
+    return {
+      navBg: isScrolled ? "bg-black/20 backdrop-blur-md" : "bg-transparent",
+      textColor: "text-white/80 group-hover:text-primary",
+      hoverColor: "hover:text-primary",
+      activeColor: "text-primary",
+    };
+  };
+
+  const styles = getNavbarStyles();
+
+  return (
+    <nav
+      className="fixed top-0 left-0 right-0 transition-all duration-300 py-6"
+      style={{ zIndex: 9998 }}
+    >
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
+        {/* Rounded Navbar Container */}
+        <div className="bg-white/90 backdrop-blur-md rounded-full px-4 sm:px-6 lg:px-8 py-3 lg:py-4 shadow-lg border border-gray-200/50">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <Link href="/">
+                <Image
+                  src="/Essence-logo.png"
+                  alt="Company Logo"
+                  width={160}
+                  height={60}
+                  className="h-10 sm:h-12 w-auto"
+                />
+              </Link>
+            </div>
+
+            {/* Navigation Links - Desktop */}
+            <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+              <Link
+                href="/services"
+                className={`${
+                  pathname === "/services" ? "text-green-700" : "text-green-600"
+                } hover:text-green-400 transition-colors text-lg lg:text-xl font-semibold`}
+              >
+                Services
+              </Link>
+              <Link
+                href="/project"
+                className={`${
+                  pathname === "/project" ? "text-green-700" : "text-green-600"
+                } hover:text-green-400 transition-colors text-lg lg:text-xl font-semibold`}
+              >
+                Project
+              </Link>
+              <Link
+                href="/career"
+                className={`${
+                  pathname === "/career" ? "text-green-700" : "text-green-600"
+                } hover:text-green-400 transition-colors text-lg lg:text-xl font-semibold`}
+              >
+                Career
+              </Link>
+              <Link
+                href="/blogs"
+                className={`${
+                  pathname === "/blogs" ? "text-green-700" : "text-green-600"
+                } hover:text-green-400 transition-colors text-lg lg:text-xl font-semibold`}
+              >
+                Blogs
+              </Link>
+              <Link
+                href="/about-us"
+                className={`${
+                  pathname === "/about-us" ? "text-green-700" : "text-green-600"
+                } hover:text-green-400 transition-colors text-lg lg:text-xl font-semibold`}
+              >
+                About
+              </Link>
+            </div>
+
+            {/* Contact Button */}
+            <div className="hidden lg:block">
+              <Link
+                href="/contact"
+                className="bg-green-600 hover:bg-green-700 text-white px-4 lg:px-6 py-2 rounded-full text-sm lg:text-xl font-semibold transition-colors shadow-md"
+              >
+                Contact
+              </Link>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="relative w-8 h-8 text-gray-700 hover:text-green-600 transition-colors flex items-center justify-center cursor-pointer"
+                aria-expanded={isMobileMenuOpen}
+                aria-label="Toggle mobile menu"
+              >
+                <div className="w-5 h-5 relative">
+                  <span
+                    className={`absolute left-0 top-1 w-5 h-0.5 bg-current transform transition-all duration-300 ${
+                      isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+                    }`}
+                  ></span>
+                  <span
+                    className={`absolute left-0 top-2.5 w-5 h-0.5 bg-current transition-all duration-300 ${
+                      isMobileMenuOpen ? "opacity-0" : ""
+                    }`}
+                  ></span>
+                  <span
+                    className={`absolute left-0 top-4 w-5 h-0.5 bg-current transform transition-all duration-300 ${
+                      isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                    }`}
+                  ></span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm lg:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+          style={{
+            zIndex: 2147483646,
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+          }}
+        />
+      )}
+
+      {/* Mobile Menu Panel */}
+      <div
+        ref={menuRef}
+        className={`fixed top-0 right-0 h-full w-80 max-w-full bg-black/65 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-out lg:hidden ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+        style={{
+          zIndex: 2147483647,
+          position: "fixed",
+          top: 0,
+          right: 0,
+          height: "100vh",
+          isolation: "isolate",
+        }}
+      >
+        {/* Close Button */}
+        <div className="absolute top-6 right-6">
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="w-10 h-10 text-white hover:text-primary transition-colors flex items-center justify-center rounded-full hover:bg-white/10 cursor-pointer"
+            aria-label="Close mobile menu"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div className="flex flex-col h-full pt-20 px-6">
+          {/* Mobile Navigation Links */}
+          <div className="flex flex-col space-y-6">
+            <Link
+              href="/services"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`${
+                pathname === "/services" ? "text-primary" : "text-white/80"
+              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
+            >
+              Services
+            </Link>
+            <Link
+              href="/project"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`${
+                pathname === "/project" ? "text-primary" : "text-white/80"
+              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
+            >
+              Project
+            </Link>
+            {/* <Link
+              href="/media"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`${
+                pathname === "/media" ? "text-primary" : "text-white/80"
+              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
+            >
+              Media
+            </Link> */}
+            <Link
+              href="/career"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`${
+                pathname === "/career" ? "text-primary" : "text-white/80"
+              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
+            >
+              Career
+            </Link>
+            {/* <Link
+              href="/contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`${
+                pathname === "/contact" ? "text-primary" : "text-white/80"
+              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
+            >
+              Contact
+            </Link> */}
+            <Link
+              href="/about-us"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`${
+                pathname === "/about-us" ? "text-primary" : "text-white/80"
+              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
+            >
+              About
+            </Link>
+            <Link
+              href="/blogs"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`${
+                pathname === "/blogs" ? "text-primary" : "text-white/80"
+              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
+            >
+              Blogs
+            </Link>
+          </div>
+
+          {/* Mobile Search Bar */}
+          <div className="mt-8 mb-6">
+            <ExpandableSearchBar
+              onSearch={(query) => {
+                handleSearch(query);
+                setIsMobileMenuOpen(false); // Close mobile menu after search
+              }}
+              placeholder="Search..."
+              suggestions={searchSuggestions}
+              iconColor="text-white/80"
+              hoverIconColor="hover:text-white"
+              className="w-full"
+            />
+          </div>
+
+          {/* Mobile Language Selector */}
+          {/* <div className="mt-8 mb-4">
+            <div className="flex items-center space-x-3 px-3 py-2 bg-white/10 rounded-lg">
+              <Image
+                src="https://flagcdn.com/w40/us.png"
+                alt="English"
+                width={24}
+                height={16}
+                className="rounded-sm"
+              />
+              <span className="text-white/90 text-base font-medium">
+                English
+              </span>
+            </div>
+          </div> */}
+
+          {/* Mobile Contact Button */}
+          <div>
+            <Link
+              href="/contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-44 h-10 px-5 py-3 bg-green-600 hover:bg-green-700 rounded-[30px] inline-flex justify-center items-center gap-2.5 transition-colors shadow-md"
+            >
+              <span className="text-white text-base font-medium">Contact</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
