@@ -36,21 +36,27 @@ const WhyChooseUsSection = () => {
   const features: Feature[] = [
     {
       id: 1,
-      title: "Unmatched Expertise",
+      title: "Complying Development Certificate Application",
       description:
-        "With years of experience across residential, commercial, and industrial projects, we bring proven knowledge and innovative techniques to every build.",
+        "Fast-track your development with our complying development certificate services. Get approvals quickly for standard residential and commercial projects.",
     },
     {
       id: 2,
-      title: "Commitment to Quality",
+      title: "Construction Certificate Application",
       description:
-        "From materials to craftsmanship, we follow international standards to ensure long-lasting durability and top-tier finishing.",
+        "Secure your construction certificate with our expert guidance. We ensure all building plans meet regulatory requirements and safety standards.",
     },
     {
       id: 3,
-      title: "On-Time Delivery",
+      title: "Occupation Certificate Application",
       description:
-        "We value your time. Our structured planning and efficient project management guarantee deadlines are met without compromise.",
+        "Complete your project with our occupation certificate services. We handle all inspections and documentation for final occupancy approval.",
+    },
+    {
+      id: 4,
+      title: "PCA Replacement Application",
+      description:
+        "Need a new Principal Certifying Authority? We provide seamless PCA replacement services to keep your project on track.",
     },
   ];
 
@@ -89,7 +95,7 @@ const WhyChooseUsSection = () => {
 
   return (
     <div className="w-full py-16 lg:py-20">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-2">
         <div className="bg-gray-50 rounded-3xl p-8 lg:p-12 shadow">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Section - Auto-sliding Images */}
@@ -101,15 +107,15 @@ const WhyChooseUsSection = () => {
               variants={imageVariants}
             >
               <div className="relative">
-                {/* Green Badge */}
-                <div className="absolute top-4 left-4 z-10 bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-sm">
+                {/* Primary Badge */}
+                <div className="absolute top-4 left-4 z-10 bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm">
                   Trusted Since
                   <br />
                   2015
                 </div>
 
                 {/* Auto-sliding Image Container - Height matches right side */}
-                <div className="relative w-full h-[500px] sm:h-[600px] lg:h-[650px] rounded-2xl overflow-hidden bg-gray-200">
+                <div className="relative w-full h-[400px] sm:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden bg-gray-200">
                   <AnimatePresence mode="popLayout">
                     <motion.div
                       key={currentImageIndex}
@@ -138,7 +144,7 @@ const WhyChooseUsSection = () => {
 
             {/* Right Section - Why Choose Us Content */}
             <motion.div
-              className="flex-1 lg:max-w-[50%] space-y-6 min-h-[500px] sm:min-h-[600px] lg:min-h-[650px] flex flex-col justify-center"
+              className="flex-1 lg:max-w-[50%] space-y-6 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px] flex flex-col justify-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
@@ -146,18 +152,16 @@ const WhyChooseUsSection = () => {
             >
               {/* Title */}
               <motion.div variants={featureVariants}>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-800 mb-4">
-                  Why Choose <span className="text-green-600">Esscence</span>
+                <h2 className="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-800 mb-4">
+                  Highly Experienced Building certifiers
                 </h2>
                 <p className="text-gray-600 text-base sm:text-lg mb-8">
-                  Your trusted partner for premium construction services and
-                  exceptional quality in the UAE. We deliver reliability,
-                  craftsmanship, and expertise that keeps your projects running
-                  at their best.
+                  Bcaa Certifiers are Sydney based specialized In Residential
+                  and commercial Approvals .
                 </p>
               </motion.div>
 
-              {/* Features Grid */}
+              {/* Certificate Applications Grid */}
               <motion.div
                 className="grid grid-cols-1 sm:grid-cols-2 gap-6"
                 variants={containerVariants}
@@ -165,50 +169,25 @@ const WhyChooseUsSection = () => {
                 {features.map((feature, index) => (
                   <motion.div
                     key={feature.id}
-                    className="space-y-3"
+                    className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
                     variants={featureVariants}
-                    whileHover={{ y: -5 }}
+                    whileHover={{ y: -5, scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                   >
-                    {/* Icon and Title */}
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        {index === 0 && (
-                          <svg
-                            className="w-4 h-4 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                        )}
-                        {index === 1 && (
-                          <svg
-                            className="w-4 h-4 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
-                          </svg>
-                        )}
-                        {index === 2 && (
-                          <svg
-                            className="w-4 h-4 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                          </svg>
-                        )}
-                      </div>
-                      <div>
-                        <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">
-                          {feature.title}
-                        </h3>
-                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                          {feature.description}
-                        </p>
-                      </div>
+                    {/* Certificate Title */}
+                    <div className="text-center">
+                      <h3 className="text-lg font-bold text-gray-800 mb-4 leading-tight">
+                        {feature.title}
+                      </h3>
+
+                      {/* Apply Button */}
+                      <motion.button
+                        className="w-full px-6 py-3 bg-primary hover:bg-primary/90 rounded-full text-white font-semibold transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        Apply
+                      </motion.button>
                     </div>
                   </motion.div>
                 ))}
@@ -217,20 +196,20 @@ const WhyChooseUsSection = () => {
               {/* CTA Button */}
               <motion.div
                 variants={featureVariants}
-                className="pt-6 flex flex-col items-end"
+                className="pt-6 flex flex-col items-center"
               >
-                <Link href="/about-us">
+                <Link href="/contact">
                   <motion.button
-                    className="px-8 py-3 bg-green-600 hover:bg-green-700 rounded-full text-white text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
+                    className="px-8 py-3 bg-primary hover:bg-primary/90 rounded-full text-white text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Explore More
+                    Book Now
                   </motion.button>
                 </Link>
-                <p className="text-gray-500 text-sm mt-4 text-right">
-                  Join thousands of satisfied customers who trust Esscence for
-                  their construction needs.
+                <p className="text-gray-500 text-sm mt-4 text-center">
+                  Join thousands of satisfied customers who trust us for their
+                  certification needs.
                 </p>
               </motion.div>
             </motion.div>
@@ -259,7 +238,7 @@ const WhyChooseUsSection = () => {
               {/* Close Button - positioned relative to video */}
               <button
                 onClick={() => setIsVideoOpen(false)}
-                className="absolute -top-12 -right-2 z-10 w-10 h-10 bg-primary/90 hover:bg-primary/70 rounded-full flex items-center justify-center text-white text-xl font-bold transition-all duration-200 cursor-pointer"
+                className="absolute -top-12 -right-2 z-10 w-10 h-10 bg-primary hover:bg-primary/80 rounded-full flex items-center justify-center text-white text-xl font-bold transition-all duration-200 cursor-pointer"
               >
                 ×
               </button>

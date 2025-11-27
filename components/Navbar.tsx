@@ -121,12 +121,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 transition-all duration-300 py-6"
+      className="fixed -top-2 left-0 right-0 transition-all duration-300 py-6"
       style={{ zIndex: 9998 }}
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
+      <div className="max-w-8xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-20">
         {/* Rounded Navbar Container */}
-        <div className="bg-white/90 backdrop-blur-md rounded-full px-4 sm:px-6 lg:px-8 py-3 lg:py-4 shadow-lg border border-gray-200/50">
+        <div className="bg-gradient-to-r from-white/95 to-white/90 backdrop-blur-md rounded-full px-4 sm:px-6 lg:px-8 py-3 lg:py-3 shadow-xl border border-gray-200/30">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
@@ -146,40 +146,50 @@ const Navbar = () => {
               <Link
                 href="/services"
                 className={`${
-                  pathname === "/services" ? "text-green-700" : "text-green-600"
-                } hover:text-green-400 transition-colors text-lg lg:text-xl font-semibold`}
+                  pathname === "/services"
+                    ? "text-primary bg-gradient-to-r from-primary/10 to-transparent px-3 py-1 rounded-full"
+                    : "text-primary/80"
+                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
               >
                 Services
               </Link>
               <Link
                 href="/project"
                 className={`${
-                  pathname === "/project" ? "text-green-700" : "text-green-600"
-                } hover:text-green-400 transition-colors text-lg lg:text-xl font-semibold`}
+                  pathname === "/project"
+                    ? "text-primary bg-gradient-to-r from-primary/10 to-transparent px-3 py-1 rounded-full"
+                    : "text-primary/80"
+                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
               >
                 Project
               </Link>
               <Link
                 href="/career"
                 className={`${
-                  pathname === "/career" ? "text-green-700" : "text-green-600"
-                } hover:text-green-400 transition-colors text-lg lg:text-xl font-semibold`}
+                  pathname === "/career"
+                    ? "text-primary bg-gradient-to-r from-primary/10 to-transparent px-3 py-1 rounded-full"
+                    : "text-primary/80"
+                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
               >
                 Career
               </Link>
               <Link
                 href="/blogs"
                 className={`${
-                  pathname === "/blogs" ? "text-green-700" : "text-green-600"
-                } hover:text-green-400 transition-colors text-lg lg:text-xl font-semibold`}
+                  pathname === "/blogs"
+                    ? "text-primary bg-gradient-to-r from-primary/10 to-transparent px-3 py-1 rounded-full"
+                    : "text-primary/80"
+                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
               >
                 Blogs
               </Link>
               <Link
                 href="/about-us"
                 className={`${
-                  pathname === "/about-us" ? "text-green-700" : "text-green-600"
-                } hover:text-green-400 transition-colors text-lg lg:text-xl font-semibold`}
+                  pathname === "/about-us"
+                    ? "text-primary bg-gradient-to-r from-primary/10 to-transparent px-3 py-1 rounded-full"
+                    : "text-primary/80"
+                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
               >
                 About
               </Link>
@@ -189,9 +199,9 @@ const Navbar = () => {
             <div className="hidden lg:block">
               <Link
                 href="/contact"
-                className="bg-green-600 hover:bg-green-700 text-white px-4 lg:px-6 py-2 rounded-full text-sm lg:text-xl font-semibold transition-colors shadow-md"
+                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white px-4 lg:px-6 py-2 rounded-full text-sm lg:text-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                Contact
+                Get Quote
               </Link>
             </div>
 
@@ -199,7 +209,7 @@ const Navbar = () => {
             <div className="lg:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="relative w-8 h-8 text-gray-700 hover:text-green-600 transition-colors flex items-center justify-center cursor-pointer"
+                className="relative w-8 h-8 text-gray-700 hover:text-primary transition-colors flex items-center justify-center cursor-pointer"
                 aria-expanded={isMobileMenuOpen}
                 aria-label="Toggle mobile menu"
               >
@@ -245,7 +255,7 @@ const Navbar = () => {
       {/* Mobile Menu Panel */}
       <div
         ref={menuRef}
-        className={`fixed top-0 right-0 h-full w-80 max-w-full bg-black/65 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-out lg:hidden ${
+        className={`fixed top-0 right-0 h-full w-80 max-w-full bg-gradient-to-b from-primary/90 to-primary/70 backdrop-blur-lg border-l border-white/20 transform transition-transform duration-300 ease-out lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{
@@ -384,7 +394,7 @@ const Navbar = () => {
             <Link
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="w-44 h-10 px-5 py-3 bg-green-600 hover:bg-green-700 rounded-[30px] inline-flex justify-center items-center gap-2.5 transition-colors shadow-md"
+              className="w-44 h-10 px-5 py-3 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 rounded-[30px] inline-flex justify-center items-center gap-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <span className="text-white text-base font-medium">Contact</span>
             </Link>

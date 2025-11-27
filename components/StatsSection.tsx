@@ -1,9 +1,16 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { MapPin, Briefcase, Calendar, Users } from "lucide-react";
+import {
+  Building2,
+  Search,
+  FileText,
+  ClipboardCheck,
+  ShieldAlert,
+  Home,
+  CheckCircle,
+} from "lucide-react";
 import { useRef, useEffect } from "react";
 import WhyChooseUs2 from "@/components/WhyCooseUs2";
 
@@ -19,56 +26,80 @@ const StatsSection = () => {
   const stats: StatItem[] = [
     {
       id: 1,
-      icon: MapPin,
-      value: 20,
-      suffix: "+",
-      label: "Locations",
+      icon: Building2,
+      value: 0,
+      suffix: "",
+      label: "Structural Engineering Inspections",
     },
     {
       id: 2,
-      icon: Briefcase,
-      value: 180,
-      suffix: "+",
-      label: "Projects",
+      icon: Search,
+      value: 0,
+      suffix: "",
+      label: "Site Inspections",
     },
     {
       id: 3,
-      icon: Calendar,
-      value: 20,
-      suffix: "+",
-      label: "Years of Experience",
+      icon: FileText,
+      value: 0,
+      suffix: "",
+      label: "BCA Reports",
     },
     {
       id: 4,
-      icon: Users,
-      value: 4,
-      suffix: "k+",
-      label: "Architects",
+      icon: ClipboardCheck,
+      value: 0,
+      suffix: "",
+      label: "Structural Reports",
+    },
+    {
+      id: 5,
+      icon: ShieldAlert,
+      value: 0,
+      suffix: "",
+      label: "Unauthorized Construction Inspection",
+    },
+    {
+      id: 6,
+      icon: Home,
+      value: 0,
+      suffix: "",
+      label: "Building Reports",
+    },
+    {
+      id: 7,
+      icon: CheckCircle,
+      value: 0,
+      suffix: "",
+      label: "Compliances Reports",
     },
   ];
 
   return (
     <>
-      <div className="p-20 ">
-        <div className="relative max-w-8xl h-[400px] lg:h-72 overflow-hidden rounded-[32px]">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/bg-stats.png" // Replace with your image path
-              alt="Stats Background"
-              fill
-              className="object-cover"
-              quality={100}
-              priority
-            />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-green-400 to-primary" />
-          </div>
+      <div className="p-20">
+        <div className="relative max-w-8xl h-[500px] lg:h-96 overflow-hidden rounded-[32px] shadow">
+          {/* Perfect Gradient Background */}
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80" />
 
-          {/* Stats Content */}
-          <div className="relative z-10 max-w-[1440px] mx-auto h-full px-4 sm:px-6 md:px-12 lg:px-[90px]">
-            <div className="h-full flex items-center justify-center">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 w-full !">
+          {/* Content Container */}
+          <div className="relative z-10 max-w-8xl mx-auto h-full px-4 sm:px-6 md:px-12 lg:px-[90px]">
+            <div className="h-full flex flex-col items-center justify-center">
+              {/* Header Section */}
+              <motion.div
+                className="text-center mb-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                  Consulting and Reports
+                </h2>
+              </motion.div>
+
+              {/* One Line Services Layout */}
+              <div className="flex justify-center items-center gap-2 sm:gap-4 lg:gap-6 xl:gap-8 overflow-x-auto w-full">
                 {stats.map((stat, index) => (
                   <StatCard key={stat.id} stat={stat} index={index} />
                 ))}
@@ -119,40 +150,67 @@ const AnimatedCounter = ({
   );
 };
 
-// Individual Stat Card Component
+// Individual Service Card Component - Large One Line Style
 const StatCard = ({ stat, index }: { stat: StatItem; index: number }) => {
   const Icon = stat.icon;
 
   return (
     <motion.div
-      className="flex flex-col items-center justify-center gap-2 sm:gap-3"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
+      className="group flex flex-col items-center justify-center min-w-[140px] max-w-[160px] p-4 hover:bg-white/3 rounded-3xl transition-all duration-300 flex-shrink-0"
+      initial={{ opacity: 0, y: 30, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{
-        duration: 0.6,
+        duration: 0.7,
         delay: index * 0.1,
-        ease: "easeOut",
+        ease: [0.34, 1.56, 0.64, 1],
       }}
     >
-      {/* Icon */}
+      {/* Modern Icon Container with Simple Hover */}
       <motion.div
-        className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center"
-        whileHover={{ scale: 1.1, rotate: 5 }}
-        transition={{ duration: 0.3 }}
+        className="relative w-20 h-20 mb-4 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center group-hover:bg-white/15 transition-all duration-300 border border-white/20 shadow-lg"
+        initial={{ scale: 0.8, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.6,
+          delay: index * 0.1,
+          ease: [0.34, 1.56, 0.64, 1],
+        }}
       >
-        <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" strokeWidth={2.5} />
+        {/* Smooth Up/Down Icon Animation */}
+        <motion.div
+          animate={{
+            y: [0, -4, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: index * 0.2,
+          }}
+          className="relative z-10"
+        >
+          <Icon
+            className="w-10 h-10 text-teal-400 group-hover:text-white transition-colors duration-300 drop-shadow-lg"
+            strokeWidth={1.5}
+          />
+        </motion.div>
       </motion.div>
 
-      {/* Value */}
-      <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-        <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-      </div>
-
-      {/* Label */}
-      <p className="text-sm sm:text-base lg:text-xl font-bold text-white text-center leading-tight">
+      {/* Simple Title */}
+      <motion.h3
+        className="text-sm font-medium text-white/85 text-center leading-tight group-hover:text-white transition-colors duration-300 max-w-[130px]"
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: index * 0.1 + 0.3,
+          duration: 0.5,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+      >
         {stat.label}
-      </p>
+      </motion.h3>
     </motion.div>
   );
 };
