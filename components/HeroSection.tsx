@@ -110,7 +110,7 @@ const HeroSection = () => {
   return (
     <div
       ref={heroRef}
-      className="relative w-full h-[663px] md:h-screen overflow-hidden"
+      className="relative w-[98%] mx-auto h-[calc(100vh-8rem)] overflow-hidden rounded-t-[32px] rounded-b-[32px] mt-26"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
