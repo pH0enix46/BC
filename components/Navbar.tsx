@@ -124,9 +124,9 @@ const Navbar = () => {
       className="fixed -top-2 left-0 right-0 transition-all duration-300 py-6"
       style={{ zIndex: 9998 }}
     >
-      <div className="max-w-8xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-20">
+      <div className="max-w-[1024px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-20">
         {/* Rounded Navbar Container */}
-        <div className="bg-gradient-to-r from-white/95 to-white/90 backdrop-blur-md rounded-full px-4 sm:px-6 lg:px-8 py-3 lg:py-3 shadow-xl border border-gray-200/30">
+        <div className="bg-gradient-to-r from-white/95 to-white/90 backdrop-blur-md rounded-full px-4 sm:px-6 lg:px-8 py-1 lg:py-1 shadow-xl border border-gray-200/30">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
@@ -162,16 +162,6 @@ const Navbar = () => {
                 } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
               >
                 Project
-              </Link>
-              <Link
-                href="/career"
-                className={`${
-                  pathname === "/career"
-                    ? "text-primary bg-gradient-to-r from-primary/10 to-transparent px-3 py-1 rounded-full"
-                    : "text-primary/80"
-                } hover:text-primary hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent hover:px-3 hover:py-1 hover:rounded-full transition-all duration-300 text-lg lg:text-xl font-semibold`}
-              >
-                Career
               </Link>
               <Link
                 href="/blogs"
@@ -320,15 +310,6 @@ const Navbar = () => {
             >
               Media
             </Link> */}
-            <Link
-              href="/career"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`${
-                pathname === "/career" ? "text-primary" : "text-white/80"
-              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
-            >
-              Career
-            </Link>
             {/* <Link
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
