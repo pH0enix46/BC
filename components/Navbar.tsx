@@ -126,7 +126,7 @@ const Navbar = () => {
     >
       <div className="max-w-[1024px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-20">
         {/* Rounded Navbar Container */}
-        <div className="bg-gradient-to-r from-gray-50 to-gray-50 backdrop-blur-md rounded-full px-4 sm:px-6 lg:px-8 py-1 lg:py-1 shadow-4xl border border-gray-200/30">
+        <div className="bg-gradient-to-r from-gray-50 to-gray-50 backdrop-blur-md rounded-[20px] px-4 sm:px-6 lg:px-8 py-1 lg:py-1 shadow-4xl border border-gray-200/30">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
