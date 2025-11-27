@@ -80,7 +80,7 @@ const StatsSection = () => {
       <div className="p-20">
         <div className="relative max-w-8xl h-[500px] lg:h-96 overflow-hidden rounded-[32px] shadow">
           {/* Perfect Gradient Background */}
-          <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-700 via-primary/90 to-primary/80" />
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary via-primary/90 to-[#1c1c84]" />
 
           {/* Content Container */}
           <div className="relative z-10 max-w-8xl mx-auto h-full sm:px-6 md:px-12 ">
