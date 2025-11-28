@@ -108,7 +108,7 @@ const WhyChooseUsSection = () => {
             >
               <div className="relative">
                 {/* Primary Badge */}
-                <div className="absolute top-4 left-4 z-10 bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm">
+                <div className="absolute top-4 left-4 z-10 bg-primary text-white px-4 py-2 rounded-xl shadow-lg font-bold text-sm">
                   Trusted Since
                   <br />
                   2015
