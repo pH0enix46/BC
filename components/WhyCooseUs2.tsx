@@ -153,8 +153,8 @@ const WhyChooseUsSection = () => {
               {/* Title */}
               <motion.div variants={featureVariants}>
                 <h2 className="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-800 mb-4">
-                  Highly Experienced Building{" "}
-                  <span className="text-primary">certifiers</span>
+                  Highly <span className="text-primary">Experienced</span>{" "}
+                  Building certifiers
                 </h2>
                 <p className="text-gray-600 text-base sm:text-lg mb-8">
                   Bcaa Certifiers are Sydney based specialized In Residential

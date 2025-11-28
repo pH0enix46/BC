@@ -97,12 +97,12 @@ const MeetOurTeam = () => {
 
         {/* Team Showcase Container */}
         <div className="bg-gray-50 backdrop-blur-xl rounded-3xl shadow border border-primary/10 p-8 md:p-0 transition-all duration-500 ease-in-out hover:shadow-primary/10 hover:shadow-3xl">
-          <div className="flex w-full h-[80vh] gap-16 items-center justify-center py-8">
+          <div className="flex w-full h-[80vh] gap-16 items-center justify-center py-8 team-showcase">
             {/* Left Side - Vertical Carousel */}
             <div className="flex-1 flex justify-center items-center">
               <div className="w-full max-w-md h-[70vh] relative flex flex-col items-center justify-center">
                 {/* Carousel Track */}
-                <div className="w-96 h-full flex flex-col justify-center items-center relative">
+                <div className="w-96 h-full flex flex-col justify-center items-center relative carousel-container">
                   {teamMembers.map((member, index) => {
                     const position = getCardPosition(index);
 
@@ -110,7 +110,7 @@ const MeetOurTeam = () => {
                       <div
                         key={index}
                         onClick={() => goToSlide(index)}
-                        className={`absolute w-96 h-72 bg-white rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 ease-out ${
+                        className={`absolute w-96 h-72 bg-white rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 ease-out team-card ${
                           position === "center"
                             ? "z-10 scale-110 translate-y-0 opacity-100"
                             : position === "up-1"
@@ -147,9 +147,9 @@ const MeetOurTeam = () => {
             </div>
 
             {/* Right Side - Controls and Info */}
-            <div className="flex-1 flex flex-col justify-center items-center gap-10 pl-10">
+            <div className="flex-1 flex flex-col justify-center items-center gap-10 pl-10 member-info-section">
               {/* Member Info */}
-              <div className="text-center max-w-lg">
+              <div className="text-center max-w-lg member-info-container">
                 <div
                   className="transition-all duration-300 ease-in-out transform"
                   style={{
@@ -159,15 +159,15 @@ const MeetOurTeam = () => {
                       : "translateY(0px)",
                   }}
                 >
-                  <h2 className="text-primary text-4xl font-bold mb-2 relative inline-block">
+                  <h2 className="text-primary text-4xl font-bold mb-2 relative inline-block member-name">
                     {teamMembers[currentIndex].name}
                     <span className="absolute top-full left-0 w-20 h-0.5 bg-primary -translate-x-24"></span>
                     <span className="absolute top-full right-0 w-20 h-0.5 bg-primary translate-x-24"></span>
                   </h2>
-                  <p className="text-gray-500 text-xl font-medium opacity-80 uppercase tracking-wider mb-6">
+                  <p className="text-gray-500 text-xl font-medium opacity-80 uppercase tracking-wider mb-6 member-role">
                     {teamMembers[currentIndex].role}
                   </p>
-                  <blockquote className="text-gray-600 text-lg leading-relaxed italic border-l-4 border-primary/20 pl-6 text-left">
+                  <blockquote className="text-gray-600 text-lg leading-relaxed italic border-l-4 border-primary/20 pl-6 text-left member-description">
                     &quot;{teamMembers[currentIndex].description}&quot;
                   </blockquote>
                 </div>
@@ -215,8 +215,44 @@ const MeetOurTeam = () => {
         </div>
       </div>
 
-      {/* Mobile Responsive Styles */}
+      {/* Responsive Styles */}
       <style jsx>{`
+        @media (min-width: 1800px) {
+          .team-card {
+            width: 40rem !important;
+            height: 30rem !important;
+          }
+
+          .carousel-container {
+            width: 28rem !important;
+          }
+
+          .team-showcase {
+            gap: 2rem !important;
+          }
+
+          .member-info-section {
+            padding-left: 2rem !important;
+          }
+
+          .member-info-container {
+            max-width: 40rem !important;
+          }
+
+          .member-name {
+            font-size: 3.5rem !important;
+          }
+
+          .member-role {
+            font-size: 1.5rem !important;
+          }
+
+          .member-description {
+            font-size: 1.375rem !important;
+            line-height: 2rem !important;
+          }
+        }
+
         @media (max-width: 768px) {
           .flex {
             flex-direction: column;

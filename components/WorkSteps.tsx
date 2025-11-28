@@ -52,7 +52,7 @@ export default function WorkSteps() {
               >
                 {/* Step Content */}
                 <div className="text-center mb-4">
-                  <div className="flex justify-center mb-4">
+                  <div className="flex justify-center mb-4 mt-2">
                     <Image
                       src="/badge.jpeg"
                       alt="Badge"
