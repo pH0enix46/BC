@@ -28,7 +28,7 @@ const WhyChooseUsSection = () => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // 5 second interval for perfect viewing time
+    }, 3000); // 3 second interval for perfect viewing time
 
     return () => clearInterval(interval);
   }, [images.length]);
