@@ -189,7 +189,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="w-full bg-gray-50 py-12 md:py-16 lg:py-20">
+    <div className="w-full bg-white py-12 md:py-16 lg:py-20">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-16">
         {/* Page Title */}
         <motion.div
@@ -198,8 +198,8 @@ export default function ContactPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-pink-950 mb-4">
-            Get In Touch
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4">
+            Get In <span className="text-primary">Touch</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
             Have questions? We&apos;d love to hear from you. Send us a message
@@ -230,13 +230,13 @@ export default function ContactPage() {
                     {/* Icon and Title */}
                     <div className="flex items-center gap-4 mb-6">
                       <motion.div
-                        className="w-14 h-14 bg-white rounded-full flex items-center justify-center group-hover:bg-red-900 transition-colors duration-300"
+                        className="w-14 h-14 bg-white rounded-full flex items-center justify-center group-hover:bg-primary transition-colors duration-300"
                         whileHover={{ rotate: 360, scale: 1.1 }}
                         transition={{ duration: 0.5 }}
                       >
-                        <Icon className="w-7 h-7 text-red-900 group-hover:text-white transition-colors duration-300" />
+                        <Icon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
                       </motion.div>
-                      <h3 className="text-2xl sm:text-3xl font-bold text-pink-950">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-primary">
                         {info.title}
                       </h3>
                     </div>
@@ -254,7 +254,7 @@ export default function ContactPage() {
                               ? "noopener noreferrer"
                               : undefined
                           }
-                          className="text-lg sm:text-xl font-bold text-gray-700 hover:text-red-900 transition-colors duration-300 block"
+                          className="text-lg sm:text-xl font-bold text-gray-700 hover:text-primary transition-colors duration-300 block"
                         >
                           {info.content}
                         </a>
@@ -280,7 +280,7 @@ export default function ContactPage() {
           >
             <form onSubmit={handleSubmit} className="flex flex-col h-full">
               {/* Title */}
-              <h2 className="text-3xl sm:text-4xl font-bold text-pink-950 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
                 Send us a Message
               </h2>
 
@@ -323,12 +323,12 @@ export default function ContactPage() {
                     placeholder=" "
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 text-gray-900 text-base font-normal font-['Anek_Malayalam'] focus:outline-none focus:border-pink-950 transition-all peer placeholder-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 text-gray-900 text-base font-normal font-['Anek_Malayalam'] focus:outline-none focus:border-primary transition-all peer placeholder-transparent disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                   <label
                     className={`absolute left-3 top-0 bg-white px-1 transition-all duration-200 pointer-events-none font-['Anek_Malayalam'] ${
                       formData.fullName || focusedField === "fullName"
-                        ? "-translate-y-1/2 text-xs text-pink-950"
+                        ? "-translate-y-1/2 text-xs text-primary"
                         : "translate-y-3 text-base text-gray-500"
                     }`}
                   >
@@ -348,12 +348,12 @@ export default function ContactPage() {
                     placeholder=" "
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 text-gray-900 text-base font-normal font-['Anek_Malayalam'] focus:outline-none focus:border-pink-950 transition-all peer placeholder-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 text-gray-900 text-base font-normal font-['Anek_Malayalam'] focus:outline-none focus:border-primary transition-all peer placeholder-transparent disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                   <label
                     className={`absolute left-3 top-0 bg-white px-1 transition-all duration-200 pointer-events-none font-['Anek_Malayalam'] ${
                       formData.phone || focusedField === "phone"
-                        ? "-translate-y-1/2 text-xs text-pink-950"
+                        ? "-translate-y-1/2 text-xs text-primary"
                         : "translate-y-3 text-base text-gray-500"
                     }`}
                   >
@@ -373,12 +373,12 @@ export default function ContactPage() {
                     placeholder=" "
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 text-gray-900 text-base font-normal font-['Anek_Malayalam'] focus:outline-none focus:border-pink-950 transition-all peer placeholder-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 bg-white rounded-lg border border-gray-300 text-gray-900 text-base font-normal font-['Anek_Malayalam'] focus:outline-none focus:border-primary transition-all peer placeholder-transparent disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                   <label
                     className={`absolute left-3 top-0 bg-white px-1 transition-all duration-200 pointer-events-none font-['Anek_Malayalam'] ${
                       formData.email || focusedField === "email"
-                        ? "-translate-y-1/2 text-xs text-pink-950"
+                        ? "-translate-y-1/2 text-xs text-primary"
                         : "translate-y-3 text-base text-gray-500"
                     }`}
                   >
@@ -397,12 +397,12 @@ export default function ContactPage() {
                     placeholder=" "
                     required
                     disabled={isSubmitting}
-                    className="w-full h-full min-h-[120px] px-4 py-3 bg-white rounded-lg border border-gray-300 text-gray-900 text-base font-normal font-['Anek_Malayalam'] focus:outline-none focus:border-pink-950 transition-all resize-none peer placeholder-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full h-full min-h-[120px] px-4 py-3 bg-white rounded-lg border border-gray-300 text-gray-900 text-base font-normal font-['Anek_Malayalam'] focus:outline-none focus:border-primary transition-all resize-none peer placeholder-transparent disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                   <label
                     className={`absolute left-3 top-0 bg-white px-1 transition-all duration-200 pointer-events-none font-['Anek_Malayalam'] ${
                       formData.message || focusedField === "message"
-                        ? "-translate-y-1/2 text-xs text-pink-950"
+                        ? "-translate-y-1/2 text-xs text-primary"
                         : "translate-y-3 text-base text-gray-500"
                     }`}
                   >
@@ -416,7 +416,7 @@ export default function ContactPage() {
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full px-8 py-4 bg-red-900 hover:bg-red-800 rounded-full text-white text-xl font-bold uppercase tracking-wide transition-all duration-300 flex items-center justify-center gap-2 shadow-lg ${
+                  className={`w-full px-8 py-4 bg-primary hover:bg-primary/80 cursor-pointer rounded-full text-white text-xl font-bold uppercase tracking-wide transition-all duration-300 flex items-center justify-center gap-2 shadow-lg ${
                     isSubmitting
                       ? "opacity-50 cursor-not-allowed"
                       : "hover:shadow-xl"

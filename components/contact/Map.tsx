@@ -132,11 +132,11 @@ export default function MapSection() {
                   {/* direction for moving map */}
                   <button
                     onClick={handleCenterToMarker}
-                    className="p-2 bg-white hover:bg-red-50 rounded-full transition-colors duration-200 group border border-gray-300"
+                    className="p-2 bg-white hover:bg-sky-50 rounded-full transition-colors duration-200 group border border-gray-300"
                     title="Center map on location"
                   >
                     <svg
-                      className="w-4 h-4 text-red-900 group-hover:text-red-800"
+                      className="w-4 h-4 text-primary group-hover:text-primary/80"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -165,7 +165,7 @@ export default function MapSection() {
 
                 <button
                   onClick={handleViewLargerMap}
-                  className="text-red-900 hover:text-red-800 text-sm font-semibold transition-colors cursor-pointer"
+                  className="text-primary hover:text-pretty/80 text-sm font-semibold transition-colors cursor-pointer"
                 >
                   View larger map →
                 </button>
@@ -188,8 +188,8 @@ export default function MapSection() {
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 mb-20">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-pink-950 mb-4">
-            Find Us On Map
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+            Find Us On <span className="text-primary">Map</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Visit our office location in Mecca, Saudi Arabia. We&apos;re here to
