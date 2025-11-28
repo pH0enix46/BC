@@ -2,7 +2,6 @@ import React from "react";
 import CommonHeader from "../../components/Common/CommonHeader";
 import Contact from "../../components/contact/contact";
 import Map from "../../components/contact/Map";
-import Stats from "../../components/Stats";
 import MeetOurTeam from "@/components/Common/MeetOurTeam";
 
 export default function ContactPage() {
@@ -15,7 +14,6 @@ export default function ContactPage() {
       />
       <Contact />
       <Map />
-      <Stats />
       <MeetOurTeam />
     </div>
   );

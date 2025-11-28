@@ -93,7 +93,7 @@ const Header = ({ title, breadcrumb, imagePath }: HeaderProps) => {
 
       {/* Content container - Center aligned */}
       <div className="relative px-8 sm:px-12 md:px-20 lg:px-[120px] h-full flex items-center justify-center z-10">
-        <div className="w-full max-w-8xl text-center">
+        <div className="w-full max-w-8xl text-center -ml-6">
           <div className="space-y-6">
             <h1
               className="text-3xl sm:text-4xl md:text-[48px] font-bold font-anek text-white text-start tracking-[-0.4px]"
