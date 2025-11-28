@@ -110,7 +110,7 @@ const HeroSection = () => {
   return (
     <div
       ref={heroRef}
-      className="relative w-[98%] mx-auto h-[calc(100vh-3rem)] overflow-hidden rounded-t-[32px] rounded-b-[32px] mt-4 bg-[#055ea1]"
+      className="relative w-[98%] mx-auto h-[calc(100vh-4rem)] overflow-hidden rounded-t-[24px] rounded-b-[24px] mt-4 bg-[#055ea1]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
