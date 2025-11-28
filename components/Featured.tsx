@@ -243,7 +243,7 @@ const FeaturedProjects = () => {
         }
       `}</style>
 
-      <div className="relative flex flex-col items-center w-full py-20 gap-16 px-4 md:px-8 lg:px-16 bg-primary/90">
+      <div className="relative flex flex-col items-center w-full py-4 gap-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-[#1c1c84] via-primary/90 to-primary">
         {/* Content wrapper with relative positioning */}
         <div className="relative z-10 w-full flex flex-col items-center gap-16">
           <div className="px-4 py-8 rounded-lg">

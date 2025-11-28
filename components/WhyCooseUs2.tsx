@@ -94,9 +94,9 @@ const WhyChooseUsSection = () => {
   };
 
   return (
-    <div className="w-full py-16 lg:py-20">
+    <div className="w-full py-16 lg:py-20 ">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-2">
-        <div className="bg-gray-100 rounded-3xl p-8 lg:p-12 shadow">
+        <div className="bg-[#f5f0d8] rounded-3xl p-8 lg:p-12 shadow-2xl">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Section - Auto-sliding Images */}
             <motion.div

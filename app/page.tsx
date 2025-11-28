@@ -32,9 +32,9 @@ export default function Home() {
         <div data-aos="fade-up" data-aos-delay="100">
           <StatsSection />
         </div>
-        <div data-aos="fade-up" data-aos-delay="200">
+        {/* <div data-aos="fade-up" data-aos-delay="200">
           <WeAssist />
-        </div>
+        </div> */}
         <div data-aos="fade-up" data-aos-delay="200">
           <Featured />
         </div>

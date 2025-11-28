@@ -16,9 +16,9 @@ const HeroSection = () => {
 
   // Array of background images
   const backgroundImages = [
-    "/landing/hero/1.jpeg",
-    "/landing/hero/2.jpeg",
-    "/landing/hero/3.webp",
+    "/landing/hero/bcaa-hero-4.jpg",
+    "/landing/hero/bcaa-hero-2.jpg",
+    "/landing/hero/bcaa-hero-5.jpg",
   ];
 
   // Initialize AOS
@@ -110,7 +110,7 @@ const HeroSection = () => {
   return (
     <div
       ref={heroRef}
-      className="relative w-[98%] mx-auto h-[calc(100vh-8rem)] overflow-hidden rounded-t-[32px] rounded-b-[32px] mt-8"
+      className="relative w-[98%] mx-auto h-[calc(100vh-3rem)] overflow-hidden rounded-t-[32px] rounded-b-[32px] mt-4 bg-[#055ea1]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
