@@ -29,7 +29,7 @@ const StatsSection = () => {
       icon: Building2,
       value: 0,
       suffix: "",
-      label: "Structural Engineering Inspections",
+      label: "Structural Engineering",
     },
     {
       id: 2,
@@ -57,7 +57,7 @@ const StatsSection = () => {
       icon: ShieldAlert,
       value: 0,
       suffix: "",
-      label: "Unauthorized Construction Inspection",
+      label: "Unauthorized Construction",
     },
     {
       id: 6,
@@ -99,7 +99,7 @@ const StatsSection = () => {
               </motion.div>
 
               {/* One Line Services Layout */}
-              <div className="flex justify-center items-center gap-2 sm:gap-4 lg:gap-6 xl:gap-8 overflow-x-auto w-full">
+              <div className="flex justify-evenly items-center gap-2 sm:gap-4 lg:gap-6 xl:gap-2 overflow-x-auto w-full">
                 {stats.map((stat, index) => (
                   <StatCard key={stat.id} stat={stat} index={index} />
                 ))}
@@ -156,7 +156,7 @@ const StatCard = ({ stat, index }: { stat: StatItem; index: number }) => {
 
   return (
     <motion.div
-      className="group flex flex-col items-center justify-center min-w-[140px] max-w-[160px] p-4 hover:bg-white/3 rounded-3xl transition-all duration-300 flex-shrink-0"
+      className="group flex flex-col items-center justify-start min-w-[160px] max-w-[200px] p-4 hover:bg-white/3 rounded-3xl transition-all duration-300 flex-shrink-0"
       initial={{ opacity: 0, y: 30, scale: 0.9 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -189,18 +189,22 @@ const StatCard = ({ stat, index }: { stat: StatItem; index: number }) => {
             ease: "easeInOut",
             delay: index * 0.2,
           }}
-          className="relative z-10"
+          className="relative z-10 w-full h-full flex items-center justify-center"
         >
           <Icon
-            className="w-10 h-10 text-white group-hover:text-white transition-colors duration-300 drop-shadow-lg"
+            className="w-12 h-12 text-white group-hover:text-white transition-colors duration-300 drop-shadow-lg flex-shrink-0"
             strokeWidth={1.5}
+            style={{
+              display: "block",
+              margin: "auto",
+            }}
           />
         </motion.div>
       </motion.div>
 
       {/* Simple Title */}
       <motion.h3
-        className="text-sm font-medium text-white/85 text-center leading-tight group-hover:text-white transition-colors duration-300 max-w-[130px]"
+        className="text-sm font-medium text-white/85 text-center leading-tight group-hover:text-white transition-colors duration-300 whitespace-nowrap overflow-hidden text-ellipsis px-2"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
