@@ -115,7 +115,7 @@ const WhyChooseUsSection = () => {
                 </div>
 
                 {/* Auto-sliding Image Container - Height matches right side */}
-                <div className="relative w-full h-[400px] sm:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden bg-gray-200">
+                <div className="relative w-full h-[400px] sm:h-[450px] lg:h-[600px] rounded-2xl overflow-hidden bg-gray-200 outline-2 outline-primary/20 outline-offset-2 shadow">
                   <AnimatePresence mode="popLayout">
                     <motion.div
                       key={currentImageIndex}
@@ -133,7 +133,7 @@ const WhyChooseUsSection = () => {
                         src={images[currentImageIndex]}
                         alt={`Construction Image ${currentImageIndex + 1}`}
                         fill
-                        className="object-cover"
+                        className="object-cover shadow"
                         priority
                       />
                     </motion.div>

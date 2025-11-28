@@ -54,47 +54,32 @@ const HeroSection = () => {
 
   // Auto-slide functionality
   useEffect(() => {
-    console.log("Auto-slide check:", { isPaused, isTransitioning, isVisible });
-
-    if (isPaused || isTransitioning || !isVisible) return;
+    if (isTransitioning || !isVisible) return;
 
     const autoSlideInterval = setInterval(() => {
-      console.log("Auto-slide triggered");
       setIsTransitioning(true);
       setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
     }, 3000);
 
     return () => clearInterval(autoSlideInterval);
-  }, [isPaused, isTransitioning, isVisible, totalSlides]);
+  }, [isTransitioning, isVisible, totalSlides]);
 
   const handlePrevSlide = () => {
     if (isTransitioning) return;
-    setIsPaused(true);
     setIsTransitioning(true);
     setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-
-    // Resume auto-slide after 5 seconds of manual interaction
-    setTimeout(() => setIsPaused(false), 5000);
   };
 
   const handleNextSlide = () => {
     if (isTransitioning) return;
-    setIsPaused(true);
     setIsTransitioning(true);
     setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-
-    // Resume auto-slide after 5 seconds of manual interaction
-    setTimeout(() => setIsPaused(false), 5000);
   };
 
   const goToSlide = (index: number) => {
     if (isTransitioning || index === currentSlide) return;
-    setIsPaused(true);
     setIsTransitioning(true);
     setCurrentSlide(index);
-
-    // Resume auto-slide after 5 seconds of manual interaction
-    setTimeout(() => setIsPaused(false), 5000);
   };
 
   // Reset transition state after animation completes
@@ -111,8 +96,6 @@ const HeroSection = () => {
     <div
       ref={heroRef}
       className="relative w-[98%] mx-auto h-[calc(100vh-4rem)] overflow-hidden rounded-t-[24px] rounded-b-[24px] mt-4 bg-[#055ea1]"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
     >
       {/* Background Images with Advanced Animations */}
       {backgroundImages.map((image, index) => (
