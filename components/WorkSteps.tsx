@@ -31,7 +31,7 @@ export default function WorkSteps() {
   ];
 
   return (
-    <section className="w-full py-20 px-4 md:px-8 lg:px-16">
+    <section className="w-full py-28 px-4 md:px-8 lg:px-16">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-16">
         {/* Header */}
         <div className="text-center mb-12">

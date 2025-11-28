@@ -29,27 +29,6 @@ const MeetOurTeam = () => {
       description:
         "Full-stack architect passionate about clean code and scalable solutions. I love solving complex problems and building technology that makes a difference.",
     },
-    {
-      name: "Ahmed Hassan",
-      role: "UX DESIGNER",
-      image: "/team-members/1.jpeg",
-      description:
-        "User-centered design advocate focused on creating intuitive experiences. Great design is invisible - it just works seamlessly for the people who use it.",
-    },
-    {
-      name: "Sarah Ali",
-      role: "MARKETING MANAGER",
-      image: "/team-members/2.jpeg",
-      description:
-        "Strategic marketer who connects brands with their audience through authentic storytelling. Marketing is about building relationships, not just selling products.",
-    },
-    {
-      name: "Omar Khan",
-      role: "PRODUCT MANAGER",
-      image: "/team-members/3.jpeg",
-      description:
-        "Product strategist who bridges the gap between user needs and business goals. The best products solve real problems in ways users didn't even know they needed.",
-    },
   ];
 
   const updateCarousel = useCallback(
@@ -96,26 +75,17 @@ const MeetOurTeam = () => {
 
     if (offset === 0) return "center";
     if (offset === 1) return "down-1";
-    if (offset === 2) return "down-2";
     if (offset === teamMembers.length - 1) return "up-1";
-    if (offset === teamMembers.length - 2) return "up-2";
     return "hidden";
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden py-20 bg-gradient-to-br from-primary/5 via-white to-primary/10 transition-all duration-1000 ease-in-out">
-      {/* Modern Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/8 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/6 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/4 to-primary/8 rounded-full blur-3xl animate-pulse delay-500"></div>
-      </div>
-
+    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden my-20">
       {/* Main Content Container */}
       <div className="relative z-10 w-full max-w-8xl mx-auto px-6 lg:px-20">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent mb-4 transition-all duration-700 ease-in-out">
+        <div className="text-center mb-10 mt-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-primary">
             Meet Our Team
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -125,7 +95,7 @@ const MeetOurTeam = () => {
         </div>
 
         {/* Team Showcase Container */}
-        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow border border-primary/10 p-8 md:p-12 transition-all duration-500 ease-in-out hover:shadow-primary/10 hover:shadow-3xl">
+        <div className="bg-gray-50 backdrop-blur-xl rounded-3xl shadow border border-primary/10 p-8 md:p-0 transition-all duration-500 ease-in-out hover:shadow-primary/10 hover:shadow-3xl">
           <div className="flex w-full h-[80vh] gap-16 items-center justify-center">
             {/* Left Side - Vertical Carousel */}
             <div className="flex-1 flex justify-center items-center">
@@ -139,17 +109,13 @@ const MeetOurTeam = () => {
                       <div
                         key={index}
                         onClick={() => goToSlide(index)}
-                        className={`absolute w-80 h-56 bg-white rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 ease-out ${
+                        className={`absolute w-96 h-72 bg-white rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 ease-out ${
                           position === "center"
                             ? "z-10 scale-110 translate-y-0 opacity-100"
                             : position === "up-1"
                             ? "z-5 -translate-y-20 scale-95 opacity-90"
-                            : position === "up-2"
-                            ? "z-1 -translate-y-40 scale-85 opacity-70"
                             : position === "down-1"
                             ? "z-5 translate-y-20 scale-95 opacity-90"
-                            : position === "down-2"
-                            ? "z-1 translate-y-40 scale-85 opacity-70"
                             : "opacity-0 pointer-events-none"
                         }`}
                         style={{
@@ -158,12 +124,8 @@ const MeetOurTeam = () => {
                               ? "scale(1.1) translateZ(0)"
                               : position === "up-1"
                               ? "translateY(-80px) scale(0.95) translateZ(-50px)"
-                              : position === "up-2"
-                              ? "translateY(-160px) scale(0.85) translateZ(-150px)"
                               : position === "down-1"
                               ? "translateY(80px) scale(0.95) translateZ(-50px)"
-                              : position === "down-2"
-                              ? "translateY(160px) scale(0.85) translateZ(-150px)"
                               : "translateY(0)"
                           }`,
                         }}
