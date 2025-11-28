@@ -1,78 +1,44 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import { X } from "lucide-react";
+import React from "react";
 
 export default function WorkSteps() {
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-
-  const handlePlayVideo = () => {
-    setIsVideoModalOpen(true);
-  };
-
-  const closeVideoModal = () => {
-    setIsVideoModalOpen(false);
-  };
-
   const steps = [
     {
       id: 1,
-      title: "Evaluation & Sign In of the Contract",
-      stepNumber: "Step 1",
+      title: "Request a fee proposal",
+      description:
+        "Upload your plans and relevant documents below for a fee proposal.",
+      alternative: "Or",
+      contact: "Speak to our experienced team on (02) 9639 8809",
     },
     {
       id: 2,
-      title: "Implementations of quality works",
-      stepNumber: "Step 2",
+      title: "We start the certification process",
+      description:
+        "Upon acceptance of our fee proposal, signed and completed application forms must be submitted to our office alongside required documents as per our checklist. Once reviewed and satisfactory, an approval will be issued.",
     },
     {
       id: 3,
-      title: "Preparation of the work plan",
-      stepNumber: "Step 3",
+      title: "We complete the site inspections",
+      description:
+        "Our office must be notified of all mandatory critical stage inspections. A minimum of 48 hours notice is required. A list of inspections will be issued with your approval. Inspection Reports will then be emailed to the applicant upon completion.",
     },
     {
       id: 4,
-      title: "Delivering the project to the customer",
-      stepNumber: "Step 4",
+      title: "We issue your certification",
+      description:
+        "An OC checklist will be provided on request during the course of construction. A Final inspection must be completed and certificates reviewed and deemed satisfactory in order for an OC to be issued.",
     },
   ];
 
   return (
-    <section className="w-full py-16 px-4 md:px-8 lg:px-16 bg-gray-50">
+    <section className="w-full py-20 px-4 md:px-8 lg:px-16">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-16">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-primary mb-4">
-            Our Work Steps
+            Building Approvals easy four step process
           </h2>
         </div>
-
-        {/* Main Image with Play Button */}
-        {/* <div className="relative mb-16">
-          <div className="relative w-full h-[500px] rounded-[40px] overflow-hidden shadow">
-            <Image
-              src="/landing/work/1.jpg"
-              alt="Construction site with workers"
-              fill
-              className="object-cover"
-            />
-
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button
-                onClick={handlePlayVideo}
-                className="w-20 h-20 bg-primary/30 hover:bg-primary/80 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow cursor-pointer"
-              >
-                <Image
-                  src="/landing/work/2.svg"
-                  alt="Play video"
-                  height={30}
-                  width={30}
-                  className="object-cover h-20 w-auto"
-                />
-              </button>
-            </div>
-          </div>
-        </div> */}
-
         {/* Steps Timeline */}
         <div className="relative">
           {/* Steps Container */}
@@ -80,29 +46,42 @@ export default function WorkSteps() {
             {steps.map((step, index) => (
               <div
                 key={step.id}
-                className="flex flex-col items-center text-center relative"
+                className="bg-gray-50 rounded-2xl p-6 shadow hover:shadow-lg border border-gray-100 transition-all duration-300 relative"
               >
                 {/* Step Content */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-bold text-stone-900 mb-2 leading-tight">
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
                     {step.title}
                   </h3>
-                  <p className="text-lg font-bold text-stone-900">
-                    {step.stepNumber}
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    {step.description}
                   </p>
+
+                  {/* Special content for first step */}
+                  {step.alternative && (
+                    <div className="mt-4">
+                      <p className="text-primary font-semibold mb-2">
+                        {step.alternative}
+                      </p>
+                      <p className="text-gray-600 text-sm">{step.contact}</p>
+                    </div>
+                  )}
                 </div>
 
-                {/* Step Circle */}
-                <div className="w-7 h-7 bg-primary rounded-full border-4 border-stone-300 relative z-10"></div>
+                {/* Step Number Badge */}
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow">
+                    <span className="text-white font-bold text-sm">
+                      {step.id}
+                    </span>
+                  </div>
+                </div>
 
                 {/* Connecting Line - Hidden on mobile, visible on larger screens */}
                 {index < steps.length - 1 && (
                   <div
-                    className="hidden lg:block absolute top-[85%] left-0 w-full h-[2px] bg-stone-400 transform translate-x-1/2"
-                    style={{
-                      background:
-                        "repeating-linear-gradient(to right, #9ca3af 0, #9ca3af 8px, transparent 8px, transparent 16px)",
-                    }}
+                    className="hidden lg:block absolute -top-[1%] left-1/2 h-[2px] bg-gray-300 z-20 transform translate-x-4"
+                    style={{ width: "calc(100% - 1rem)" }}
                   ></div>
                 )}
               </div>
@@ -110,36 +89,6 @@ export default function WorkSteps() {
           </div>
         </div>
       </div>
-
-      {/* Video Modal */}
-      {isVideoModalOpen && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-          <div className="relative w-full max-w-4xl bg-white rounded-2xl overflow-hidden">
-            {/* Close Button */}
-            <button
-              onClick={closeVideoModal}
-              className="absolute top-4 right-4 z-10 w-10 h-10 bg-primary/90 hover:bg-primary/70 rounded-full flex items-center justify-center text-white transition-all duration-200 hover:scale-110 cursor-pointer"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            {/* Video Container */}
-            <div
-              className="relative w-full"
-              style={{ paddingBottom: "56.25%" }}
-            >
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/mbwuj58UEPg?autoplay=1"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

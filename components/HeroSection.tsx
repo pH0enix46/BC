@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
+
   const [isVisible, setIsVisible] = useState(true);
   const heroRef = React.useRef<HTMLDivElement>(null);
   const totalSlides = 3;

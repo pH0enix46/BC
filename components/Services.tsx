@@ -1,133 +1,116 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
-export default function Services() {
-  const router = useRouter();
-
-  const handleReadMore = (serviceId: number) => {
-    router.push(`/services-details?service=${serviceId}`);
-  };
-
+const Services = () => {
   const services = [
     {
       id: 1,
-      title: "Contracting",
+      title: "Complying Development",
+      highlight: "Certificates",
       description:
-        "Majoka delivers high-quality contracting solutions, ensuring precision and reliability in every project.",
-      icon: "/landing/services/6.svg",
-      featured: true,
+        "Complying Development Certificates are a fast-track way of obtaining an approval, quickly and efficiently, without the need for a Development Application through Council.",
+      image:
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      imageAlt: "Modern kitchen interior design",
+      layout: "left",
     },
     {
       id: 2,
-      title: "Testing",
+      title: "Construction",
+      highlight: "Certificates",
       description:
-        "Majoka supplies high-quality materials and equipment through reliable trading services.",
-      icon: "/landing/services/1.svg",
-      featured: false,
+        "A construction certificate is required after a Development Consent is issued by Local Council and before any building work can commence. Phoenix Building Approvals can issue Construction Certificates under Part 4A of the EP&A Act within their accredited Authority (BCA) and Local Principal on Sustainable PCA's for any development projects.",
+      image:
+        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      imageAlt: "Modern building construction",
+      layout: "right",
     },
     {
       id: 3,
-      title: "Calibration",
+      title: "Occupation",
+      highlight: "Certificates",
       description:
-        "Majoka offers precise calibration services to ensure equipment accuracy and reliability.",
-      icon: "/landing/services/2.svg",
-      featured: false,
+        "An occupation certificate is issued by the appointed Principal Certifying Authority (PCA) under the Environmental Planning and Development Act 1979 (EP & A Act) allowing a person to occupy a/or use a new building or change the use of an existing building.\n\nPhoenix Building Approvals can issue Occupation Certificates for residential buildings - including single dwellings, dual occupancies and multi-unit residential buildings (SEPP 65) that they have been appointed to provide for the construction and completion phases of building compliance works - safely and securely.",
+      image:
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      imageAlt: "Modern office building",
+      layout: "left",
     },
     {
       id: 4,
-      title: "Inspection",
+      title: "Building",
+      highlight: "Inspections",
       description:
-        "Majoka conducts detailed inspections to assess structural integrity and ensure safety compliance.",
-      icon: "/landing/services/3.svg",
-      featured: false,
-    },
-    {
-      id: 5,
-      title: "Trading",
-      description:
-        "Majoka supplies high-quality materials and equipment through reliable trading services.",
-      icon: "/landing/services/4.svg",
-      featured: false,
-    },
-    {
-      id: 6,
-      title: "Hotel",
-      description:
-        "Majoka provides comfortable accommodations and exceptional service at our modern hotel.",
-      icon: "/landing/services/5.svg",
-      featured: false,
+        "Mandatory Critical Stage Inspections as well as all Development approvals.\n\nAnd by July 2019, it is mandatory for Council projects listed in the Building Professionals Board's List that need to be scheduled throughout the development process during planning stages and during construction within a 48 hour timeframe. These mandatory inspections play from building the foundations right through to the completion of the building.",
+      image:
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      imageAlt: "Building inspection and construction",
+      layout: "right",
     },
   ];
 
   return (
-    <section className="w-full py-16 px-4 md:px-8 lg:px-16 bg-white">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-16">
+    <section className="w-full py-20 bg-gray-50">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-18">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            Our Services
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Building Approvals <span className="text-primary">Services</span>{" "}
+            Include:
           </h2>
-          <p className="text-lg text-stone-900 max-w-2xl mx-auto">
-            Discover how we can elevate your experience.
-          </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
+        <div className="space-y-20">
+          {services.map((service, index) => (
             <div
               key={service.id}
-              className="group rounded-2xl p-8 text-center transition-all duration-500 hover:shadow-2xl hover:scale-105 border border-stone-400 bg-white hover:bg-primary cursor-pointer"
+              className={`flex flex-col ${
+                service.layout === "right"
+                  ? "lg:flex-row-reverse"
+                  : "lg:flex-row"
+              } items-center gap-8 lg:gap-16`}
             >
-              {/* Icon */}
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center bg-primary/80 group-hover:bg-white/20 transition-all duration-500">
+              {/* Image Section */}
+              <div className="w-full lg:w-1/2">
+                <div className="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl outline-2 outline-primary/20 outline-offset-2">
                   <Image
-                    src={service.icon}
-                    alt={service.title}
-                    width={32}
-                    height={32}
-                    className="filter brightness-0 invert transition-all duration-500"
+                    src={service.image}
+                    alt={service.imageAlt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-700 "
                   />
                 </div>
               </div>
 
-              {/* Title */}
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-white transition-colors duration-500">
-                {service.title}
-              </h3>
+              {/* Content Section */}
+              <div className="w-full lg:w-1/2 space-y-6">
+                <div className="space-y-4">
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+                    {service.title}{" "}
+                    <span className="text-primary">{service.highlight}</span>
+                  </h3>
 
-              {/* Description */}
-              <p className="text-base leading-relaxed mb-8 text-gray-600 group-hover:text-white/90 transition-colors duration-500">
-                {service.description}
-              </p>
-
-              {/* Get Started Button */}
-              <button
-                onClick={() => handleReadMore(service.id)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 text-primary group-hover:text-white cursor-pointer"
-              >
-                Get Started
-                <svg
-                  className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </button>
+                  <div className="prose prose-lg max-w-none">
+                    {service.description.split("\n\n").map((paragraph, idx) => (
+                      <p
+                        key={idx}
+                        className="text-gray-600 leading-relaxed text-lg"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Services;
