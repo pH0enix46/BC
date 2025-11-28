@@ -121,7 +121,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed -top-2 left-0 right-0 transition-all duration-300 py-4"
+      className="fixed top-2 left-0 right-0 transition-all duration-300 py-4"
       style={{ zIndex: 9998 }}
     >
       <div className="max-w-[1024px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-20">
