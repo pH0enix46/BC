@@ -99,7 +99,7 @@ const StatsSection = () => {
               </motion.div>
 
               {/* One Line Services Layout */}
-              <div className="flex justify-evenly items-center gap-2 sm:gap-4 lg:gap-6 xl:gap-2 overflow-x-auto w-full">
+              <div className="flex justify-evenly items-center gap-2 sm:gap-4 lg:gap-6 xl:gap-2 overflow-x-auto w-full flex-wrap">
                 {stats.map((stat, index) => (
                   <StatCard key={stat.id} stat={stat} index={index} />
                 ))}
