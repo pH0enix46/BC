@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import { ChevronUp, ChevronDown } from "lucide-react";
 
 const MeetOurTeam = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -172,21 +173,42 @@ const MeetOurTeam = () => {
                 </div>
               </div>
 
-              {/* Navigation Dots */}
-              <div className="flex justify-center gap-3 mt-8">
-                {teamMembers.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    disabled={isAnimating}
-                    className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
-                      currentIndex === index
-                        ? "bg-primary scale-125"
-                        : "bg-primary/20 hover:bg-primary/40"
-                    } ${isAnimating ? "opacity-50 cursor-not-allowed" : ""}`}
-                    aria-label={`Go to ${teamMembers[index].name}`}
-                  />
-                ))}
+              {/* Navigation Arrows */}
+              <div className="flex items-center gap-4 mt-8">
+                <button
+                  onClick={() => updateCarousel(currentIndex - 1)}
+                  disabled={isAnimating}
+                  className={`w-12 h-12 rounded-full bg-primary/10 hover:bg-primary/20 border border-primary/20 flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 ${
+                    isAnimating ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                  aria-label="Previous team member"
+                >
+                  <ChevronUp className="w-6 h-6 text-primary" />
+                </button>
+
+                <div className="flex gap-2">
+                  {teamMembers.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        currentIndex === index
+                          ? "bg-primary scale-125"
+                          : "bg-primary/30"
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                <button
+                  onClick={() => updateCarousel(currentIndex + 1)}
+                  disabled={isAnimating}
+                  className={`w-12 h-12 rounded-full bg-primary/10 hover:bg-primary/20 border border-primary/20 flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 ${
+                    isAnimating ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                  aria-label="Next team member"
+                >
+                  <ChevronDown className="w-6 h-6 text-primary" />
+                </button>
               </div>
             </div>
           </div>
