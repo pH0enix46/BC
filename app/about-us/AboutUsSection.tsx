@@ -33,7 +33,7 @@ const AboutUsSection = () => {
               <span className="text-stone-900"> Excellence</span>
             </h2> */}
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-pink-950">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">
               Excellence in Engineering
             </h2>
             <p className="text-justify text-stone-600 text-base sm:text-lg lg:text-2xl font-normal leading-7 sm:leading-8 lg:leading-9">

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 interface TestimonialData {
@@ -17,8 +17,8 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
   return (
-    <div className="relative rounded-xl overflow-hidden shadow-xl transition-all duration-300 ease-in-out hover:shadow hover:scale-105 hover:-translate-y-2 cursor-pointer group">
-      <div className="relative h-[550px] bg-[#98D1EC]">
+    <div className="relative rounded-xl overflow-hidden transition-all duration-500 ease-in-out hover:scale-[1.02] cursor-pointer group outline-2 outline-offset-2 outline-primary/30 shadow-lg">
+      <div className="relative h-[550px] 2xl:h-[600px] bg-[#98D1EC] ">
         {/* Background Image */}
         <div className="absolute inset-0 bg-[#333] z-0">
           <Image
@@ -26,7 +26,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
             width={800}
             src={testimonial.image}
             alt="Testimonial background"
-            className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 shadow"
           />
         </div>
 
@@ -162,8 +162,12 @@ const ClientTestimonials = () => {
     if (isAnimating) return;
     setIsAnimating(true);
     setCurrentIndex(index);
-    setTimeout(() => setIsAnimating(false), 500);
+    setTimeout(() => setIsAnimating(false), 600);
   };
+
+  // Calculate total number of slides dynamically
+  const totalSlides = Math.max(0, testimonialsData.length - cardsPerView + 1);
+
   return (
     <div className="bg-white flex flex-col items-center w-full py-20 gap-16 px-4 md:px-8 lg:px-8">
       <div className="flex flex-col items-center gap-4 max-w-xl mx-auto text-center">
@@ -171,15 +175,15 @@ const ClientTestimonials = () => {
           Client <span className="text-primary">Testimonials</span>
         </span>
 
-        <p className="text-stone-900 text-xl!">
+        <p className="text-stone-900 text-xl">
           Discover how we can elevate your experience
         </p>
       </div>
 
       <div className="relative w-full max-w-8xl px-6 lg:px-12 mx-auto rounded-xl -mt-6">
-        <div className="overflow-hidden px-4 py-6 ">
+        <div className="overflow-hidden px-4 py-6">
           <div
-            className="flex transition-transform duration-500 ease-in-out"
+            className="flex transition-transform duration-600 ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)`,
               gap: cardsPerView === 1 ? "0px" : "24px",
@@ -205,52 +209,42 @@ const ClientTestimonials = () => {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-4">
+        <div className="absolute top-1/2 -translate-y-1/2 w-[95%] flex justify-between">
           <button
             onClick={prevSlide}
             disabled={isAnimating}
-            className="w-[50px] h-[50px] rounded-full bg-primary hover:bg-primary/70 flex items-center justify-center transform cursor-pointer"
+            className="w-[50px] h-[50px] rounded-full bg-primary hover:bg-primary/80 flex items-center justify-center transform cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <Image
-              src="/arrowL.svg"
-              alt="Previous"
-              width={24}
-              height={24}
-              className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-            />
+            <ChevronLeft className="w-6 h-6 text-white" />
           </button>
           <button
             onClick={nextSlide}
             disabled={isAnimating}
-            className="w-[50px] h-[50px] rounded-full bg-primary hover:bg-primary/70 flex items-center justify-center transform cursor-pointer"
+            className="w-[50px] h-[50px] rounded-full bg-primary hover:bg-primary/80 flex items-center justify-center transform cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <Image
-              src="/arrowR.svg"
-              alt="Previous"
-              width={24}
-              height={24}
-              className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-            />
+            <ChevronRight className="w-6 h-6 text-white" />
           </button>
         </div>
 
-        {/* Carousel Indicators */}
-        <div className="flex justify-center mt-8 gap-3">
-          {Array.from({ length: 5 }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              disabled={isAnimating}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ease-in-out hover:scale-125 active:scale-90 ${
-                currentIndex === index
-                  ? "bg-primary shadow-lg scale-110"
-                  : isAnimating
-                  ? "bg-gray-300 cursor-not-allowed"
-                  : "bg-gray-200 hover:bg-primary/70"
-              }`}
-            />
-          ))}
-        </div>
+        {/* Dynamic Carousel Indicators */}
+        {totalSlides > 1 && (
+          <div className="flex justify-center mt-8 gap-3">
+            {Array.from({ length: totalSlides }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                disabled={isAnimating}
+                className={`w-3 h-3 rounded-full transition-all duration-400 ease-in-out hover:scale-125 active:scale-90 ${
+                  currentIndex === index
+                    ? "bg-primary scale-110"
+                    : isAnimating
+                    ? "bg-gray-300 cursor-not-allowed"
+                    : "bg-gray-200 hover:bg-primary/70"
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

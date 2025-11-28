@@ -27,13 +27,13 @@ const OurMission = () => {
             data-aos="fade-left"
             data-aos-delay="200"
           >
-            <div className="bg-white/60 p-8 lg:p-12 rounded-[30px] shadow-xl outline-1 outline-offset-[-1px] outline-pink-950">
+            <div className="bg-white/60 p-8 lg:p-12 rounded-[30px] shadow-xl outline-1 outline-offset-[-1px] outline-primary">
               <div className="flex flex-col gap-6">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-pink-950">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">
                   Our Mission & Vision
                 </h2>
 
-                <div className="text-pink-950 text-sm sm:text-base space-y-4 leading-snug tracking-tight text-shadow-2xs">
+                <div className="text-black text-sm sm:text-base space-y-4 leading-snug tracking-tight text-shadow-2xs">
                   <p>
                     At Majoka Engineering, our mission is to deliver innovative,
                     reliable, and sustainable engineering solutions that empower
