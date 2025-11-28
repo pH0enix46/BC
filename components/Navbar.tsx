@@ -121,7 +121,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed -top-2 left-0 right-0 transition-all duration-300 py-4"
+      className="fixed top-2 left-0 right-0 transition-all duration-300 py-4"
       style={{ zIndex: 9998 }}
     >
       <div className="max-w-[1024px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-20">
@@ -189,7 +189,7 @@ const Navbar = () => {
             <div className="hidden lg:block">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-primary to-[#22229e] hover:from-primary/90 hover:to-primary/70 text-white px-4 lg:px-6 py-2 rounded-full text-sm lg:text-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="bg-gradient-to-r from-primary to-[#22229e] hover:from-primary/90 hover:to-primary/70 text-white px-4 lg:px-6 py-2 rounded-[20px] text-sm lg:text-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Get Quote
               </Link>
