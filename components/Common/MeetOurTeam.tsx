@@ -86,10 +86,10 @@ const MeetOurTeam = () => {
       <div className="relative z-10 w-full max-w-8xl mx-auto px-6 lg:px-20">
         {/* Section Header */}
         <div className="text-center mb-10 mt-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary">
-            Meet Our Team
+          <h1 className="text-4xl md:text-5xl font-bold text-black">
+            Meet Our <span className="text-primary">Team</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Passionate professionals dedicated to bringing your vision to life
             through innovation and expertise
           </p>
@@ -97,7 +97,7 @@ const MeetOurTeam = () => {
 
         {/* Team Showcase Container */}
         <div className="bg-gray-50 backdrop-blur-xl rounded-3xl shadow border border-primary/10 p-8 md:p-0 transition-all duration-500 ease-in-out hover:shadow-primary/10 hover:shadow-3xl">
-          <div className="flex w-full h-[80vh] gap-16 items-center justify-center">
+          <div className="flex w-full h-[80vh] gap-16 items-center justify-center py-8">
             {/* Left Side - Vertical Carousel */}
             <div className="flex-1 flex justify-center items-center">
               <div className="w-full max-w-md h-[70vh] relative flex flex-col items-center justify-center">

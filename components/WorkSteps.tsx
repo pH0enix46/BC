@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function WorkSteps() {
   const steps = [
@@ -34,9 +35,10 @@ export default function WorkSteps() {
     <section className="w-full py-28 px-4 md:px-8 lg:px-16">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-16">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-primary mb-4">
-            Building Approvals easy four step process
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-4">
+            Building Approvals easy{" "}
+            <span className="text-primary">four step</span> process
           </h2>
         </div>
         {/* Steps Timeline */}
@@ -50,6 +52,15 @@ export default function WorkSteps() {
               >
                 {/* Step Content */}
                 <div className="text-center mb-4">
+                  <div className="flex justify-center mb-4">
+                    <Image
+                      src="/badge.jpeg"
+                      alt="Badge"
+                      width={60}
+                      height={60}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
                     {step.title}
                   </h3>

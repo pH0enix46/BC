@@ -286,7 +286,7 @@ const FeaturedProjects = () => {
                   className="flex gap-6"
                   style={{
                     animation: `scroll-right-to-left ${
-                      filteredProjects.length * 4
+                      filteredProjects.length * 8
                     }s linear infinite`,
                     animationPlayState: isPaused ? "paused" : "running",
                     width: "max-content",

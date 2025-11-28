@@ -167,8 +167,8 @@ const ClientTestimonials = () => {
   return (
     <div className="bg-white flex flex-col items-center w-full py-20 gap-16 px-4 md:px-8 lg:px-8">
       <div className="flex flex-col items-center gap-4 max-w-xl mx-auto text-center">
-        <span className="text-4xl text-primary font-semibold">
-          Client Testimonials
+        <span className="text-4xl lg:text-5xl text-black font-semibold">
+          Client <span className="text-primary">Testimonials</span>
         </span>
 
         <p className="text-stone-900 text-xl!">

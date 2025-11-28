@@ -96,7 +96,7 @@ const WhyChooseUsSection = () => {
   return (
     <div className="w-full py-16 lg:py-20 ">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-2">
-        <div className="bg-[#f5f0d8] rounded-3xl p-8 lg:p-12 shadow-2xl">
+        <div className="bg-gray-50 rounded-3xl p-8 lg:p-12 shadow">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Section - Auto-sliding Images */}
             <motion.div
@@ -153,7 +153,8 @@ const WhyChooseUsSection = () => {
               {/* Title */}
               <motion.div variants={featureVariants}>
                 <h2 className="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-800 mb-4">
-                  Highly Experienced Building certifiers
+                  Highly Experienced Building{" "}
+                  <span className="text-primary">certifiers</span>
                 </h2>
                 <p className="text-gray-600 text-base sm:text-lg mb-8">
                   Bcaa Certifiers are Sydney based specialized In Residential
