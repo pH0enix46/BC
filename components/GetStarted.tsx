@@ -210,12 +210,12 @@ const GetStarted = () => {
                       <Mail className="w-5 h-5 text-white" />
                     </div>
                     <div className="flex flex-col">
-                      <h4 className="text-sm font-medium text-gray-600">
+                      <h4 className="text-sm lg:text-xl font-medium text-gray-600">
                         Email
                       </h4>
                       <a
                         href="mailto:info@majokaengineering.com"
-                        className="text-sm font-medium text-primary hover:underline"
+                        className="text-sm lg:text-[15px] font-medium text-primary hover:underline"
                       >
                         info@majokaengineering.com
                       </a>
@@ -228,12 +228,12 @@ const GetStarted = () => {
                       <Phone className="w-5 h-5 text-white" />
                     </div>
                     <div className="flex flex-col">
-                      <h4 className="text-sm font-medium text-gray-600">
+                      <h4 className="text-sm lg:text-xl font-medium text-gray-600">
                         Phone
                       </h4>
                       <a
                         href="tel:+9660503010184"
-                        className="text-sm font-medium text-primary hover:underline"
+                        className="text-sm lg:text-[15px] font-medium text-primary hover:underline"
                       >
                         +966-0503010184
                       </a>
@@ -246,10 +246,10 @@ const GetStarted = () => {
                       <MapPin className="w-5 h-5 text-white" />
                     </div>
                     <div className="flex flex-col">
-                      <h4 className="text-sm font-medium text-gray-600">
+                      <h4 className="text-sm lg:text-xl font-medium text-gray-600">
                         Office
                       </h4>
-                      <p className="text-sm font-medium text-primary">
+                      <p className="text-sm lg:text-[15px] font-medium text-primary">
                         Mecca, Saudi Arabia
                       </p>
                     </div>
