@@ -251,18 +251,18 @@ const FeaturedProjects = () => {
               <h2 className="text-4xl font-bold tracking-[-0.4px] text-gray-100">
                 Our Featured Projects
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="mx-2! text-base md:text-xl text-gray-300 mb-8">
                 Explore Our Highlighted Projects That Reflect Our Identity
               </p>
 
               {/* Modern Filter Design */}
-              <div className="bg-white/10 backdrop-blur-md rounded-full p-2 shadow-2xl border border-white/20 mb-8">
-                <div className="flex items-center gap-2">
+              <div className="bg-white/10 backdrop-blur-md rounded-3xl sm:rounded-full p-2 shadow-2xl border border-white/20 mb-8">
+                <div className="flex items-center gap-2 flex-wrap justify-center">
                   {categories.map((category) => (
                     <button
                       key={category}
                       onClick={() => handleCategoryChange(category)}
-                      className={`px-6 py-3 rounded-full font-semibold text-sm transition-all duration-500 ease-out transform hover:scale-105 cursor-pointer ${
+                      className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full font-semibold text-[10px] sm:text-sm transition-all duration-500 ease-out transform hover:scale-105 cursor-pointer whitespace-nowrap ${
                         selectedCategory === category
                           ? "bg-primary text-white shadow-lg scale-105"
                           : "text-white/80 hover:text-white hover:bg-white/10"
