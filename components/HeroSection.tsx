@@ -111,14 +111,14 @@ const HeroSection = () => {
           >
             {/* Animated Gradient Overlay */}
             <div
-              className={`absolute inset-0 bg-gradient-to-r from-black/30 to-[#bc2b2b] transition-all duration-700 ${
-                index === currentSlide ? "opacity-40" : "opacity-60"
+              className={`absolute inset-0 bg-gradient-to-r from-black/90 to-black transition-all duration-700 ${
+                index === currentSlide ? "opacity-70" : "opacity-80"
               }`}
               style={{
                 background:
                   index === currentSlide
-                    ? "linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(188,43,43,0.4) 100%)"
-                    : "linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(188,43,43,0.6) 100%)",
+                    ? "linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 100%)"
+                    : "linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%)",
               }}
             ></div>
 
