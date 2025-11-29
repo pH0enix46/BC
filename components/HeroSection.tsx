@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ArrowLeft, ArrowRight, ArrowUp, Phone, Search } from "lucide-react";
-import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -64,18 +62,6 @@ const HeroSection = () => {
     return () => clearInterval(autoSlideInterval);
   }, [isTransitioning, isVisible, totalSlides]);
 
-  const handlePrevSlide = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-  };
-
-  const handleNextSlide = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-  };
-
   const goToSlide = (index: number) => {
     if (isTransitioning || index === currentSlide) return;
     setIsTransitioning(true);
@@ -93,10 +79,10 @@ const HeroSection = () => {
   }, [isTransitioning]);
 
   return (
-    <div className="w-full bg-gray-100 py-4">
+    <div className="w-full py-4">
       <div
         ref={heroRef}
-        className="relative w-[98%] mx-auto h-[calc(100vh-4rem)] overflow-hidden rounded-t-[24px] rounded-b-[24px] bg-[#055ea1] shadow-xl"
+        className="relative w-[98%] mx-auto h-[calc(100vh-2rem)] sm:h-[calc(100vh-3rem)] md:h-[calc(100vh-4rem)] overflow-hidden rounded-t-[24px] rounded-b-[24px] bg-[#055ea1] shadow-xl"
       >
         {/* Background Images with Advanced Animations */}
         {backgroundImages.map((image, index) => (
@@ -164,30 +150,25 @@ const HeroSection = () => {
         ></div>
 
         {/* Hero Content with Animations */}
-        <div className="relative z-10 flex flex-col h-full px-4">
+        <div className="relative z-10 flex flex-col h-full">
           {/* Top Content - Heading and Paragraph */}
           <div
-            className="max-w-8xl mx-auto flex flex-col items-center space-y-5 pt-32 md:pt-20 lg:pt-54"
+            className="max-w-8xl mx-auto flex flex-col items-center justify-center space-y-4 sm:space-y-5 md:space-y-6 px-4 sm:px-6 md:px-8 flex-1"
             data-aos="fade-down"
             data-aos-duration="1200"
             data-aos-delay="200"
           >
             <h1
-              className={`text-white/90 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center leading-tight tracking-[-0.4px] transition-all duration-700 transform font-anek ${
-                isTransitioning
-                  ? "opacity-70 translate-y-2 scale-98"
-                  : "opacity-100 translate-y-0 scale-100"
-              }`}
+              className="text-white/90 text-5xl lg:text-6xl xl:text-7xl font-bold text-center leading-tight sm:leading-tight md:leading-tight tracking-[-0.4px] font-anek"
               style={{
                 textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
-                animation: isTransitioning ? "none" : "fadeInUp 1s ease-out",
               }}
             >
               Shaping Skylines, Defining Progress
             </h1>
 
             <p
-              className="text-white/80 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center font-anek"
+              className="text-white/80 text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-anek max-w-5xl"
               style={{
                 textShadow: "1px 1px 3px rgba(0,0,0,0.5)",
               }}
@@ -196,56 +177,9 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Spacer to push other content down */}
-          <div className="flex-1"></div>
-
-          {/* Navigation Arrows */}
-          {/* <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 w-full max-w-[1300px] flex justify-between px-4  z-50">
-          <button
-            onClick={handlePrevSlide}
-            disabled={isTransitioning}
-            className={`w-[50px] h-[50px] rounded-full shadow-lg flex items-center justify-center transition-all duration-300 cursor-pointer transform hover:scale-110 active:scale-95 bg-sky-400/60 hover:bg-sky-500/70 ${
-              isTransitioning ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-            style={{
-              boxShadow:
-                "0 4px 15px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.1)",
-              zIndex: 50,
-            }}
-            data-aos="fade-right"
-            data-aos-delay="400"
-          >
-            <ArrowLeft
-              className={`w-8 h-8 transition-all duration-300 text-white ${
-                isTransitioning ? "animate-pulse" : ""
-              }`}
-            />
-          </button>
-          <button
-            onClick={handleNextSlide}
-            disabled={isTransitioning}
-            className={`w-[50px] h-[50px] rounded-full shadow-lg flex items-center justify-center transition-all duration-300 cursor-pointer transform hover:scale-110 active:scale-95 bg-sky-400/60 hover:bg-sky-500/70 ${
-              isTransitioning ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-            style={{
-              boxShadow:
-                "0 4px 15px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.1)",
-              zIndex: 50,
-            }}
-            data-aos="fade-left"
-            data-aos-delay="400"
-          >
-            <ArrowRight
-              className={`w-8 h-8 transition-all duration-300 text-white ${
-                isTransitioning ? "animate-pulse" : ""
-              }`}
-            />
-          </button>
-        </div> */}
-
           {/* Enhanced Slider Dots */}
           <div
-            className="absolute bottom-[200px] md:bottom-[60px] left-1/2 transform -translate-x-1/2 flex space-x-3 z-30"
+            className="absolute bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30"
             data-aos="fade-up"
             data-aos-delay="500"
           >
@@ -254,10 +188,10 @@ const HeroSection = () => {
                 key={index}
                 onClick={() => goToSlide(index)}
                 disabled={isTransitioning}
-                className={`h-3 rounded-full transition-all duration-500 cursor-pointer transform hover:scale-125 active:scale-90 ${
+                className={`h-2.5 sm:h-3 rounded-full transition-all duration-500 cursor-pointer transform hover:scale-125 active:scale-90 ${
                   currentSlide === index
-                    ? "bg-primary w-8 shadow-lg"
-                    : "bg-indigo-50 hover:bg-indigo-100 w-3"
+                    ? "bg-primary w-6 sm:w-8 shadow-lg"
+                    : "bg-indigo-50 hover:bg-indigo-100 w-2.5 sm:w-3"
                 } ${isTransitioning ? "opacity-50 cursor-not-allowed" : ""}`}
                 style={{
                   boxShadow:
@@ -269,114 +203,6 @@ const HeroSection = () => {
               />
             ))}
           </div>
-
-          {/* Enhanced CTA Button */}
-          {/* <div
-          className="mt-8 md:mt-16 relative z-50"
-          data-aos="zoom-in"
-          data-aos-delay="600"
-          data-aos-duration="800"
-        >
-          <button
-            className={`bg-sky-500 text-white font-bold text-lg md:text-xl py-3 px-6 md:px-8 rounded-full w-[200px] md:w-[340px] h-[50px] md:h-[60px] hover:bg-sky-600 transition-all duration-300 cursor-pointer shadow-lg transform hover:scale-105 hover:shadow-xl active:scale-95 flex items-center justify-center gap-2 md:gap-3 font-anek ${
-              isTransitioning
-                ? "opacity-80 translate-y-1"
-                : "opacity-100 translate-y-0"
-            }`}
-            style={{
-              boxShadow:
-                "0 6px 20px rgba(14, 165, 233, 0.3), 0 2px 4px rgba(0,0,0,0.1)",
-              background: "linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%)",
-              animation: isTransitioning
-                ? "none"
-                : "fadeInUp 1s ease-out 0.4s both",
-            }}
-          >
-            <Phone className="w-6 h-6 text-white" />
-            <span className="uppercase whitespace-nowrap">
-              Book A Quick Call
-            </span>
-          </button>
-        </div> */}
-
-          {/* Glassmorphism Job Search Section */}
-          {/* <div
-          className="mt-8 md:mt-12 w-full max-w-5xl px-4 mb-8 z-30"
-          data-aos="fade-up"
-          data-aos-delay="700"
-          data-aos-duration="1000"
-        >
-          <div
-            className={`rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 transition-all duration-700 transform ${
-              isTransitioning
-                ? "opacity-70 translate-y-3"
-                : "opacity-100 translate-y-0"
-            }`}
-            style={{
-              background: "rgba(255, 255, 255, 0.08)",
-              backdropFilter: "blur(15px)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)",
-              animation: isTransitioning
-                ? "none"
-                : "fadeInUp 1s ease-out 0.6s both",
-            }}
-          >
-            <div className="text-sky-400 text-xs md:text-sm font-semibold mb-2 md:mb-3 uppercase tracking-wider font-anek">
-              QUICK SEARCH
-            </div>
-
-            <h2 className="text-white text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-6 lg:mb-8 font-anek">
-              Find Your Dream Job Now!
-            </h2>
-            <div className="flex flex-row gap-3 md:gap-4 items-stretch">
-              <div className="flex-1">
-                <input
-                  type="text"
-                  placeholder="Job Title"
-                  className="w-full px-4 md:px-6 py-3 md:py-4 rounded-full text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-sky-400 transition-all duration-300 text-base md:text-lg font-anek"
-                  style={{
-                    background: "rgba(255, 255, 255, 0.95)",
-                    border: "none",
-                  }}
-                />
-              </div>
-
-              <button
-                className="bg-sky-500 hover:bg-sky-600 text-white font-bold px-6 md:px-8 py-3 md:py-4 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 shadow-lg cursor-pointer whitespace-nowrap font-anek"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%)",
-                  boxShadow: "0 4px 15px rgba(14, 165, 233, 0.4)",
-                }}
-              >
-                <Search className="w-4 h-4 md:w-5 md:h-5" />
-                FIND JOB
-              </button>
-            </div>
-          </div>
-        </div> */}
-
-          {/* <div
-          className="absolute bottom-10 right-[120px] md:right-[200px]"
-          data-aos="fade-left"
-          data-aos-delay="800"
-        >
-          <button className="relative w-[40px] h-[40px] rounded-full flex items-center justify-center hover:bg-[#f8eaea]/20 transition-colors cursor-pointer bg-gray-200/80">
-            <Image
-              src="/landing/hero/msg.svg"
-              alt="Message"
-              width={26}
-              height={26}
-              className="w-12 h-12 p-1"
-            />
-            <div className="absolute inset-0 flex items-center justify-center gap-0.5 -translate-y-[1px]">
-              <div className="w-1 h-1 bg-black rounded-full"></div>
-              <div className="w-1 h-1 bg-black rounded-full"></div>
-              <div className="w-1 h-1 bg-black rounded-full"></div>
-            </div>
-          </button>
-        </div> */}
         </div>
       </div>
     </div>
