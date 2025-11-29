@@ -36,27 +36,28 @@ const WhyChooseUsSection = () => {
   const features: Feature[] = [
     {
       id: 1,
-      title: "Complying Development Certificate Application",
-      description:
-        "Fast-track your development with our complying development certificate services. Get approvals quickly for standard residential and commercial projects.",
+      title: "Complying Development Certificates",
+      description: "",
     },
     {
       id: 2,
-      title: "Construction Certificate Application",
-      description:
-        "Secure your construction certificate with our expert guidance. We ensure all building plans meet regulatory requirements and safety standards.",
+      title: "Construction Certificates",
+      description: "",
     },
     {
       id: 3,
-      title: "Occupation Certificate Application",
-      description:
-        "Complete your project with our occupation certificate services. We handle all inspections and documentation for final occupancy approval.",
+      title: "Occupation Certificates",
+      description: "",
     },
     {
       id: 4,
-      title: "PCA Replacement Application",
-      description:
-        "Need a new Principal Certifying Authority? We provide seamless PCA replacement services to keep your project on track.",
+      title: "Building Inspections",
+      description: "",
+    },
+    {
+      id: 5,
+      title: "Pool Compliance Certificates",
+      description: "",
     },
   ];
 
@@ -153,43 +154,42 @@ const WhyChooseUsSection = () => {
               {/* Title */}
               <motion.div variants={featureVariants}>
                 <h2 className="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-800 mb-4">
-                  Highly <span className="text-primary">Experienced</span>{" "}
-                  Building certifiers
+                  Building <span className="text-primary">Approvals</span>{" "}
                 </h2>
                 <p className="text-gray-600 text-base sm:text-lg mb-8">
-                  Bcaa Certifiers are Sydney based specialized In Residential
-                  and commercial Approvals .
+                  Building Approvals are A1 Unrestricted Certifiers in:
                 </p>
               </motion.div>
 
-              {/* Certificate Applications Grid */}
-              <motion.div
-                className="grid grid-cols-1 sm:grid-cols-2 gap-6"
-                variants={containerVariants}
-              >
+              {/* Certificate List with Checkmarks */}
+              <motion.div className="space-y-4" variants={containerVariants}>
                 {features.map((feature, index) => (
                   <motion.div
                     key={feature.id}
-                    className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
+                    className="flex items-center gap-4"
                     variants={featureVariants}
-                    whileHover={{ y: -5, scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
                   >
-                    {/* Certificate Title */}
-                    <div className="text-center">
-                      <h3 className="text-lg font-bold text-gray-800 mb-4 leading-tight">
-                        {feature.title}
-                      </h3>
-
-                      {/* Apply Button */}
-                      <motion.button
-                        className="w-full px-6 py-3 bg-primary hover:bg-primary/90 rounded-full text-white font-semibold transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                    {/* Green Checkmark */}
+                    <div className="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-5 h-5 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        Apply
-                      </motion.button>
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={3}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
                     </div>
+
+                    {/* Certificate Title */}
+                    <h3 className="text-xl font-bold text-gray-800">
+                      {feature.title}
+                    </h3>
                   </motion.div>
                 ))}
               </motion.div>
@@ -197,21 +197,30 @@ const WhyChooseUsSection = () => {
               {/* CTA Button */}
               <motion.div
                 variants={featureVariants}
-                className="pt-6 flex flex-col items-center"
+                className="pt-8 flex flex-col items-start"
               >
                 <Link href="/contact">
                   <motion.button
-                    className="px-8 py-3 bg-primary hover:bg-primary/90 rounded-full text-white text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
+                    className="px-8 py-4 bg-primary hover:bg-primary/80 rounded-full text-white text-lg font-bold transition-all duration-300 shadow hover:shadow-lg cursor-pointer flex items-center gap-3"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Book Now
+                    Request A Free Proposal
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                   </motion.button>
                 </Link>
-                <p className="text-gray-500 text-sm mt-4 text-center">
-                  Join thousands of satisfied customers who trust us for their
-                  certification needs.
-                </p>
               </motion.div>
             </motion.div>
           </div>

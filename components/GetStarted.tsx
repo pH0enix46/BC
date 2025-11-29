@@ -10,6 +10,8 @@ interface FormData {
   email: string;
   service: string;
   message: string;
+  plans: File | null;
+  daConsent: File | null;
 }
 
 const GetStarted = () => {
@@ -20,6 +22,8 @@ const GetStarted = () => {
     email: "",
     service: "",
     message: "",
+    plans: null,
+    daConsent: null,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
@@ -43,6 +47,14 @@ const GetStarted = () => {
   ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const handleFileChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    fieldName: "plans" | "daConsent"
+  ) => {
+    const file = e.target.files?.[0] || null;
+    setFormData({ ...formData, [fieldName]: file });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -120,6 +132,8 @@ const GetStarted = () => {
           email: "",
           service: "",
           message: "",
+          plans: null,
+          daConsent: null,
         });
       } else {
         // Show error toast
@@ -189,7 +203,7 @@ const GetStarted = () => {
           <div className="relative z-10 flex flex-col lg:flex-row justify-between items-start gap-12 border border-primary/20 shadow p-6 py-10 rounded-xl">
             {/* Left Content - Image */}
             <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
-              <div className="relative h-[600px] rounded-[20px] overflow-hidden shadow outline-2 outline-offset-2 outline-primary/30">
+              <div className="relative h-[600px] lg:h-[720px] rounded-[20px] overflow-hidden shadow outline-2 outline-offset-2 outline-primary/30">
                 <Image
                   src="/get-start.jpeg"
                   alt="Get Started"
@@ -203,7 +217,7 @@ const GetStarted = () => {
             <div className="w-full lg:w-1/2 flex flex-col">
               {/* Contact Information - Horizontal Layout */}
               <div className="mb-8">
-                <div className="flex flex-wrap justify-center lg:justify-start gap-6 mb-8">
+                <div className="flex flex-wrap justify-center lg:justify-around gap-6 mb-8">
                   {/* Email */}
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
@@ -400,6 +414,59 @@ const GetStarted = () => {
                       >
                         Message
                       </label>
+                    </div>
+
+                    {/* File Uploads Row */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {/* Plans File Upload */}
+                      <div className="flex flex-col space-y-1">
+                        <label className="text-gray-900 text-base font-semibold">
+                          Plans
+                        </label>
+                        <p className="text-gray-500 text-xs">
+                          (20mb max, jpg,gif,png,bmp,pdf)
+                        </p>
+                        <div className="relative">
+                          <input
+                            type="file"
+                            name="plans"
+                            accept=".jpg,.jpeg,.gif,.png,.bmp,.pdf"
+                            onChange={(e) => handleFileChange(e, "plans")}
+                            disabled={isSubmitting}
+                            className="w-full h-[45px] px-3 py-2 bg-white border-2 border-dashed border-gray-300 rounded-xl text-gray-900 text-sm font-normal focus:outline-none focus:border-primary transition-all file:mr-2 file:py-1 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-primary file:text-white hover:file:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                          />
+                          {formData.plans && (
+                            <p className="mt-1 text-xs text-gray-600 truncate">
+                              {formData.plans.name}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* DA Consent File Upload */}
+                      <div className="flex flex-col space-y-1">
+                        <label className="text-gray-900 text-base font-semibold">
+                          DA Consent
+                        </label>
+                        <p className="text-gray-500 text-xs">
+                          (20mb max, jpg,gif,png,bmp,pdf)
+                        </p>
+                        <div className="relative">
+                          <input
+                            type="file"
+                            name="daConsent"
+                            accept=".jpg,.jpeg,.gif,.png,.bmp,.pdf"
+                            onChange={(e) => handleFileChange(e, "daConsent")}
+                            disabled={isSubmitting}
+                            className="w-full h-[45px] px-3 py-2 bg-white border-2 border-dashed border-gray-300 rounded-xl text-gray-900 text-sm font-normal focus:outline-none focus:border-primary transition-all file:mr-2 file:py-1 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-primary file:text-white hover:file:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                          />
+                          {formData.daConsent && (
+                            <p className="mt-1 text-xs text-gray-600 truncate">
+                              {formData.daConsent.name}
+                            </p>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
 

@@ -99,7 +99,7 @@ const MeetOurTeam = () => {
         <div className="bg-gray-50 backdrop-blur-xl rounded-3xl shadow border border-primary/10 p-8 md:p-0 transition-all duration-500 ease-in-out hover:shadow-primary/10 hover:shadow-3xl">
           <div className="flex w-full h-[80vh] gap-16 items-center justify-center py-8 team-showcase">
             {/* Left Side - Vertical Carousel */}
-            <div className="flex-1 flex justify-center items-center">
+            <div className="flex-1 flex justify-center items-center my-20">
               <div className="w-full max-w-md h-[70vh] relative flex flex-col items-center justify-center">
                 {/* Carousel Track */}
                 <div className="w-96 h-full flex flex-col justify-center items-center relative carousel-container">

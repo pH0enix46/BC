@@ -5,29 +5,29 @@ export default function WorkSteps() {
   const steps = [
     {
       id: 1,
-      title: "Request a fee proposal",
+      title: "Request Fee Proposal",
       description:
-        "Upload your plans and relevant documents below for a fee proposal.",
+        "Upload your plans and relevant documents for a detailed fee proposal from our team.",
       alternative: "Or",
       contact: "Speak to our experienced team on (02) 9639 8809",
     },
     {
       id: 2,
-      title: "We start the certification process",
+      title: "Start Certification Process",
       description:
-        "Upon acceptance of our fee proposal, signed and completed application forms must be submitted to our office alongside required documents as per our checklist. Once reviewed and satisfactory, an approval will be issued.",
+        "Submit signed application forms with required documents. We review everything and issue your approval.",
     },
     {
       id: 3,
-      title: "We complete the site inspections",
+      title: "Complete Site Inspections",
       description:
-        "Our office must be notified of all mandatory critical stage inspections. A minimum of 48 hours notice is required. A list of inspections will be issued with your approval. Inspection Reports will then be emailed to the applicant upon completion.",
+        "Notify us 48 hours before inspections. We conduct all mandatory checks and email reports.",
     },
     {
       id: 4,
-      title: "We issue your certification",
+      title: "Issue Your Certification",
       description:
-        "An OC checklist will be provided on request during the course of construction. A Final inspection must be completed and certificates reviewed and deemed satisfactory in order for an OC to be issued.",
+        "Final inspection completed and all certificates reviewed. Your occupation certificate is then issued.",
     },
   ];
 

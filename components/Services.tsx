@@ -10,7 +10,7 @@ const Services = () => {
       title: "Complying Development",
       highlight: "Certificates",
       description:
-        "Complying Development Certificates are a fast-track way of obtaining an approval, quickly and efficiently, without the need for a Development Application through Council.",
+        "Fast-track your development approvals without the need for a Development Application through Council. Our Complying Development Certificates provide a streamlined pathway to get your project approved quickly and efficiently, saving you time and reducing complexity in the approval process.",
       image:
         "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       imageAlt: "Modern kitchen interior design",
@@ -21,7 +21,7 @@ const Services = () => {
       title: "Construction",
       highlight: "Certificates",
       description:
-        "A construction certificate is required after a Development Consent is issued by Local Council and before any building work can commence. Phoenix Building Approvals can issue Construction Certificates under Part 4A of the EP&A Act within their accredited Authority (BCA) and Local Principal on Sustainable PCA's for any development projects.",
+        "Required after Development Consent and before building work begins. We issue Construction Certificates under Part 4A of the EP&A Act for residential and commercial projects. Our accredited team ensures your plans meet all regulatory requirements and building codes for a smooth construction start.",
       image:
         "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       imageAlt: "Modern building construction",
@@ -32,7 +32,7 @@ const Services = () => {
       title: "Occupation",
       highlight: "Certificates",
       description:
-        "An occupation certificate is issued by the appointed Principal Certifying Authority (PCA) under the Environmental Planning and Development Act 1979 (EP & A Act) allowing a person to occupy a/or use a new building or change the use of an existing building.\n\nPhoenix Building Approvals can issue Occupation Certificates for residential buildings - including single dwellings, dual occupancies and multi-unit residential buildings (SEPP 65) that they have been appointed to provide for the construction and completion phases of building compliance works - safely and securely.",
+        "Issued by the Principal Certifying Authority under the EP&A Act, allowing legal occupation of new or modified buildings. We provide Occupation Certificates for residential buildings including single dwellings, dual occupancies, and multi-unit developments. Our comprehensive service covers all construction and completion phases of building compliance.",
       image:
         "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       imageAlt: "Modern office building",
@@ -43,7 +43,7 @@ const Services = () => {
       title: "Building",
       highlight: "Inspections",
       description:
-        "Mandatory Critical Stage Inspections as well as all Development approvals.\n\nAnd by July 2019, it is mandatory for Council projects listed in the Building Professionals Board's List that need to be scheduled throughout the development process during planning stages and during construction within a 48 hour timeframe. These mandatory inspections play from building the foundations right through to the completion of the building.",
+        "Mandatory Critical Stage Inspections throughout your development process. We conduct all required inspections from foundations to completion, scheduled within 48 hours notice. Our thorough inspection service ensures compliance with Building Professionals Board requirements and maintains the highest standards of safety and quality throughout construction.",
       image:
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       imageAlt: "Building inspection and construction",
