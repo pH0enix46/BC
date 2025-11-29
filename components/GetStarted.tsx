@@ -193,14 +193,14 @@ const GetStarted = () => {
       />
 
       <div className="relative w-full min-h-[676px] overflow-hidden bg-white">
-        <div className="max-w-8xl mx-auto px-6 lg:px-20 py-16">
+        <div className="max-w-8xl mx-auto px-2 lg:px-20 py-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 tracking-[-0.4px] text-center">
             Ready To Get Started?{" "}
             <span className="text-primary">Contact Us</span> Today!
           </h2>
 
           {/* Content */}
-          <div className="relative z-10 flex flex-col lg:flex-row justify-between items-start gap-12 border border-primary/20 shadow p-6 py-10 rounded-xl">
+          <div className="relative z-10 flex flex-col lg:flex-row justify-between items-start gap-12 border border-primary/20 shadow p-4 md:p-6 py-10 rounded-xl">
             {/* Left Content - Image */}
             <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
               <div className="relative h-[600px] lg:h-[720px] rounded-[20px] overflow-hidden shadow outline-2 outline-offset-2 outline-primary/30">

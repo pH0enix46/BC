@@ -180,7 +180,7 @@ const ClientTestimonials = () => {
         </p>
       </div>
 
-      <div className="relative w-full max-w-8xl px-6 lg:px-12 mx-auto rounded-xl -mt-6">
+      <div className="relative w-full max-w-8xl px-0 lg:px-12 mx-auto rounded-xl -mt-6">
         <div className="overflow-hidden px-4 py-6">
           <div
             className="flex transition-transform duration-600 ease-in-out"
