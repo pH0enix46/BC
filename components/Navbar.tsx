@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Settings, FolderOpen, FileText, Users } from "lucide-react";
+import NormalButton from "./AnimatedButton";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -123,16 +124,13 @@ const Navbar = () => {
             {/* Contact Button - Right Side */}
             <div
               ref={buttonRef}
-              className={`relative group flex-shrink-0 transition-opacity duration-1000 ease-out rounded-full ${
+              className={`relative group flex-shrink-0 transition-opacity duration-1000 ease-out ${
                 isScrolled ? "opacity-0" : "opacity-100"
               }`}
             >
-              <Link
-                href="/contact"
-                className="relative bg-gradient-to-r from-primary to-[#22229e] hover:from-primary/90 hover:to-primary/70 text-white px-6 lg:px-8 py-2 lg:py-3 rounded-full text-base lg:text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl block whitespace-nowrap outline-2 outline-offset-1 outline-primary/30"
-              >
-                Get Quote
-              </Link>
+              <a href="/contact">
+                <NormalButton>Get Quote</NormalButton>
+              </a>
             </div>
           </div>
         </div>
