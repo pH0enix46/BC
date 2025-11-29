@@ -186,10 +186,14 @@ const Navbar = () => {
             </div>
 
             {/* Contact Button */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:block relative group">
+              {/* Animated gradient border */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-purple-500 to-[#22229e] rounded-[20px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-xy blur-sm"></div>
+
+              {/* Button */}
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-primary to-[#22229e] hover:from-primary/90 hover:to-primary/70 text-white px-4 lg:px-6 py-2 rounded-[20px] text-sm lg:text-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="relative bg-gradient-to-r from-primary to-[#22229e] hover:from-primary/90 hover:to-primary/70 text-white px-4 lg:px-6 py-2 rounded-[20px] text-sm lg:text-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform  block"
               >
                 Get Quote
               </Link>
