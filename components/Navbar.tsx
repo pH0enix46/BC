@@ -61,7 +61,7 @@ const Navbar = () => {
                   alt="Company Logo"
                   width={160}
                   height={60}
-                  className="h-10 sm:h-12 w-auto"
+                  className="h-14 sm:h-16 w-auto"
                 />
               </Link>
             </div>
@@ -81,9 +81,8 @@ const Navbar = () => {
                         pathname === "/services"
                           ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
                           : "text-primary/80"
-                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
+                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-xl font-medium`}
                     >
-                      <Settings className="w-6 h-6" />
                       Services
                     </Link>
                     <Link
@@ -92,9 +91,8 @@ const Navbar = () => {
                         pathname === "/project"
                           ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
                           : "text-primary/80"
-                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
+                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-xl font-medium`}
                     >
-                      <FolderOpen className="w-6 h-6" />
                       Project
                     </Link>
                     <Link
@@ -103,9 +101,8 @@ const Navbar = () => {
                         pathname === "/blogs"
                           ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
                           : "text-primary/80"
-                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
+                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-xl font-medium`}
                     >
-                      <FileText className="w-6 h-6" />
                       Blogs
                     </Link>
                     <Link
@@ -114,9 +111,8 @@ const Navbar = () => {
                         pathname === "/about-us"
                           ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
                           : "text-primary/80"
-                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
+                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-xl font-medium`}
                     >
-                      <Users className="w-6 h-6" />
                       About
                     </Link>
                   </div>
@@ -133,7 +129,7 @@ const Navbar = () => {
             >
               <Link
                 href="/contact"
-                className="relative bg-gradient-to-r from-primary to-[#22229e] hover:from-primary/90 hover:to-primary/70 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl block whitespace-nowrap"
+                className="relative bg-gradient-to-r from-primary to-[#22229e] hover:from-primary/90 hover:to-primary/70 text-white px-6 lg:px-8 py-2 lg:py-3 rounded-full text-base lg:text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl block whitespace-nowrap"
               >
                 Get Quote
               </Link>
@@ -160,8 +156,7 @@ const Navbar = () => {
                         : "text-primary/80"
                     } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
                   >
-                    <Settings className="w-6 h-6" />
-                    Services
+                    <Settings className="w-7 h-7" />
                   </Link>
                   <Link
                     href="/project"
@@ -171,8 +166,7 @@ const Navbar = () => {
                         : "text-primary/80"
                     } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
                   >
-                    <FolderOpen className="w-6 h-6" />
-                    Project
+                    <FolderOpen className="w-7 h-7" />
                   </Link>
                   <Link
                     href="/blogs"
@@ -182,8 +176,7 @@ const Navbar = () => {
                         : "text-primary/80"
                     } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
                   >
-                    <FileText className="w-6 h-6" />
-                    Blogs
+                    <FileText className="w-7 h-7" />
                   </Link>
                   <Link
                     href="/about-us"
@@ -193,8 +186,7 @@ const Navbar = () => {
                         : "text-primary/80"
                     } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
                   >
-                    <Users className="w-6 h-6" />
-                    About
+                    <Users className="w-7 h-7" />
                   </Link>
                 </div>
               </div>
