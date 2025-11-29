@@ -155,9 +155,9 @@ const Border = styled.div<{
 `;
 
 const Glow = styled(Border)`
-  filter: blur(60px);
+  filter: blur(1px);
   opacity: 0.90;
-  z-index: 5;
+  z-index: -5;
   mask: none;
 `;
 
