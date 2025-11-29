@@ -79,7 +79,7 @@ const Navbar = () => {
                 <div
                   className={`${isScrolled ? "bg-black/30" : ""} rounded-full`}
                 >
-                  <div className="backdrop-blur-md rounded-full px-8 py-0 shadow-2xl border ">
+                  <div className="backdrop-blur-md rounded-[20px] px-8 py-0 shadow-2xl border ">
                     <div className="flex items-center space-x-6 xl:space-x-8 my-1">
                       <Link
                         href="/services"
@@ -150,7 +150,7 @@ const Navbar = () => {
         >
           <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
             <div className="flex items-center justify-center">
-              <div className="bg-gradient-to-r from-gray-50 to-gray-50 backdrop-blur-md rounded-full px-10 py-1 shadow border border-gray-200/30 outline-2 outline-offset-1 outline-gray-300">
+              <div className="bg-gradient-to-r from-gray-50 to-gray-50 backdrop-blur-md rounded-[20px] px-10 py-1 shadow border border-gray-200/30 outline-2 outline-offset-1 outline-gray-300">
                 <div className="flex items-center space-x-6 xl:space-x-8">
                   <Link
                     href="/services"
