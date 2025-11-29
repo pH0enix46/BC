@@ -41,10 +41,12 @@ const Navbar = () => {
     <>
       {/* Top Navbar - Always present with logo and button */}
       <nav
-        className="fixed top-2 left-0 right-0 transition-all duration-300 py-4"
+        className={`fixed ${
+          isScrolled ? "-top-4" : "top-2"
+        } left-0 right-0 transition-all duration-400 py-4`}
         style={{ zIndex: 99999 }}
       >
-        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 ">
           <div
             className={`flex items-center transition-all duration-500 ${
               isScrolled ? "justify-between" : "justify-between"
@@ -70,52 +72,56 @@ const Navbar = () => {
             {/* Navigation Links - Center with Rounded Box - Only show on desktop */}
             {!isMobile && (
               <div
-                className={`flex items-center justify-center transition-all duration-500 ${
+                className={`flex items-center justify-center transition-all duration-500  ${
                   isScrolled ? "flex-none" : "flex-1 mx-8"
                 }`}
               >
-                <div className="bg-gradient-to-r from-gray-50 to-gray-50 backdrop-blur-md rounded-full px-8 py-0 shadow border border-gray-200/30 outline-2 outline-offset-1 outline-gray-300">
-                  <div className="flex items-center space-x-6 xl:space-x-8 my-1">
-                    <Link
-                      href="/services"
-                      className={`${
-                        pathname === "/services"
-                          ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
-                          : "text-primary/80"
-                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
-                    >
-                      Services
-                    </Link>
-                    <Link
-                      href="/project"
-                      className={`${
-                        pathname === "/project"
-                          ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
-                          : "text-primary/80"
-                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
-                    >
-                      Project
-                    </Link>
-                    <Link
-                      href="/blogs"
-                      className={`${
-                        pathname === "/blogs"
-                          ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
-                          : "text-primary/80"
-                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
-                    >
-                      Blogs
-                    </Link>
-                    <Link
-                      href="/about-us"
-                      className={`${
-                        pathname === "/about-us"
-                          ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
-                          : "text-primary/80"
-                      } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
-                    >
-                      About
-                    </Link>
+                <div
+                  className={`${isScrolled ? "bg-black/30" : ""} rounded-full`}
+                >
+                  <div className="backdrop-blur-md rounded-full px-8 py-0 shadow-2xl border ">
+                    <div className="flex items-center space-x-6 xl:space-x-8 my-1">
+                      <Link
+                        href="/services"
+                        className={`${
+                          pathname === "/services"
+                            ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
+                            : "text-white/80"
+                        } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
+                      >
+                        Services
+                      </Link>
+                      <Link
+                        href="/project"
+                        className={`${
+                          pathname === "/project"
+                            ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
+                            : "text-white/80"
+                        } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
+                      >
+                        Project
+                      </Link>
+                      <Link
+                        href="/blogs"
+                        className={`${
+                          pathname === "/blogs"
+                            ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
+                            : "text-white/80"
+                        } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
+                      >
+                        Blogs
+                      </Link>
+                      <Link
+                        href="/about-us"
+                        className={`${
+                          pathname === "/about-us"
+                            ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
+                            : "text-white/80"
+                        } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
+                      >
+                        About
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
