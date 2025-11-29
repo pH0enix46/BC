@@ -77,13 +77,13 @@ const StatsSection = () => {
 
   return (
     <>
-      <div className="p-20">
-        <div className="relative max-w-8xl h-[500px] lg:h-96 overflow-hidden rounded-[32px] shadow-lg outline-2 outline-offset-2 outline-primary/30">
+      <div className="py-20">
+        <div className="relative max-w-8xl overflow-hidden rounded-[32px] shadow-lg outline-2 outline-offset-2 outline-primary/30 mx-4 md:mx-12">
           {/* Perfect Gradient Background */}
           <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary via-primary/90 to-[#1c1c84]" />
 
           {/* Content Container */}
-          <div className="relative z-10 max-w-8xl mx-auto h-full sm:px-6 md:px-12 ">
+          <div className="relative z-10 max-w-8xl mx-auto h-full sm:px-6 md:px-12 py-10 ">
             <div className="h-full flex flex-col items-center justify-center">
               {/* Header Section */}
               <motion.div

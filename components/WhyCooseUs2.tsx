@@ -95,28 +95,28 @@ const WhyChooseUsSection = () => {
   };
 
   return (
-    <div className="w-full py-16 lg:py-20 ">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-2">
-        <div className="bg-gray-50 rounded-3xl p-8 lg:p-12 shadow">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+    <div className="w-full py-8 sm:py-12 lg:py-20">
+      <div className="max-w-8xl mx-auto px-3 sm:px-6 lg:px-14">
+        <div className="bg-gray-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-12 shadow border border-gray-200">
+          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-16">
             {/* Left Section - Auto-sliding Images */}
             <motion.div
-              className="flex-1 lg:max-w-[50%]"
+              className="w-full lg:flex-1 lg:max-w-[50%]"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={imageVariants}
             >
-              <div className="relative">
+              <div className="relative w-full">
                 {/* Primary Badge */}
-                <div className="absolute top-4 left-4 z-10 bg-primary text-white px-4 py-2 rounded-xl shadow-lg font-bold text-sm">
+                <div className="absolute top-2 left-2 sm:top-4 sm:left-4 z-10 bg-primary text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl shadow-lg font-bold text-xs sm:text-sm">
                   Trusted Since
                   <br />
                   2015
                 </div>
 
                 {/* Auto-sliding Image Container - Height matches right side */}
-                <div className="relative w-full h-[400px] sm:h-[450px] lg:h-[600px] rounded-2xl overflow-hidden bg-gray-200 outline-2 outline-primary/20 outline-offset-2 shadow">
+                <div className="relative w-full h-[280px] sm:h-[350px] md:h-[400px] lg:h-[600px] rounded-xl sm:rounded-2xl overflow-hidden bg-gray-200 outline-2 outline-primary/20 outline-offset-2 shadow">
                   <AnimatePresence mode="popLayout">
                     <motion.div
                       key={currentImageIndex}
@@ -136,6 +136,8 @@ const WhyChooseUsSection = () => {
                         fill
                         className="object-cover shadow"
                         priority
+                        unoptimized
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                       />
                     </motion.div>
                   </AnimatePresence>
@@ -145,7 +147,7 @@ const WhyChooseUsSection = () => {
 
             {/* Right Section - Why Choose Us Content */}
             <motion.div
-              className="flex-1 lg:max-w-[50%] space-y-6 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px] flex flex-col justify-center"
+              className="w-full lg:flex-1 lg:max-w-[50%] space-y-4 sm:space-y-6 flex flex-col justify-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
@@ -153,26 +155,29 @@ const WhyChooseUsSection = () => {
             >
               {/* Title */}
               <motion.div variants={featureVariants}>
-                <h2 className="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-800 mb-4">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-800 mb-3 sm:mb-4">
                   Building <span className="text-primary">Approvals</span>{" "}
                 </h2>
-                <p className="text-gray-600 text-base sm:text-lg mb-8">
+                <p className="text-gray-600 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8">
                   Building Approvals are A1 Unrestricted Certifiers in:
                 </p>
               </motion.div>
 
               {/* Certificate List with Checkmarks */}
-              <motion.div className="space-y-4" variants={containerVariants}>
-                {features.map((feature, index) => (
+              <motion.div
+                className="space-y-3 sm:space-y-4"
+                variants={containerVariants}
+              >
+                {features.map((feature) => (
                   <motion.div
                     key={feature.id}
-                    className="flex items-center gap-4"
+                    className="flex items-center gap-3 sm:gap-4"
                     variants={featureVariants}
                   >
                     {/* Green Checkmark */}
-                    <div className="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center">
                       <svg
-                        className="w-5 h-5 text-white"
+                        className="w-3 h-3 sm:w-5 sm:h-5 text-white"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -187,7 +192,7 @@ const WhyChooseUsSection = () => {
                     </div>
 
                     {/* Certificate Title */}
-                    <h3 className="text-xl font-bold text-gray-800">
+                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-800">
                       {feature.title}
                     </h3>
                   </motion.div>
@@ -197,17 +202,20 @@ const WhyChooseUsSection = () => {
               {/* CTA Button */}
               <motion.div
                 variants={featureVariants}
-                className="pt-8 flex flex-col items-start"
+                className="pt-4 sm:pt-6 lg:pt-8 flex flex-col items-start"
               >
                 <Link href="/contact">
                   <motion.button
-                    className="px-8 py-4 bg-primary hover:bg-primary/80 rounded-full text-white text-lg font-bold transition-all duration-300 shadow hover:shadow-lg cursor-pointer flex items-center gap-3"
+                    className="px-4 py-3 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-primary hover:bg-primary/80 rounded-full text-white text-sm sm:text-base lg:text-lg font-bold transition-all duration-300 shadow hover:shadow-lg cursor-pointer flex items-center gap-2 sm:gap-3"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Request A Free Proposal
+                    <span className="hidden sm:inline">
+                      Request A Free Proposal
+                    </span>
+                    <span className="sm:hidden">Free Proposal</span>
                     <svg
-                      className="w-5 h-5"
+                      className="w-4 h-4 sm:w-5 sm:h-5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
