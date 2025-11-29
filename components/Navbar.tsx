@@ -73,7 +73,7 @@ const Navbar = () => {
                   isScrolled ? "flex-none" : "flex-1 mx-8"
                 }`}
               >
-                <div className="bg-gradient-to-r from-gray-50 to-gray-50 backdrop-blur-md rounded-full px-4 sm:px-6 lg:px-8 py-3 lg:py-1 shadow-4xl border border-gray-200/30 outline-2 outline-offset-1 outline-gray-300">
+                <div className="bg-gradient-to-r from-gray-50 to-gray-50 backdrop-blur-md rounded-full px-4 sm:px-6 lg:px-8 py-3 lg:py-1 shadow border border-gray-200/30 outline-2 outline-offset-1 outline-gray-300">
                   <div className="flex items-center space-x-6 xl:space-x-8">
                     <Link
                       href="/services"
@@ -129,7 +129,7 @@ const Navbar = () => {
             >
               <Link
                 href="/contact"
-                className="relative bg-gradient-to-r from-primary to-[#22229e] hover:from-primary/90 hover:to-primary/70 text-white px-6 lg:px-8 py-2 lg:py-3 rounded-full text-base lg:text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl block whitespace-nowrap"
+                className="relative bg-gradient-to-r from-primary to-[#22229e] hover:from-primary/90 hover:to-primary/70 text-white px-6 lg:px-8 py-2 lg:py-3 rounded-full text-base lg:text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl block whitespace-nowrap outline-2 outline-offset-1 outline-primary/30"
               >
                 Get Quote
               </Link>
@@ -146,7 +146,7 @@ const Navbar = () => {
         >
           <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
             <div className="flex items-center justify-center">
-              <div className="bg-gradient-to-r from-gray-50 to-gray-50 backdrop-blur-md rounded-full px-4 sm:px-6 lg:px-8 py-3 lg:py-1 shadow-4xl border border-gray-200/30 outline-2 outline-offset-1 outline-gray-300">
+              <div className="bg-gradient-to-r from-gray-50 to-gray-50 backdrop-blur-md rounded-full px-4 py-2 shadow border border-gray-200/30 outline-2 outline-offset-1 outline-gray-300">
                 <div className="flex items-center space-x-6 xl:space-x-8">
                   <Link
                     href="/services"
