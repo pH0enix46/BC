@@ -139,7 +139,7 @@ const Navbar = () => {
       {/* Bottom Navigation - Only show on mobile */}
       {isMobile && (
         <nav
-          className="fixed bottom-4 left-0 right-0 transition-all duration-500 py-4"
+          className="fixed -bottom-1 left-0 right-0 transition-all duration-500 py-4"
           style={{ zIndex: 99999 }}
         >
           <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
