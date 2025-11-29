@@ -202,7 +202,7 @@ const GetStarted = () => {
           {/* Content */}
           <div className="relative z-10 flex flex-col lg:flex-row justify-between items-start gap-12 border border-primary/20 shadow p-4 md:p-6 py-10 rounded-xl">
             {/* Left Content - Image */}
-            <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
+            <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
               <div className="relative h-[600px] lg:h-[720px] rounded-[20px] overflow-hidden shadow outline-2 outline-offset-2 outline-primary/30">
                 <Image
                   src="/get-start.jpeg"
@@ -217,7 +217,7 @@ const GetStarted = () => {
             <div className="w-full lg:w-1/2 flex flex-col">
               {/* Contact Information - Horizontal Layout */}
               <div className="mb-8">
-                <div className="flex flex-wrap justify-center lg:justify-around gap-6 mb-8">
+                <div className="flex flex-wrap justify-between lg:justify-between gap-2 mb-8">
                   {/* Email */}
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">

@@ -3,6 +3,7 @@ import { Anek_Malayalam } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Common/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 import { Toaster } from "react-hot-toast";
 
@@ -88,6 +89,9 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+
+        {/* Scroll to Top Button - Bottom Right */}
+        <ScrollToTop />
 
         {/* Global WhatsApp Button - Bottom Right */}
         {/* <div className="fixed bottom-6 right-6 z-50">

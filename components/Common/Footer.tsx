@@ -16,10 +16,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <footer className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/95 to-primary/90">
       {/* Animated Background Elements */}
@@ -429,29 +425,11 @@ export default function Footer() {
       {/* Copyright Bar */}
       <div className="relative pb-8 border-t border-white/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            {/* Scroll to Top Button */}
-            <motion.button
-              onClick={scrollToTop}
-              className="group w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-white/10"
-              aria-label="Scroll to top"
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <ChevronRight className="w-5 h-5 text-white rotate-[-90deg] group-hover:text-white transition-colors" />
-            </motion.button>
-
+          <div className="flex items-center justify-center">
             {/* Copyright Text */}
             <p className="text-center text-white/90 text-base font-light">
               © 2025 MAJOKA ENGINEERING. All rights reserved.
             </p>
-
-            {/* Empty space for balance */}
-            <div className="w-12 h-12 hidden md:block"></div>
           </div>
         </div>
       </div>
