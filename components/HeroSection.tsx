@@ -93,113 +93,114 @@ const HeroSection = () => {
   }, [isTransitioning]);
 
   return (
-    <div
-      ref={heroRef}
-      className="relative w-[98%] mx-auto h-[calc(100vh-4rem)] overflow-hidden rounded-t-[24px] rounded-b-[24px] mt-4 bg-[#055ea1]"
-    >
-      {/* Background Images with Advanced Animations */}
-      {backgroundImages.map((image, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 bg-[#333] bg-cover bg-center transition-all duration-[800ms] ease-in-out transform ${
-            index === currentSlide
-              ? "opacity-100 scale-100 rotate-0"
-              : index === (currentSlide - 1 + totalSlides) % totalSlides
-              ? "opacity-0 scale-110 -rotate-1 translate-x-[-100px]"
-              : index === (currentSlide + 1) % totalSlides
-              ? "opacity-0 scale-110 rotate-1 translate-x-[100px]"
-              : "opacity-0 scale-95 translate-y-[50px]"
-          }`}
-          style={{
-            backgroundImage: `url('${image}')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter:
-              index === currentSlide
-                ? "brightness(0.8) contrast(1.05)"
-                : "brightness(0.8) blur(2px)",
-            transition:
-              "all 800ms cubic-bezier(0.4, 0, 0.2, 1), filter 600ms ease-out",
-          }}
-        >
-          {/* Animated Gradient Overlay */}
-          <div
-            className={`absolute inset-0 bg-gradient-to-r from-black/30 to-[#bc2b2b] transition-all duration-700 ${
-              index === currentSlide ? "opacity-40" : "opacity-60"
-            }`}
-            style={{
-              background:
-                index === currentSlide
-                  ? "linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(188,43,43,0.4) 100%)"
-                  : "linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(188,43,43,0.6) 100%)",
-            }}
-          ></div>
-
-          {/* Animated Particles Effect */}
-          {index === currentSlide && (
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              {[...Array(6)].map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
-                  style={{
-                    left: `${20 + i * 15}%`,
-                    top: `${30 + (i % 3) * 20}%`,
-                    animationDelay: `${i * 0.5}s`,
-                    animationDuration: "3s",
-                  }}
-                ></div>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
-
-      {/* Slide Transition Overlay */}
+    <div className="w-full bg-gray-100 py-4">
       <div
-        className={`absolute inset-0 bg-black/20 transition-opacity duration-300 pointer-events-none ${
-          isTransitioning ? "opacity-100" : "opacity-0"
-        }`}
-      ></div>
-
-      {/* Hero Content with Animations */}
-      <div className="relative z-10 flex flex-col h-full px-4">
-        {/* Top Content - Heading and Paragraph */}
-        <div
-          className="max-w-8xl mx-auto flex flex-col items-center space-y-5 pt-32 md:pt-20 lg:pt-54"
-          data-aos="fade-down"
-          data-aos-duration="1200"
-          data-aos-delay="200"
-        >
-          <h1
-            className={`text-white/90 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center leading-tight tracking-[-0.4px] transition-all duration-700 transform font-anek ${
-              isTransitioning
-                ? "opacity-70 translate-y-2 scale-98"
-                : "opacity-100 translate-y-0 scale-100"
+        ref={heroRef}
+        className="relative w-[98%] mx-auto h-[calc(100vh-4rem)] overflow-hidden rounded-t-[24px] rounded-b-[24px] bg-[#055ea1] shadow-xl"
+      >
+        {/* Background Images with Advanced Animations */}
+        {backgroundImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-[#333] bg-cover bg-center transition-all duration-[800ms] ease-in-out transform ${
+              index === currentSlide
+                ? "opacity-100 scale-100 rotate-0"
+                : index === (currentSlide - 1 + totalSlides) % totalSlides
+                ? "opacity-0 scale-110 -rotate-1 translate-x-[-100px]"
+                : index === (currentSlide + 1) % totalSlides
+                ? "opacity-0 scale-110 rotate-1 translate-x-[100px]"
+                : "opacity-0 scale-95 translate-y-[50px]"
             }`}
             style={{
-              textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
-              animation: isTransitioning ? "none" : "fadeInUp 1s ease-out",
+              backgroundImage: `url('${image}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              filter:
+                index === currentSlide
+                  ? "brightness(0.8) contrast(1.05)"
+                  : "brightness(0.8) blur(2px)",
+              transition:
+                "all 800ms cubic-bezier(0.4, 0, 0.2, 1), filter 600ms ease-out",
             }}
           >
-            Shaping Skylines, Defining Progress
-          </h1>
+            {/* Animated Gradient Overlay */}
+            <div
+              className={`absolute inset-0 bg-gradient-to-r from-black/30 to-[#bc2b2b] transition-all duration-700 ${
+                index === currentSlide ? "opacity-40" : "opacity-60"
+              }`}
+              style={{
+                background:
+                  index === currentSlide
+                    ? "linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(188,43,43,0.4) 100%)"
+                    : "linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(188,43,43,0.6) 100%)",
+              }}
+            ></div>
 
-          <p
-            className="text-white/80 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center font-anek"
-            style={{
-              textShadow: "1px 1px 3px rgba(0,0,0,0.5)",
-            }}
+            {/* Animated Particles Effect */}
+            {index === currentSlide && (
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                {[...Array(6)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
+                    style={{
+                      left: `${20 + i * 15}%`,
+                      top: `${30 + (i % 3) * 20}%`,
+                      animationDelay: `${i * 0.5}s`,
+                      animationDuration: "3s",
+                    }}
+                  ></div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+
+        {/* Slide Transition Overlay */}
+        <div
+          className={`absolute inset-0 bg-black/20 transition-opacity duration-300 pointer-events-none ${
+            isTransitioning ? "opacity-100" : "opacity-0"
+          }`}
+        ></div>
+
+        {/* Hero Content with Animations */}
+        <div className="relative z-10 flex flex-col h-full px-4">
+          {/* Top Content - Heading and Paragraph */}
+          <div
+            className="max-w-8xl mx-auto flex flex-col items-center space-y-5 pt-32 md:pt-20 lg:pt-54"
+            data-aos="fade-down"
+            data-aos-duration="1200"
+            data-aos-delay="200"
           >
-            Trusted Contractor partner across UAE, KSA, and beyond
-          </p>
-        </div>
+            <h1
+              className={`text-white/90 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center leading-tight tracking-[-0.4px] transition-all duration-700 transform font-anek ${
+                isTransitioning
+                  ? "opacity-70 translate-y-2 scale-98"
+                  : "opacity-100 translate-y-0 scale-100"
+              }`}
+              style={{
+                textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
+                animation: isTransitioning ? "none" : "fadeInUp 1s ease-out",
+              }}
+            >
+              Shaping Skylines, Defining Progress
+            </h1>
 
-        {/* Spacer to push other content down */}
-        <div className="flex-1"></div>
+            <p
+              className="text-white/80 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center font-anek"
+              style={{
+                textShadow: "1px 1px 3px rgba(0,0,0,0.5)",
+              }}
+            >
+              Trusted Contractor partner across UAE, KSA, and beyond
+            </p>
+          </div>
 
-        {/* Navigation Arrows */}
-        {/* <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 w-full max-w-[1300px] flex justify-between px-4  z-50">
+          {/* Spacer to push other content down */}
+          <div className="flex-1"></div>
+
+          {/* Navigation Arrows */}
+          {/* <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 w-full max-w-[1300px] flex justify-between px-4  z-50">
           <button
             onClick={handlePrevSlide}
             disabled={isTransitioning}
@@ -242,35 +243,35 @@ const HeroSection = () => {
           </button>
         </div> */}
 
-        {/* Enhanced Slider Dots */}
-        <div
-          className="absolute bottom-[200px] md:bottom-[60px] left-1/2 transform -translate-x-1/2 flex space-x-3 z-30"
-          data-aos="fade-up"
-          data-aos-delay="500"
-        >
-          {Array.from({ length: totalSlides }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              disabled={isTransitioning}
-              className={`h-3 rounded-full transition-all duration-500 cursor-pointer transform hover:scale-125 active:scale-90 ${
-                currentSlide === index
-                  ? "bg-primary w-8 shadow-lg"
-                  : "bg-indigo-50 hover:bg-indigo-100 w-3"
-              } ${isTransitioning ? "opacity-50 cursor-not-allowed" : ""}`}
-              style={{
-                boxShadow:
+          {/* Enhanced Slider Dots */}
+          <div
+            className="absolute bottom-[200px] md:bottom-[60px] left-1/2 transform -translate-x-1/2 flex space-x-3 z-30"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            {Array.from({ length: totalSlides }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                disabled={isTransitioning}
+                className={`h-3 rounded-full transition-all duration-500 cursor-pointer transform hover:scale-125 active:scale-90 ${
                   currentSlide === index
-                    ? "0 2px 8px rgba(188,43,43,0.4), 0 0 0 2px rgba(255,255,255,0.2)"
-                    : "0 1px 3px rgba(0,0,0,0.2)",
-              }}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+                    ? "bg-primary w-8 shadow-lg"
+                    : "bg-indigo-50 hover:bg-indigo-100 w-3"
+                } ${isTransitioning ? "opacity-50 cursor-not-allowed" : ""}`}
+                style={{
+                  boxShadow:
+                    currentSlide === index
+                      ? "0 2px 8px rgba(188,43,43,0.4), 0 0 0 2px rgba(255,255,255,0.2)"
+                      : "0 1px 3px rgba(0,0,0,0.2)",
+                }}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
 
-        {/* Enhanced CTA Button */}
-        {/* <div
+          {/* Enhanced CTA Button */}
+          {/* <div
           className="mt-8 md:mt-16 relative z-50"
           data-aos="zoom-in"
           data-aos-delay="600"
@@ -298,8 +299,8 @@ const HeroSection = () => {
           </button>
         </div> */}
 
-        {/* Glassmorphism Job Search Section */}
-        {/* <div
+          {/* Glassmorphism Job Search Section */}
+          {/* <div
           className="mt-8 md:mt-12 w-full max-w-5xl px-4 mb-8 z-30"
           data-aos="fade-up"
           data-aos-delay="700"
@@ -356,7 +357,7 @@ const HeroSection = () => {
           </div>
         </div> */}
 
-        {/* <div
+          {/* <div
           className="absolute bottom-10 right-[120px] md:right-[200px]"
           data-aos="fade-left"
           data-aos-delay="800"
@@ -376,6 +377,7 @@ const HeroSection = () => {
             </div>
           </button>
         </div> */}
+        </div>
       </div>
     </div>
   );
