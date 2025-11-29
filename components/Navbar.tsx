@@ -242,11 +242,13 @@ const Navbar = () => {
         />
       )}
 
-      {/* Mobile Menu Panel */}
+      {/* Mobile Menu Panel - Modern Design */}
       <div
         ref={menuRef}
-        className={`fixed top-0 right-0 h-full w-80 max-w-full bg-gradient-to-b from-primary/90 to-primary/70 backdrop-blur-lg border-l border-white/20 transform transition-transform duration-300 ease-out lg:hidden ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-full w-80 max-w-full bg-gradient-to-br from-white/20 via-gray-50/40 to-gray-100/60 backdrop-blur-xl border-l border-gray-200/50 shadow-2xl transform transition-all duration-500 ease-out lg:hidden ${
+          isMobileMenuOpen
+            ? "translate-x-0 opacity-100"
+            : "translate-x-full opacity-0"
         }`}
         style={{
           zIndex: 2147483647,
@@ -257,127 +259,226 @@ const Navbar = () => {
           isolation: "isolate",
         }}
       >
-        {/* Close Button */}
-        <div className="absolute top-6 right-6">
+        {/* Decorative gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-primary/10 pointer-events-none" />
+
+        {/* Close Button - Modern Style */}
+        <div className="absolute top-6 right-6 z-10">
           <button
             onClick={() => setIsMobileMenuOpen(false)}
-            className="w-10 h-10 text-white hover:text-primary transition-colors flex items-center justify-center rounded-full hover:bg-white/10 cursor-pointer"
+            className="w-11 h-11 bg-gray-100/80 hover:bg-primary/10 text-gray-700 hover:text-primary transition-all duration-300 flex items-center justify-center rounded-2xl shadow hover:shadow-lg hover:scale-110 cursor-pointer group"
             aria-label="Close mobile menu"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5 transition-transform duration-300 group-hover:rotate-90"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              strokeWidth={2.5}
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
                 d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </button>
         </div>
 
-        <div className="flex flex-col h-full pt-20 px-6">
-          {/* Mobile Navigation Links */}
-          <div className="flex flex-col space-y-6">
+        {/* Logo Section */}
+        <div className="pt-8 px-6 pb-6 border-b border-gray-200/50">
+          <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+            <Image
+              src="/Essence-logo.png"
+              alt="Company Logo"
+              width={140}
+              height={50}
+              className="h-10 w-auto"
+            />
+          </Link>
+        </div>
+
+        <div className="flex flex-col h-full pt-8 px-6 pb-8 overflow-y-auto">
+          {/* Mobile Navigation Links - Modern Cards */}
+          <div className="flex flex-col space-y-3">
             <Link
               href="/services"
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`${
-                pathname === "/services" ? "text-primary" : "text-white/80"
-              } hover:text-white font-medium transition-colors text-xl py-2 font-anek`}
+              className={`group relative px-5 py-4 rounded-2xl transition-all duration-300 ${
+                pathname === "/services"
+                  ? "bg-gradient-to-r from-primary/10 to-primary/5 shadow"
+                  : "bg-white/50 hover:bg-white/80 hover:shadow-md"
+              }`}
             >
-              Services
+              <div className="flex items-center justify-between">
+                <span
+                  className={`text-lg font-semibold transition-colors ${
+                    pathname === "/services"
+                      ? "text-primary"
+                      : "text-gray-700 group-hover:text-primary"
+                  }`}
+                >
+                  Services
+                </span>
+                <svg
+                  className={`w-5 h-5 transition-all duration-300 ${
+                    pathname === "/services"
+                      ? "text-primary translate-x-0"
+                      : "text-gray-400 -translate-x-1 group-hover:translate-x-0 group-hover:text-primary"
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
             </Link>
+
             <Link
               href="/project"
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`${
-                pathname === "/project" ? "text-primary" : "text-white/80"
-              } hover:text-white font-medium transition-colors text-xl py-2 font-anek`}
+              className={`group relative px-5 py-4 rounded-2xl transition-all duration-300 ${
+                pathname === "/project"
+                  ? "bg-gradient-to-r from-primary/10 to-primary/5 shadow"
+                  : "bg-white/50 hover:bg-white/80 hover:shadow-md"
+              }`}
             >
-              Project
+              <div className="flex items-center justify-between">
+                <span
+                  className={`text-lg font-semibold transition-colors ${
+                    pathname === "/project"
+                      ? "text-primary"
+                      : "text-gray-700 group-hover:text-primary"
+                  }`}
+                >
+                  Project
+                </span>
+                <svg
+                  className={`w-5 h-5 transition-all duration-300 ${
+                    pathname === "/project"
+                      ? "text-primary translate-x-0"
+                      : "text-gray-400 -translate-x-1 group-hover:translate-x-0 group-hover:text-primary"
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
             </Link>
-            {/* <Link
-              href="/media"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`${
-                pathname === "/media" ? "text-primary" : "text-white/80"
-              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
-            >
-              Media
-            </Link> */}
-            {/* <Link
-              href="/contact"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`${
-                pathname === "/contact" ? "text-primary" : "text-white/80"
-              } hover:text-white font-semibold transition-colors text-xl py-2 font-anek`}
-            >
-              Contact
-            </Link> */}
+
             <Link
               href="/about-us"
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`${
-                pathname === "/about-us" ? "text-primary" : "text-white/80"
-              } hover:text-white font-medium transition-colors text-xl py-2 font-anek`}
+              className={`group relative px-5 py-4 rounded-2xl transition-all duration-300 ${
+                pathname === "/about-us"
+                  ? "bg-gradient-to-r from-primary/10 to-primary/5 shadow"
+                  : "bg-white/50 hover:bg-white/80 hover:shadow-md"
+              }`}
             >
-              About
+              <div className="flex items-center justify-between">
+                <span
+                  className={`text-lg font-semibold transition-colors ${
+                    pathname === "/about-us"
+                      ? "text-primary"
+                      : "text-gray-700 group-hover:text-primary"
+                  }`}
+                >
+                  About
+                </span>
+                <svg
+                  className={`w-5 h-5 transition-all duration-300 ${
+                    pathname === "/about-us"
+                      ? "text-primary translate-x-0"
+                      : "text-gray-400 -translate-x-1 group-hover:translate-x-0 group-hover:text-primary"
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
             </Link>
+
             <Link
               href="/blogs"
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`${
-                pathname === "/blogs" ? "text-primary" : "text-white/80"
-              } hover:text-white font-medium transition-colors text-xl py-2 font-anek`}
+              className={`group relative px-5 py-4 rounded-2xl transition-all duration-300 ${
+                pathname === "/blogs"
+                  ? "bg-gradient-to-r from-primary/10 to-primary/5 shadow"
+                  : "bg-white/50 hover:bg-white/80 hover:shadow-md"
+              }`}
             >
-              Blogs
+              <div className="flex items-center justify-between">
+                <span
+                  className={`text-lg font-semibold transition-colors ${
+                    pathname === "/blogs"
+                      ? "text-primary"
+                      : "text-gray-700 group-hover:text-primary"
+                  }`}
+                >
+                  Blogs
+                </span>
+                <svg
+                  className={`w-5 h-5 transition-all duration-300 ${
+                    pathname === "/blogs"
+                      ? "text-primary translate-x-0"
+                      : "text-gray-400 -translate-x-1 group-hover:translate-x-0 group-hover:text-primary"
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
             </Link>
           </div>
 
-          {/* Mobile Search Bar */}
-          <div className="mt-8 mb-6">
-            <ExpandableSearchBar
-              onSearch={(query) => {
-                handleSearch(query);
-                setIsMobileMenuOpen(false); // Close mobile menu after search
-              }}
-              placeholder="Search..."
-              suggestions={searchSuggestions}
-              iconColor="text-white/80"
-              hoverIconColor="hover:text-white"
-              className="w-full"
-            />
-          </div>
-
-          {/* Mobile Language Selector */}
-          {/* <div className="mt-8 mb-4">
-            <div className="flex items-center space-x-3 px-3 py-2 bg-white/10 rounded-lg">
-              <Image
-                src="https://flagcdn.com/w40/us.png"
-                alt="English"
-                width={24}
-                height={16}
-                className="rounded-sm"
-              />
-              <span className="text-white/90 text-base font-medium">
-                English
-              </span>
-            </div>
-          </div> */}
-
-          {/* Mobile Contact Button */}
-          <div>
+          {/* Mobile Contact Button - Modern Style */}
+          <div className="mt-8 pt-6 border-t border-gray-200/50">
             <Link
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="w-44 h-10 px-5 py-3 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 rounded-[30px] inline-flex justify-center items-center gap-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="w-full px-6 py-4 bg-gradient-to-r from-primary to-[#22229e] hover:from-primary/90 hover:to-primary/70 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.18)] transform hover:scale-[1.02] group"
             >
-              <span className="text-white text-base font-medium">Contact</span>
+              <span className="text-white text-lg font-bold">Get Quote</span>
+              <svg
+                className="w-5 h-5 text-white transition-transform duration-300 group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
             </Link>
           </div>
         </div>
