@@ -117,13 +117,13 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+              <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                 <Image
-                  src="/Essence-logo.png"
+                  src="/logo-white.jpeg"
                   alt="Majoka Engineering Logo"
                   width={160}
                   height={80}
-                  className="h-auto w-30"
+                  className="h-14 sm:h-20 w-auto rounded-full shadow border-2 border-gray-400"
                 />
               </div>
             </motion.div>
@@ -146,7 +146,7 @@ export default function Footer() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  href="https://www.facebook.com/"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
@@ -160,7 +160,7 @@ export default function Footer() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  href="https://instagram.com/majokaengineering/"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
@@ -174,7 +174,7 @@ export default function Footer() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  href="https://www.linkedin.com/"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
@@ -188,7 +188,7 @@ export default function Footer() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  href="https://x.com/home"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
@@ -224,7 +224,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/about-us"
+                  href="/"
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
@@ -233,7 +233,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/"
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
@@ -242,7 +242,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services-details?service=5"
+                  href="/"
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
@@ -267,7 +267,7 @@ export default function Footer() {
             <ul className="space-y-4 flex-grow">
               <li>
                 <Link
-                  href="/blogs"
+                  href=""
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
@@ -276,7 +276,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/career"
+                  href=""
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
@@ -285,7 +285,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/gallery"
+                  href=""
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
@@ -294,7 +294,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/project"
+                  href=""
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
@@ -319,7 +319,7 @@ export default function Footer() {
             <ul className="space-y-4 flex-grow">
               <li>
                 <Link
-                  href="/services-details?service=1"
+                  href=""
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
@@ -328,7 +328,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services-details?service=2"
+                  href=""
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
@@ -337,7 +337,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services-details?service=3"
+                  href=""
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
@@ -346,7 +346,8 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services-details?service=4"
+                  // href="/services-details?service=4"
+                  href=""
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />

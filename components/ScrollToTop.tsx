@@ -44,7 +44,7 @@ export default function ScrollToTop() {
         >
           <motion.button
             onClick={scrollToTop}
-            className="group w-12 h-12 bg-primary/90 backdrop-blur-sm hover:bg-primary rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-primary/20"
+            className="group w-12 h-12 bg-primary/90 backdrop-blur-sm hover:bg-primary rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-primary/20 outline-2 outline-offset-2 outline-primary/50 shadow"
             aria-label="Scroll to top"
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95 }}
