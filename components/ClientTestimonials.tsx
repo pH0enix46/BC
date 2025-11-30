@@ -100,7 +100,7 @@ const ClientTestimonials = () => {
       id: 2,
       name: "Stella Smith, New York",
       title:
-        "Majoka Engineering delivered exactly what we expected — professional work, timely completion, and great communication from start to finish.",
+        "ABC Company delivered exactly what we expected — professional work, timely completion, and great communication from start to finish.",
       image: "/clientt/2.jpeg",
       testimonial: "",
     },
@@ -124,7 +124,7 @@ const ClientTestimonials = () => {
       id: 5,
       name: "Ahmed Hassan, Dubai",
       title:
-        "Reliable and efficient service delivery. Majoka Engineering consistently provides high-quality work with excellent project management and communication.",
+        "Reliable and efficient service delivery. ABC Company consistently provides high-quality work with excellent project management and communication.",
       image: "/clientt/4.jpeg",
       testimonial: "",
     },

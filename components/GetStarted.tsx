@@ -231,7 +231,7 @@ const GetStarted = () => {
                         href="mailto:info@majokaengineering.com"
                         className="text-sm lg:text-[15px] font-medium text-primary hover:underline"
                       >
-                        info@majokaengineering.com
+                        info@certificate.com
                       </a>
                     </div>
                   </div>
@@ -264,7 +264,7 @@ const GetStarted = () => {
                         Office
                       </h4>
                       <p className="text-sm lg:text-[15px] font-medium text-primary">
-                        Mecca, Saudi Arabia
+                        Melbourne, Australia
                       </p>
                     </div>
                   </div>

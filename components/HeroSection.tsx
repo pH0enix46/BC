@@ -173,7 +173,7 @@ const HeroSection = () => {
                 textShadow: "1px 1px 3px rgba(0,0,0,0.5)",
               }}
             >
-              Trusted Contractor partner across UAE, KSA, and beyond
+              Trusted Contractor partner across Australia and beyond
             </p>
           </div>
 

@@ -381,7 +381,7 @@ export default function Footer() {
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div className="text-white/90 text-base leading-relaxed">
-                  <p>Mecca, Saudi Arabia</p>
+                  <p>Melbourne, Australia</p>
                 </div>
               </motion.div>
               <motion.div
@@ -412,10 +412,10 @@ export default function Footer() {
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <Link
-                  href="mailto:info@majokaengineering.com"
+                  href="mailto:info@certificate.com"
                   className="text-white/90 text-base hover:text-white transition-colors break-all"
                 >
-                  info@majokaengineering.com
+                  info@certificate.com
                 </Link>
               </motion.div>
             </div>
@@ -429,7 +429,7 @@ export default function Footer() {
           <div className="flex items-center justify-center">
             {/* Copyright Text */}
             <p className="text-center text-white/90 text-base font-light">
-              © 2025 MAJOKA ENGINEERING. All rights reserved.
+              © {new Date().getFullYear()} ABC COMPANY. All rights reserved
             </p>
           </div>
         </div>

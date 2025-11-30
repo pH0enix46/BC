@@ -134,9 +134,9 @@ const Navbar = () => {
                 isScrolled ? "opacity-0" : "opacity-100"
               }`}
             >
-              <a href="/contact">
+              <Link href="/contact">
                 <NormalButton>Get Quote</NormalButton>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
