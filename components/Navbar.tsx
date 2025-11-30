@@ -58,11 +58,11 @@ const Navbar = () => {
             >
               <Link href="/">
                 <Image
-                  src="/Essence-logo.png"
+                  src="/logo-white.jpeg"
                   alt="Company Logo"
                   width={160}
                   height={60}
-                  className="h-14 sm:h-16 w-auto"
+                  className="h-16 sm:h-20 w-auto rounded-full shadow border-2 border-gray-400"
                 />
               </Link>
             </div>

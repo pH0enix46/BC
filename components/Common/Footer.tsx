@@ -117,13 +117,13 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+              <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                 <Image
-                  src="/Essence-logo.png"
+                  src="/logo-white.jpeg"
                   alt="Majoka Engineering Logo"
                   width={160}
                   height={80}
-                  className="h-auto w-30"
+                  className="h-14 sm:h-20 w-auto rounded-full shadow border-2 border-gray-400"
                 />
               </div>
             </motion.div>
