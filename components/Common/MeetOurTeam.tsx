@@ -12,7 +12,7 @@ const MeetOurTeam = () => {
     {
       name: "Yousuf Noor",
       role: "FOUNDER",
-      image: "/team-members/1.jpeg",
+      image: "/team-members/1.jpg",
       description:
         "Visionary leader with 10+ years of experience building innovative solutions. I believe in turning bold ideas into reality through strategic thinking and passionate execution.",
     },
