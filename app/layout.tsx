@@ -14,8 +14,9 @@ const anekMalayalam = Anek_Malayalam({
 });
 
 export const metadata: Metadata = {
-  title: "Majoka Contractor",
-  description: "Professional services and solutions",
+  title: "ABC Company",
+  description:
+    "ABC Company is a leading construction company specializing in residential and commercial construction.",
 };
 
 export default function RootLayout({
