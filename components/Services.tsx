@@ -5,19 +5,19 @@ import Image from "next/image";
 
 const Services = () => {
   const services = [
+    // {
+    //   id: 1,
+    //   title: "Complying Development",
+    //   highlight: "Certificates",
+    //   description:
+    //     "Fast-track your development approvals without the need for a Development Application through Council. Our Complying Development Certificates provide a streamlined pathway to get your project approved quickly and efficiently, saving you time and reducing complexity in the approval process.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    //   imageAlt: "Modern kitchen interior design",
+    //   layout: "left",
+    // },
     {
       id: 1,
-      title: "Complying Development",
-      highlight: "Certificates",
-      description:
-        "Fast-track your development approvals without the need for a Development Application through Council. Our Complying Development Certificates provide a streamlined pathway to get your project approved quickly and efficiently, saving you time and reducing complexity in the approval process.",
-      image:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      imageAlt: "Modern kitchen interior design",
-      layout: "left",
-    },
-    {
-      id: 2,
       title: "Construction",
       highlight: "Certificates",
       description:
@@ -28,7 +28,7 @@ const Services = () => {
       layout: "right",
     },
     {
-      id: 3,
+      id: 2,
       title: "Occupation",
       highlight: "Certificates",
       description:
@@ -39,7 +39,7 @@ const Services = () => {
       layout: "left",
     },
     {
-      id: 4,
+      id: 3,
       title: "Building",
       highlight: "Inspections",
       description:

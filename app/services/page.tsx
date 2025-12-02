@@ -10,11 +10,11 @@ export default function ProjectPage() {
       <CommonHeader
         title="Explore Our Services"
         breadcrumb="Services"
-        imagePath="/project.jpg"
+        imagePath="/landing/hero/h3.avif"
       />
       <Services />
-      <MeetOurTeam />
-      <ClientTestimonials />
+      {/* <MeetOurTeam />
+      <ClientTestimonials /> */}
     </div>
   );
 }

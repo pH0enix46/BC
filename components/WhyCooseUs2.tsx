@@ -34,29 +34,29 @@ const WhyChooseUsSection = () => {
   }, [images.length]);
 
   const features: Feature[] = [
+    // {
+    //   id: 1,
+    //   title: "Complying Development Certificates",
+    //   description: "",
+    // },
     {
       id: 1,
-      title: "Complying Development Certificates",
-      description: "",
-    },
-    {
-      id: 2,
       title: "Construction Certificates",
       description: "",
     },
     {
-      id: 3,
+      id: 2,
       title: "Occupation Certificates",
       description: "",
     },
     {
-      id: 4,
+      id: 3,
       title: "Building Inspections",
       description: "",
     },
     {
-      id: 5,
-      title: "Pool Compliance Certificates",
+      id: 4,
+      title: "Building information certificates",
       description: "",
     },
   ];
@@ -159,7 +159,7 @@ const WhyChooseUsSection = () => {
                   Building <span className="text-primary">Approvals</span>{" "}
                 </h2>
                 <p className="text-gray-600 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8">
-                  Building Approvals are A1 Unrestricted Certifiers in:
+                  Building Approvals are A2 Unrestricted Certifiers in:
                 </p>
               </motion.div>
 

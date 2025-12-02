@@ -85,9 +85,9 @@ const Navbar = () => {
                         href="/services"
                         className={`${
                           pathname === "/services"
-                            ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
+                            ? "text-white/70 bg-gradient-to-r from-primary/80 to-transparent"
                             : "text-white/80"
-                        } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
+                        } hover:text-white hover:bg-gradient-to-r hover:from-primary/80 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
                       >
                         Services
                       </Link>
@@ -95,13 +95,13 @@ const Navbar = () => {
                         href="/project"
                         className={`${
                           pathname === "/project"
-                            ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
+                            ? "text-white/70 bg-gradient-to-r from-primary/80 to-transparent"
                             : "text-white/80"
-                        } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
+                        } hover:text-white hover:bg-gradient-to-r hover:from-primary/80 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
                       >
                         Project
                       </Link>
-                      <Link
+                      {/* <Link
                         href="/blogs"
                         className={`${
                           pathname === "/blogs"
@@ -110,14 +110,14 @@ const Navbar = () => {
                         } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
                       >
                         Blogs
-                      </Link>
+                      </Link> */}
                       <Link
                         href="/about-us"
                         className={`${
                           pathname === "/about-us"
-                            ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
+                            ? "text-white/70 bg-gradient-to-r from-primary/80 to-transparent"
                             : "text-white/80"
-                        } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
+                        } hover:text-white hover:bg-gradient-to-r hover:from-primary/80 hover:to-transparent px-3 py-1 rounded-full transition-all duration-300 text-xl font-medium`}
                       >
                         About
                       </Link>
@@ -156,9 +156,9 @@ const Navbar = () => {
                     href="/services"
                     className={`${
                       pathname === "/services"
-                        ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
+                        ? "text-white/70 bg-gradient-to-r from-primary/80 to-transparent"
                         : "text-primary/80"
-                    } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
+                    } hover:text-primary hover:bg-gradient-to-r hover:from-primary/80 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
                   >
                     <Settings className="w-7 h-7" />
                   </Link>
@@ -166,13 +166,13 @@ const Navbar = () => {
                     href="/project"
                     className={`${
                       pathname === "/project"
-                        ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
+                        ? "text-white/70 bg-gradient-to-r from-primary/80 to-transparent"
                         : "text-primary/80"
-                    } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
+                    } hover:text-primary hover:bg-gradient-to-r hover:from-primary/80 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
                   >
                     <FolderOpen className="w-7 h-7" />
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/blogs"
                     className={`${
                       pathname === "/blogs"
@@ -181,14 +181,14 @@ const Navbar = () => {
                     } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
                   >
                     <FileText className="w-7 h-7" />
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/about-us"
                     className={`${
                       pathname === "/about-us"
-                        ? "text-primary bg-gradient-to-r from-primary/10 to-transparent"
+                        ? "text-white/70 bg-gradient-to-r from-primary/80 to-transparent"
                         : "text-primary/80"
-                    } hover:text-primary hover:bg-gradient-to-r hover:from-primary/20 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
+                    } hover:text-primary hover:bg-gradient-to-r hover:from-primary/80 hover:to-transparent px-3 py-2 rounded-full transition-all duration-300 text-sm font-medium flex flex-col items-center gap-1`}
                   >
                     <Users className="w-7 h-7" />
                   </Link>

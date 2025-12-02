@@ -35,7 +35,7 @@ const OurMission = () => {
 
                 <div className="text-black text-sm sm:text-base space-y-4 leading-snug tracking-tight text-shadow-2xs">
                   <p>
-                    At Majoka Engineering, our mission is to deliver innovative,
+                    At ABC Company, our mission is to deliver innovative,
                     reliable, and sustainable engineering solutions that empower
                     industries and enhance communities. We strive to exceed
                     client expectations through technical excellence, quality

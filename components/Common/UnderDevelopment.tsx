@@ -13,7 +13,7 @@ export default function UnderDevelopment({
   showBackButton = true,
 }: UnderDevelopmentProps) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center bg-gray-900">
       <div className="text-center max-w-md mx-auto px-4">
         {/* Processing Animation */}
         <div className="flex items-center justify-center mb-8">
@@ -37,7 +37,7 @@ export default function UnderDevelopment({
         <h1 className="text-4xl font-bold text-primary mb-4">{title}</h1>
 
         {/* Message */}
-        <p className="text-lg text-gray-600 mb-8">{message}</p>
+        <p className="text-lg text-gray-400 mb-8">{message}</p>
 
         {/* Loading dots animation */}
         <div className="flex justify-center space-x-3 mb-8">
@@ -57,7 +57,7 @@ export default function UnderDevelopment({
           <div className="mt-8">
             <Link
               href="/"
-              className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-colors duration-300"
+              className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-full transition-colors duration-300"
             >
               <svg
                 className="w-5 h-5 mr-2"

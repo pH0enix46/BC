@@ -10,12 +10,12 @@ const AboutUs = () => {
       <CommonHeader
         title="About Our Company"
         breadcrumb="About Us"
-        imagePath="/about-us/about-us-1.png"
+        imagePath="/landing/hero/h3.avif"
       />
       <AboutUsSection />
       <OurMission />
-      <MeetOurTeam />
-      <ClientTestimonials />
+      {/* <MeetOurTeam />
+      <ClientTestimonials /> */}
     </div>
   );
 };

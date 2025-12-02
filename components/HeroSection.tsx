@@ -14,9 +14,9 @@ const HeroSection = () => {
 
   // Array of background images
   const backgroundImages = [
-    "/landing/hero/bcaa-hero-4.jpg",
-    "/landing/hero/bcaa-hero-2.jpg",
-    "/landing/hero/bcaa-hero-5.jpg",
+    "/landing/hero/h-1.avif",
+    "/landing/hero/h2.avif",
+    "/landing/hero/h3.avif",
   ];
 
   // Initialize AOS

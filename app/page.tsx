@@ -32,21 +32,21 @@ export default function Home() {
         <div data-aos="fade-up" data-aos-delay="100">
           <StatsSection />
         </div>
-        <div data-aos="fade-up" data-aos-delay="200">
+        {/* <div data-aos="fade-up" data-aos-delay="200">
           <Featured />
-        </div>
+        </div> */}
         <div data-aos="fade-up" data-aos-delay="200">
           <WorkSteps />
         </div>
         <div data-aos="fade-up" data-aos-delay="200">
           <Services />
         </div>
-        <div data-aos="fade-up" data-aos-delay="200">
+        {/* <div data-aos="fade-up" data-aos-delay="200">
           <MeetOurTeam />
         </div>
         <div data-aos="fade-up" data-aos-delay="200">
           <ClientTestimonials />
-        </div>
+        </div> */}
 
         <div data-aos="fade-up" data-aos-delay="200">
           <GetStarted />

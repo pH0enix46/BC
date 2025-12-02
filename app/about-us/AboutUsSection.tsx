@@ -37,9 +37,9 @@ const AboutUsSection = () => {
               Excellence in Engineering
             </h2>
             <p className="text-justify text-stone-600 text-base sm:text-lg lg:text-2xl font-normal leading-7 sm:leading-8 lg:leading-9">
-              At Majoka, our commitment to excellence extends beyond technical
+              At ABC Company, our commitment to excellence extends beyond technical
               expertise to encompass exceptional customer service and unwavering
-              integrity. When you choose Majoka, you’re choosing a trusted ally
+              integrity. When you choose ABC Company, you’re choosing a trusted ally
               dedicated to the success of your project and the safety of your
               community
             </p>
@@ -73,7 +73,7 @@ const AboutUsSection = () => {
                 >
                   {/* Background Image */}
                   <Image
-                    src="/about-us/1.png"
+                    src="/landing/hero/h3.avif"
                     alt="Expert Team Background"
                     fill
                     className="object-cover"
@@ -100,8 +100,8 @@ const AboutUsSection = () => {
                   data-aos-delay="200"
                 >
                   <Image
-                    src="/about-us/about-us-4.png"
-                    alt="About Us"
+                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop"
+                    alt="Modern Building Architecture"
                     fill
                     className="object-cover"
                   />
@@ -117,8 +117,8 @@ const AboutUsSection = () => {
                   data-aos-delay="300"
                 >
                   <Image
-                    src="/about-us/about-us-2.png"
-                    alt="About Us"
+                    src="/landing/hero/h2.avif"
+                    alt="Construction Site"
                     fill
                     className="object-cover"
                   />
@@ -131,7 +131,7 @@ const AboutUsSection = () => {
                   data-aos-delay="400"
                 >
                   <Image
-                    src="/about-us/2.png"
+                    src="/landing/hero/h-1.avif"
                     alt="Expert Team Background"
                     fill
                     className="object-cover"

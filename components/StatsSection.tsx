@@ -3,13 +3,13 @@
 import React from "react";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import {
-  Building2,
   Search,
   FileText,
   ClipboardCheck,
   ShieldAlert,
   Home,
   CheckCircle,
+  BadgeCheck,
 } from "lucide-react";
 import { useRef, useEffect } from "react";
 import WhyChooseUs2 from "@/components/WhyCooseUs2";
@@ -26,10 +26,10 @@ const StatsSection = () => {
   const stats: StatItem[] = [
     {
       id: 1,
-      icon: Building2,
+      icon: BadgeCheck,
       value: 0,
       suffix: "",
-      label: "Structural Engineering",
+      label: "Certification approval",
     },
     {
       id: 2,
@@ -45,29 +45,29 @@ const StatsSection = () => {
       suffix: "",
       label: "BCA Reports",
     },
+    // {
+    //   id: 4,
+    //   icon: ClipboardCheck,
+    //   value: 0,
+    //   suffix: "",
+    //   label: "Structural Reports",
+    // },
     {
       id: 4,
-      icon: ClipboardCheck,
-      value: 0,
-      suffix: "",
-      label: "Structural Reports",
-    },
-    {
-      id: 5,
       icon: ShieldAlert,
       value: 0,
       suffix: "",
       label: "Unauthorized Construction",
     },
     {
-      id: 6,
+      id: 5,
       icon: Home,
       value: 0,
       suffix: "",
       label: "Building Reports",
     },
     {
-      id: 7,
+      id: 6,
       icon: CheckCircle,
       value: 0,
       suffix: "",
