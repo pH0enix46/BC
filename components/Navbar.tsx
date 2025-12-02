@@ -79,7 +79,7 @@ const Navbar = () => {
                 <div
                   className={`${isScrolled ? "bg-black/30" : ""} rounded-full`}
                 >
-                  <div className="backdrop-blur-md rounded-[20px] px-8 py-0 shadow-2xl border ">
+                  <div className="backdrop-blur-md rounded-[20px] px-8 py-0 shadow-2xl border border-gray-50/40">
                     <div className="flex items-center space-x-6 xl:space-x-8 my-1">
                       <Link
                         href="/services"
