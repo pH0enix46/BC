@@ -13,6 +13,8 @@ const Navbar = () => {
   const buttonRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
+  console.log();
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
