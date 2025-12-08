@@ -5,17 +5,6 @@ import Image from "next/image";
 
 const Services = () => {
   const services = [
-    // {
-    //   id: 1,
-    //   title: "Complying Development",
-    //   highlight: "Certificates",
-    //   description:
-    //     "Fast-track your development approvals without the need for a Development Application through Council. Our Complying Development Certificates provide a streamlined pathway to get your project approved quickly and efficiently, saving you time and reducing complexity in the approval process.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    //   imageAlt: "Modern kitchen interior design",
-    //   layout: "left",
-    // },
     {
       id: 1,
       title: "Construction",
@@ -49,11 +38,27 @@ const Services = () => {
       imageAlt: "Building inspection and construction",
       layout: "right",
     },
+    {
+      id: "cdc",
+      title: "Complying Development",
+      highlight: "Certificates",
+      // Added per your request
+      description: `We issue The complying Development Certificate approval under Part 4 of the Environmental Planning and Assessment Act 1979 Section 4.28 for residential and commercial projects. 
+      
+      Our expertise team will ensures your plans meet all regulatory compliance and requirements and Australian Building Codes for a perfect starts.`,
+    },
+    {
+      id: "cc",
+      title: "Construction",
+      highlight: "Certificates",
+      description: `We issue construction certificates (CC) for building works after development consent is granted. 
+      
+      This ensures your detailed construction plans and specifications are consistent with the development consent and comply with the Building Code of Australia (BCA).`,
+    },
   ];
-
   return (
     <section className="w-full py-20 bg-gray-50">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-18">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -62,47 +67,28 @@ const Services = () => {
           </h2>
         </div>
 
-        {/* Services Grid */}
-        <div className="space-y-20">
-          {services.map((service, index) => (
+        {/* Services List (Text Only) */}
+        <div className="space-y-8">
+          {services.map((service) => (
             <div
               key={service.id}
-              className={`flex flex-col ${
-                service.layout === "right"
-                  ? "lg:flex-row-reverse"
-                  : "lg:flex-row"
-              } items-center gap-8 lg:gap-16`}
+              className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
             >
-              {/* Image Section */}
-              <div className="w-full lg:w-1/2">
-                <div className="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl outline-2 outline-primary/20 outline-offset-2">
-                  <Image
-                    src={service.image}
-                    alt={service.imageAlt}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-700 "
-                  />
-                </div>
-              </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  {service.title}{" "}
+                  <span className="text-primary">{service.highlight}</span>
+                </h3>
 
-              {/* Content Section */}
-              <div className="w-full lg:w-1/2 space-y-6">
-                <div className="space-y-4">
-                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
-                    {service.title}{" "}
-                    <span className="text-primary">{service.highlight}</span>
-                  </h3>
-
-                  <div className="prose prose-lg max-w-none">
-                    {service.description.split("\n\n").map((paragraph, idx) => (
-                      <p
-                        key={idx}
-                        className="text-gray-600 leading-relaxed text-lg"
-                      >
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
+                <div className="prose prose-lg max-w-none">
+                  {service.description.split("\n\n").map((paragraph, idx) => (
+                    <p
+                      key={idx}
+                      className="text-gray-600 leading-relaxed text-lg"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>
