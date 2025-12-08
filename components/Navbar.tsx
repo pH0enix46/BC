@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Settings, FolderOpen, FileText, Users } from "lucide-react";
 import NormalButton from "./AnimatedButton";
+import AnimatedButton from "./AnimattedButtonNew";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -135,7 +136,7 @@ const Navbar = () => {
               }`}
             >
               <Link href="/contact">
-                <NormalButton>Get Quote</NormalButton>
+                <AnimatedButton text="Get Quote" />
               </Link>
             </div>
           </div>
