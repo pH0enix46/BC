@@ -110,7 +110,7 @@ const HeroSection = () => {
             }}
           >
             {/* Animated Gradient Overlay */}
-            <div
+            {/* <div
               className={`absolute inset-0 bg-gradient-to-r from-black/90 to-black transition-all duration-700 ${
                 index === currentSlide ? "opacity-70" : "opacity-80"
               }`}
@@ -120,7 +120,7 @@ const HeroSection = () => {
                     ? "linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 100%)"
                     : "linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%)",
               }}
-            ></div>
+            ></div> */}
 
             {/* Animated Particles Effect */}
             {index === currentSlide && (
@@ -144,7 +144,7 @@ const HeroSection = () => {
 
         {/* Slide Transition Overlay */}
         <div
-          className={`absolute inset-0 bg-black/20 transition-opacity duration-300 pointer-events-none ${
+          className={`absolute inset-0 transition-opacity duration-300 pointer-events-none ${
             isTransitioning ? "opacity-100" : "opacity-0"
           }`}
         ></div>
@@ -159,7 +159,7 @@ const HeroSection = () => {
             data-aos-delay="200"
           >
             <h1
-              className="text-white/90 text-5xl lg:text-6xl xl:text-7xl font-bold text-center leading-tight sm:leading-tight md:leading-tight tracking-[-0.4px] font-anek"
+              className="text-white text-5xl lg:text-6xl xl:text-7xl font-bold text-center leading-tight sm:leading-tight md:leading-tight tracking-[-0.4px] font-anek"
               style={{
                 textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
               }}
