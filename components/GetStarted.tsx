@@ -205,7 +205,7 @@ const GetStarted = () => {
             <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
               <div className="relative h-[600px] lg:h-[720px] rounded-[20px] overflow-hidden shadow outline-2 outline-offset-2 outline-primary/30">
                 <Image
-                  src="/get-start.jpeg"
+                  src="/sydney.jpg"
                   alt="Get Started"
                   fill
                   className="object-cover shadow hover:scale-105 transition-all duration-300"
