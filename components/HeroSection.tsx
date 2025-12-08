@@ -79,10 +79,10 @@ const HeroSection = () => {
   }, [isTransitioning]);
 
   return (
-    <div className="w-full py-4">
+    <div className="w-full">
       <div
         ref={heroRef}
-        className="relative w-[98%] mx-auto h-[calc(100vh-2rem)] sm:h-[calc(100vh-3rem)] md:h-[calc(100vh-4rem)] overflow-hidden rounded-t-[24px] rounded-b-[24px] bg-[#055ea1] shadow-xl"
+        className="relative w-[100%] mx-auto h-[100vh] overflow-hidden bg-[#055ea1] shadow-xl"
       >
         {/* Background Images with Advanced Animations */}
         {backgroundImages.map((image, index) => (
