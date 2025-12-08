@@ -6,15 +6,21 @@ import Image from "next/image";
 const Services = () => {
   const services = [
     {
-      id: 1,
+      id: "cdc",
+      title: "Complying Development",
+      highlight: "Certificates",
+      // Added per your request
+      description: `We issue The complying Development Certificate approval under Part 4 of the Environmental Planning and Assessment Act 1979 Section 4.28 for residential and commercial projects. 
+      
+      Our expertise team will ensures your plans meet all regulatory compliance and requirements and Australian Building Codes for a perfect starts.`,
+    },
+    {
+      id: "cc",
       title: "Construction",
       highlight: "Certificates",
-      description:
-        "Required after Development Consent and before building work begins. We issue Construction Certificates under Part 4A of the EP&A Act for residential and commercial projects. Our accredited team ensures your plans meet all regulatory requirements and building codes for a smooth construction start.",
-      image:
-        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      imageAlt: "Modern building construction",
-      layout: "right",
+      description: `We issue construction certificates (CC) for building works after development consent is granted. 
+      
+      This ensures your detailed construction plans and specifications are consistent with the development consent and comply with the Building Code of Australia (BCA).`,
     },
     {
       id: 2,
@@ -37,23 +43,6 @@ const Services = () => {
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       imageAlt: "Building inspection and construction",
       layout: "right",
-    },
-    {
-      id: "cdc",
-      title: "Complying Development",
-      highlight: "Certificates",
-      // Added per your request
-      description: `We issue The complying Development Certificate approval under Part 4 of the Environmental Planning and Assessment Act 1979 Section 4.28 for residential and commercial projects. 
-      
-      Our expertise team will ensures your plans meet all regulatory compliance and requirements and Australian Building Codes for a perfect starts.`,
-    },
-    {
-      id: "cc",
-      title: "Construction",
-      highlight: "Certificates",
-      description: `We issue construction certificates (CC) for building works after development consent is granted. 
-      
-      This ensures your detailed construction plans and specifications are consistent with the development consent and comply with the Building Code of Australia (BCA).`,
     },
   ];
   return (
