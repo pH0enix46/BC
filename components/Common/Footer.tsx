@@ -371,7 +371,7 @@ export default function Footer() {
             </h3>
             <div className="space-y-6 flex-grow">
               <motion.div
-                className="flex items-start gap-4 group"
+                className="flex items-center gap-4 group"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -381,7 +381,7 @@ export default function Footer() {
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div className="text-white/90 text-base leading-relaxed">
-                  <p>Melbourne, Australia</p>
+                  <p>Sydney NSW</p>
                 </div>
               </motion.div>
               <motion.div
@@ -395,10 +395,10 @@ export default function Footer() {
                   <Phone className="w-5 h-5 text-white" />
                 </div>
                 <Link
-                  href="tel:+9660503010184"
+                  href="tel:0430729789"
                   className="text-white/90 text-base hover:text-white transition-colors"
                 >
-                  +966-0503010184
+                  0430729789
                 </Link>
               </motion.div>
               <motion.div
