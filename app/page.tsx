@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 "use client";
 
 import { useEffect } from "react";
@@ -12,6 +13,7 @@ import Services from "@/components/Services";
 import ClientTestimonials from "@/components/ClientTestimonials";
 import GetStarted from "@/components/GetStarted";
 import MeetOurTeam from "@/components/Common/MeetOurTeam";
+import TeamSection from "@/components/TeamSection";
 
 export default function Home() {
   useEffect(() => {
@@ -50,6 +52,9 @@ export default function Home() {
 
         <div data-aos="fade-up" data-aos-delay="200">
           <GetStarted />
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <TeamSection />
         </div>
       </main>
     </div>
