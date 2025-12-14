@@ -46,8 +46,8 @@ export default function MapSection() {
           shadowSize: [41, 41],
         });
 
-        // Mecca, Saudi Arabia coordinates
-        const position: [number, number] = [21.4225, 39.8262];
+        // NSW, Australia coordinates (Sydney as reference point)
+        const position: [number, number] = [-33.8688, 151.2093];
 
         // Map control component to handle centering
         const MapController = ({
@@ -103,16 +103,11 @@ export default function MapSection() {
                 <Marker position={position} icon={redIcon}>
                   <Popup className="custom-popup">
                     <div className="p-2">
-                      <h3 className="font-bold text-lg mb-2">
-                        Majoka Engineering
-                      </h3>
                       <p className="text-sm text-gray-600 mb-2">
-                        Mecca
-                        <br />
-                        Saudi Arabia
+                        NSW, Australia
                       </p>
                       <div className="text-sm">
-                        <p className="font-semibold">Phone: 0430 729 789 </p>
+                        <p className="font-semibold">Phone: 0430 729 789</p>
                         <p className="font-semibold">
                           Email: projects@buildingsapproval.com.au
                         </p>
@@ -158,9 +153,8 @@ export default function MapSection() {
                 </div>
 
                 <div className="text-sm text-gray-700 mb-3 leading-relaxed">
-                  <p className="font-semibold">Majoka Engineering</p>
-                  <p>Mecca</p>
-                  <p>Saudi Arabia</p>
+                  <p>NSW</p>
+                  <p>Australia</p>
                 </div>
 
                 <button
@@ -192,7 +186,7 @@ export default function MapSection() {
             Find Us On <span className="text-primary">Map</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Visit our office location in Mecca, Saudi Arabia. We&apos;re here to
+            Visit our office location in NSW, Australia. We&apos;re here to
             serve you with excellence.
           </p>
         </div>

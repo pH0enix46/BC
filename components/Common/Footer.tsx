@@ -107,9 +107,9 @@ export default function Footer() {
 
       <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-16 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Company Info Section - Column 1 */}
-          <div className="lg:col-span-1 flex flex-col space-y-8">
+          <div className="lg:col-span-1 flex flex-col space-y-4">
             <motion.div
               className="flex items-center mb-4"
               initial={{ opacity: 0, y: 20 }}
@@ -128,14 +128,22 @@ export default function Footer() {
               </div>
             </motion.div>
 
-            <p className="text-white/90 text-base leading-relaxed font-light">
-              Delivering innovative and sustainable engineering solutions with
-              integrity and excellence.
-            </p>
+            <motion.div
+              className=""
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-white/90 text-base leading-relaxed font-light">
+                Delivering innovative and sustainable engineering solutions with
+                integrity and excellence.
+              </p>{" "}
+            </motion.div>
 
             {/* Social Media Icons */}
             <motion.div
-              className="flex items-center gap-4 pt-4"
+              className="flex items-center gap-4 pt-2"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -149,7 +157,7 @@ export default function Footer() {
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
+                  className="group w-10 h-10 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5 text-white group-hover:text-white transition-colors" />
@@ -163,7 +171,7 @@ export default function Footer() {
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
+                  className="group w-10 h-10 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5 text-white group-hover:text-white transition-colors" />
@@ -177,7 +185,7 @@ export default function Footer() {
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
+                  className="group w-10 h-10 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5 text-white group-hover:text-white transition-colors" />
@@ -191,7 +199,7 @@ export default function Footer() {
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
+                  className="group w-10 h-10 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
                   aria-label="Twitter"
                 >
                   <Twitter className="w-5 h-5 text-white group-hover:text-white transition-colors" />
@@ -259,39 +267,20 @@ export default function Footer() {
             <ul className="space-y-4 flex-grow">
               <li>
                 <Link
-                  href=""
+                  href="/services"
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
-                  Contracting
+                  Certificates
                 </Link>
               </li>
               <li>
                 <Link
-                  href=""
+                  href="/services"
                   className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
                 >
                   <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
-                  Testing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href=""
-                  className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
-                >
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
-                  Calibration
-                </Link>
-              </li>
-              <li>
-                <Link
-                  // href="/services-details?service=4"
-                  href=""
-                  className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
-                >
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
-                  Inspection
+                  Building Inspections
                 </Link>
               </li>
             </ul>
@@ -309,7 +298,7 @@ export default function Footer() {
               Contact Us
               <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-white/40 rounded-full"></div>
             </h3>
-            <div className="space-y-6 flex-grow">
+            <div className="space-y-4 flex-grow">
               <motion.div
                 className="flex items-center gap-4 group"
                 initial={{ opacity: 0, x: -20 }}
@@ -353,7 +342,7 @@ export default function Footer() {
                 </div>
                 <Link
                   href="mailto:projects@buildingsapproval.com.au"
-                  className="text-white/90 text-base hover:text-white transition-colors break-all"
+                  className="text-white/90 text-base hover:text-white transition-colors"
                 >
                   projects@buildingsapproval.com.au
                 </Link>
