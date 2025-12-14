@@ -28,14 +28,7 @@ const GetStarted = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
 
-  const services = [
-    "Contracting",
-    "Testing",
-    "Calibration",
-    "Inspection",
-    "Trading",
-    "Hotel",
-  ];
+  const services = ["Certificates", "Building Inspections"];
 
   const handleServiceSelect = (service: string) => {
     setFormData({ ...formData, service });
