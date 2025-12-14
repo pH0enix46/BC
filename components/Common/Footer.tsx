@@ -353,7 +353,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright Bar */}
-      <div className="relative pb-8 border-t border-white/20 backdrop-blur-sm">
+      <div className="relative pb-4 border-t border-white/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 pt-8">
           <div className="flex items-center justify-center">
             {/* Copyright Text */}
@@ -362,6 +362,32 @@ export default function Footer() {
               COMPANY. All rights reserved
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* Developer Credit */}
+      <div className="relative pb-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
+          <motion.div
+            className="flex items-center justify-center"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-center text-white/70 text-sm font-light">
+              Developed by{" "}
+              <Link
+                href="https://codechs.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-medium hover:text-white/90 transition-colors underline decoration-white/40 hover:decoration-white/70 underline-offset-2"
+              >
+                Codechs
+              </Link>
+              . All rights reserved
+            </p>
+          </motion.div>
         </div>
       </div>
     </footer>
