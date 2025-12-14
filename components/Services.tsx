@@ -14,25 +14,25 @@ const Services = () => {
       
       Our expertise team will ensures your plans meet all regulatory compliance and requirements and Australian Building Codes for a perfect starts.`,
     },
-    {
-      id: "cc",
-      title: "Construction",
-      highlight: "Certificates",
-      description: `We issue construction certificates (CC) for building works after development consent is granted. 
-      
-      This ensures your detailed construction plans and specifications are consistent with the development consent and comply with the Building Code of Australia (BCA).`,
-    },
-    {
-      id: 2,
-      title: "Occupation",
-      highlight: "Certificates",
-      description:
-        "Issued by the Principal Certifying Authority under the EP&A Act, allowing legal occupation of new or modified buildings. We provide Occupation Certificates for residential buildings including single dwellings, dual occupancies, and multi-unit developments. Our comprehensive service covers all construction and completion phases of building compliance.",
-      image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      imageAlt: "Modern office building",
-      layout: "left",
-    },
+    // {
+    //   id: "cc",
+    //   title: "Construction",
+    //   highlight: "Certificates",
+    //   description: `We issue construction certificates (CC) for building works after development consent is granted.
+
+    //   This ensures your detailed construction plans and specifications are consistent with the development consent and comply with the Building Code of Australia (BCA).`,
+    // },
+    // {
+    //   id: 2,
+    //   title: "Occupation",
+    //   highlight: "Certificates",
+    //   description:
+    //     "Issued by the Principal Certifying Authority under the EP&A Act, allowing legal occupation of new or modified buildings. We provide Occupation Certificates for residential buildings including single dwellings, dual occupancies, and multi-unit developments. Our comprehensive service covers all construction and completion phases of building compliance.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    //   imageAlt: "Modern office building",
+    //   layout: "left",
+    // },
     {
       id: 3,
       title: "Building",

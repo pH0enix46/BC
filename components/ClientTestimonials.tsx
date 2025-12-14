@@ -100,7 +100,7 @@ const ClientTestimonials = () => {
       id: 2,
       name: "Stella Smith, New York",
       title:
-        "ABC Company delivered exactly what we expected — professional work, timely completion, and great communication from start to finish.",
+        "Planning and buildings approval delivered exactly what we expected — professional work, timely completion, and great communication from start to finish.",
       image: "/clientt/2.jpeg",
       testimonial: "",
     },
@@ -124,7 +124,7 @@ const ClientTestimonials = () => {
       id: 5,
       name: "Ahmed Hassan, Dubai",
       title:
-        "Reliable and efficient service delivery. ABC Company consistently provides high-quality work with excellent project management and communication.",
+        "Reliable and efficient service delivery. Planning and buildings approval Company consistently provides high-quality work with excellent project management and communication.",
       image: "/clientt/4.jpeg",
       testimonial: "",
     },

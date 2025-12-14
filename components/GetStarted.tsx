@@ -228,10 +228,10 @@ const GetStarted = () => {
                         Email
                       </h4>
                       <a
-                        href="mailto:info@majokaengineering.com"
+                        href="mailto:projects@buildingsapproval.com.au"
                         className="text-sm lg:text-[15px] font-medium text-primary hover:underline"
                       >
-                        info@certificate.com
+                        projects@buildingsapproval.com.au
                       </a>
                     </div>
                   </div>
@@ -246,10 +246,10 @@ const GetStarted = () => {
                         Phone
                       </h4>
                       <a
-                        href="tel:+9660503010184"
+                        href="0430 729 789"
                         className="text-sm lg:text-[15px] font-medium text-primary hover:underline"
                       >
-                        +966-0503010184
+                        0430 729 789
                       </a>
                     </div>
                   </div>
@@ -264,7 +264,7 @@ const GetStarted = () => {
                         Office
                       </h4>
                       <p className="text-sm lg:text-[15px] font-medium text-primary">
-                        Melbourne, Australia
+                        NSW, Australia
                       </p>
                     </div>
                   </div>

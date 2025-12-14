@@ -166,15 +166,6 @@ const HeroSection = () => {
             >
               Made Building approval easier and simplifier
             </h1>
-
-            <p
-              className="text-white/80 text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-anek max-w-5xl"
-              style={{
-                textShadow: "1px 1px 3px rgba(0,0,0,0.5)",
-              }}
-            >
-              Trusted Contractor partner across Australia and beyond
-            </p>
           </div>
 
           {/* Enhanced Slider Dots */}

@@ -29,10 +29,10 @@ const WorkSteps = () => {
               <div className="flex flex-col">
                 <h4 className="text-xl font-medium text-white">Email</h4>
                 <a
-                  href="mailto:info@majokaengineering.com"
+                  href="mailto:projects@buildingsapproval.com.au"
                   className="text-base font-medium text-white hover:underline"
                 >
-                  info@majokaengineering.com
+                  projects@buildingsapproval.com.au
                 </a>
               </div>
             </div>
@@ -45,10 +45,10 @@ const WorkSteps = () => {
               <div className="flex flex-col">
                 <h4 className="text-xl font-medium text-white">Phone</h4>
                 <a
-                  href="tel:+966-0503010184"
+                  href="tel:0430 729 789"
                   className="text-base font-medium text-white hover:underline"
                 >
-                  +966-0503010184
+                  0430 729 789
                 </a>
               </div>
             </div>

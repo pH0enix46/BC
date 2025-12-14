@@ -53,9 +53,6 @@ export default function Home() {
         <div data-aos="fade-up" data-aos-delay="200">
           <GetStarted />
         </div>
-        <div data-aos="fade-up" data-aos-delay="200">
-          <TeamSection />
-        </div>
       </main>
     </div>
   );

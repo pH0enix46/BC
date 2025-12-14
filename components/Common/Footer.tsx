@@ -240,67 +240,7 @@ export default function Footer() {
                   Services
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/"
-                  className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
-                >
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
-                  Trading
-                </Link>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* Resources - Column 3 */}
-          <motion.div
-            className="space-y-6 h-full flex flex-col md:ml-6 mt-8 lg:mt-0"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-white text-xl font-bold mb-4 relative">
-              Resources
-              <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-white/40 rounded-full"></div>
-            </h3>
-            <ul className="space-y-4 flex-grow">
-              <li>
-                <Link
-                  href=""
-                  className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
-                >
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href=""
-                  className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
-                >
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
-                  Career
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href=""
-                  className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
-                >
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href=""
-                  className="group flex items-center gap-3 text-white/80 text-base hover:text-white transition-all duration-300 hover:translate-x-1"
-                >
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 group-hover:text-white/60 transition-colors" />
-                  Project
-                </Link>
-              </li>
+              <li></li>
             </ul>
           </motion.div>
 
@@ -381,7 +321,7 @@ export default function Footer() {
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div className="text-white/90 text-base leading-relaxed">
-                  <p>Sydney NSW</p>
+                  <p>NSW, Australia</p>
                 </div>
               </motion.div>
               <motion.div
@@ -412,10 +352,10 @@ export default function Footer() {
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <Link
-                  href="mailto:info@certificate.com"
+                  href="mailto:projects@buildingsapproval.com.au"
                   className="text-white/90 text-base hover:text-white transition-colors break-all"
                 >
-                  info@certificate.com
+                  projects@buildingsapproval.com.au
                 </Link>
               </motion.div>
             </div>
@@ -429,7 +369,8 @@ export default function Footer() {
           <div className="flex items-center justify-center">
             {/* Copyright Text */}
             <p className="text-center text-white/90 text-base font-light">
-              © {new Date().getFullYear()} ABC COMPANY. All rights reserved
+              © {new Date().getFullYear()} Planning and buildings approval
+              COMPANY. All rights reserved
             </p>
           </div>
         </div>

@@ -14,9 +14,9 @@ const anekMalayalam = Anek_Malayalam({
 });
 
 export const metadata: Metadata = {
-  title: "ABC Company",
+  title: "Planning and buildings approval",
   description:
-    "ABC Company is a leading construction company specializing in residential and commercial construction.",
+    "Planning and buildings approval Company is a leading buildings approval company specializing in residential and commercial building approvals in austrailia.",
 };
 
 export default function RootLayout({

@@ -112,9 +112,9 @@ export default function MapSection() {
                         Saudi Arabia
                       </p>
                       <div className="text-sm">
-                        <p className="font-semibold">Phone: +966-0503010184</p>
+                        <p className="font-semibold">Phone: 0430 729 789 </p>
                         <p className="font-semibold">
-                          Email: info@majokaengineering.com
+                          Email: projects@buildingsapproval.com.au
                         </p>
                       </div>
                     </div>

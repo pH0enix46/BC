@@ -126,7 +126,7 @@ const FeaturedProjects = () => {
         name: "Modern Extension",
         image: "/Featured/1.png",
         category: "EXTENSION",
-        location: "Sydney, NSW",
+        location: "NSW, Australia",
         year: "2024",
         type: "Residential",
         area: "150 sq m",
