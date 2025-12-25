@@ -111,19 +111,19 @@ export default function Footer() {
           {/* Company Info Section - Column 1 */}
           <div className="lg:col-span-1 flex flex-col space-y-4">
             <motion.div
-              className="flex items-center mb-4"
+              className="flex items-center mb-2"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <div className="p-2">
                 <Image
-                  src="/logo-white.jpeg"
+                  src="/pc-logo-white.png"
                   alt="Majoka Engineering Logo"
                   width={160}
                   height={80}
-                  className="h-14 sm:h-20 w-auto rounded-full shadow border-2 border-gray-400"
+                  className="h-14 sm:h-20 w-auto"
                 />
               </div>
             </motion.div>

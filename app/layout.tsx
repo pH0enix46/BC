@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo-white.jpeg" sizes="any" />
-        <link rel="icon" href="/logo-white.jpeg" type="image/jpeg" />
-        <link rel="apple-touch-icon" href="/logo-white.jpeg" />
+        <link rel="icon" href="/pc-logo.png" sizes="any" />
+        <link rel="icon" href="/pc-logo.png" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/pc-logo.png" />
       </head>
       <body
         className={`${anekMalayalam.variable} ${anekMalayalam.variable} antialiased bg-white overflow-x-hidden!`}
