@@ -14,31 +14,35 @@ const Services = () => {
       
       Our expertise team will ensures your plans meet all regulatory compliance and requirements and Australian Building Codes for a perfect starts.`,
     },
-    // {
-    //   id: "cc",
-    //   title: "Construction",
-    //   highlight: "Certificates",
-    //   description: `We issue construction certificates (CC) for building works after development consent is granted.
 
-    //   This ensures your detailed construction plans and specifications are consistent with the development consent and comply with the Building Code of Australia (BCA).`,
-    // },
-    // {
-    //   id: 2,
-    //   title: "Occupation",
-    //   highlight: "Certificates",
-    //   description:
-    //     "Issued by the Principal Certifying Authority under the EP&A Act, allowing legal occupation of new or modified buildings. We provide Occupation Certificates for residential buildings including single dwellings, dual occupancies, and multi-unit developments. Our comprehensive service covers all construction and completion phases of building compliance.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    //   imageAlt: "Modern office building",
-    //   layout: "left",
-    // },
     {
       id: 3,
       title: "Building",
       highlight: "Inspections",
       description:
         "Mandatory Critical Stage Inspections throughout your development process. We conduct all required inspections from foundations to completion, scheduled within 48 hours notice. Our thorough inspection service ensures compliance with Building Professionals Board requirements and maintains the highest standards of safety and quality throughout construction.",
+      image:
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      imageAlt: "Building inspection and construction",
+      layout: "right",
+    },
+    {
+      id: 4,
+      title: "Construction",
+      highlight: "Certificate",
+      description:
+        "We provide efficient and reliable Construction Certificate services, working closely with clients, designers, and consultants to streamline the approval process. Our thorough assessments focus on structural adequacy, fire safety, accessibility, and compliance with all conditions of consent relevant to construction. From initial review to certificate issue, we offer clear guidance, professional advice, and timely outcomes to support safe and compliant construction.",
+      image:
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      imageAlt: "Building inspection and construction",
+      layout: "right",
+    },
+    {
+      id: 5,
+      title: "Occupation ",
+      highlight: "Certificate",
+      description:
+        "Our accredited certifiers carry out thorough inspections and compliance assessments throughout the construction process to ensure all critical stage inspections, fire safety measures, and required documentation have been completed. We work closely with builders, owners, and consultants to facilitate a smooth and timely Occupation Certificate process, providing clear guidance and professional support from project completion through to final approval.",
       image:
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       imageAlt: "Building inspection and construction",
