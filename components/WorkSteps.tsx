@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link"; // Import Link
 
 export default function WorkSteps() {
   const steps = [
@@ -9,7 +10,8 @@ export default function WorkSteps() {
       description:
         "Upload your plans and relevant documents for a detailed fee proposal from our team.",
       alternative: "Or",
-      contact: "Speak to our experienced team on (02) 9639 8809",
+      contact: "Speak to our experienced team on 0430729789",
+      href: "/contact", // Added href for the first step
     },
     {
       id: 2,
@@ -41,14 +43,14 @@ export default function WorkSteps() {
             <span className="text-primary">four step</span> process
           </h2>
         </div>
+
         {/* Steps Timeline */}
         <div className="relative">
-          {/* Steps Container */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
             {steps.map((step, index) => (
               <div
                 key={step.id}
-                className="bg-gray-50 rounded-2xl p-6 shadow hover:shadow-lg border border-gray-100 transition-all duration-300 relative"
+                className="bg-gray-50 rounded-2xl p-6 shadow hover:shadow-lg border border-gray-100 transition-all duration-300 relative group"
               >
                 {/* Step Content */}
                 <div className="text-center mb-4">
@@ -61,26 +63,45 @@ export default function WorkSteps() {
                       className="rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
-                    {step.title}
-                  </h3>
+
+                  {/* Conditional Link for Title */}
+                  {step.href ? (
+                    <Link href={step.href}>
+                      <h3 className="text-xl font-bold  mb-4 leading-tight text-primary transition-colors cursor-pointer">
+                        {step.title}
+                      </h3>
+                    </Link>
+                  ) : (
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
+                      {step.title}
+                    </h3>
+                  )}
+
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {step.description}
                   </p>
 
                   {/* Special content for first step */}
-                  {step.alternative && (
+                  {step.id === 1 && (
                     <div className="mt-4">
+                      <Link
+                        href="/contact"
+                        className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-primary/90 transition-all mb-4"
+                      >
+                        Get a Proposal
+                      </Link>
                       <p className="text-primary font-semibold mb-2">
                         {step.alternative}
                       </p>
-                      <p className="text-gray-600 text-sm">{step.contact}</p>
+                      <p className="text-gray-600 text-sm font-medium">
+                        {step.contact}
+                      </p>
                     </div>
                   )}
                 </div>
 
                 {/* Step Number Badge */}
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-30">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow">
                     <span className="text-white font-bold text-sm">
                       {step.id}
@@ -88,7 +109,7 @@ export default function WorkSteps() {
                   </div>
                 </div>
 
-                {/* Connecting Line - Hidden on mobile, visible on larger screens */}
+                {/* Connecting Line */}
                 {index < steps.length - 1 && (
                   <div
                     className="hidden lg:block absolute -top-[1%] left-1/2 h-[2px] bg-gray-300 z-20 transform translate-x-4"

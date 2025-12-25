@@ -61,7 +61,7 @@ export default function ContactPage() {
       id: 3,
       icon: MapPin,
       title: "Location",
-      content: "NSW, Australiaa",
+      content: "Sydney NSW.",
       link: "https://www.google.com/maps?sca_esv=8d93a75d85064be8&output=search&q=NSW,+Australia&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZrjP_Cx0LI1Ytb_FGcOviEm1ssuPGpLt-JO6rIVBYz_RaN6fYAxw4hlG5yEN69ihLpA-gT6zUWZEt11riWghfIVjXj7p67NZbvGUUoeP_acaZBCudMgXkbBuQzK7rz7zr8ibHkb_xJCGOglL9Hhs-PdPcg-w-Oh0w3C2FAQSNjUQWNWMACUmbSPvP5BEOO85Q-VQHxQ&entry=mc&ved=1t:200715&ictx=111",
     },
   ];

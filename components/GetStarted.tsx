@@ -257,7 +257,7 @@ const GetStarted = () => {
                         Office
                       </h4>
                       <p className="text-sm lg:text-[15px] font-medium text-primary">
-                        NSW, Australia
+                        Sydney NSW.
                       </p>
                     </div>
                   </div>

@@ -34,14 +34,20 @@ const AboutUsSection = () => {
             </h2> */}
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">
-              Excellence in Engineering
+              Excellence in Building Approvals
             </h2>
             <p className="text-justify text-stone-600 text-base sm:text-lg lg:text-2xl font-normal leading-7 sm:leading-8 lg:leading-9">
-              At Planning and buildings approval, our commitment to excellence
-              extends beyond technical expertise to encompass exceptional
-              customer service and unwavering integrity. When you choose PC
-              Approval, you’re choosing a trusted ally dedicated to the success
-              of your project and the safety of your community
+              We deliver excellence in building approvals through a rigorous,
+              transparent, and client-focused approach that ensures full
+              compliance with Australian legislation, the National Construction
+              Code (NCC), and relevant State and local planning controls. Our
+              experienced team works closely with clients, consultants, and
+              authorities to streamline the approvals process while maintaining
+              the highest standards of technical accuracy, integrity, and public
+              safety. From initial assessment to final approval, we provide
+              clear guidance, timely outcomes, and reliable certification
+              services that support high-quality, safe, and compliant
+              developments.
             </p>
 
             {/* Download Button */}

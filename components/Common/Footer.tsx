@@ -310,7 +310,7 @@ export default function Footer() {
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div className="text-white/90 text-base leading-relaxed">
-                  <p>NSW, Australia</p>
+                  <p>Sydney NSW.</p>
                 </div>
               </motion.div>
               <motion.div
@@ -378,12 +378,12 @@ export default function Footer() {
             <p className="text-center text-white/70 text-sm font-light">
               Developed by{" "}
               <Link
-                href="https://codechs.com"
+                href="https://megatecs.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white font-medium hover:text-white/90 transition-colors underline decoration-white/40 hover:decoration-white/70 underline-offset-2"
               >
-                Codechs
+                MegaTecs
               </Link>
               . All rights reserved
             </p>

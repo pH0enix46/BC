@@ -1,231 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// "use client";
-
-// import React from "react";
-// import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-// import {
-//   Search,
-//   FileText,
-//   ClipboardCheck,
-//   ShieldAlert,
-//   Home,
-//   CheckCircle,
-//   BadgeCheck,
-// } from "lucide-react";
-// import { useRef, useEffect } from "react";
-// import WhyChooseUs2 from "@/components/WhyCooseUs2";
-
-// interface StatItem {
-//   id: number;
-//   icon: React.ElementType;
-//   value: number;
-//   suffix: string;
-//   label: string;
-// }
-
-// const StatsSection = () => {
-//   const stats: StatItem[] = [
-//     {
-//       id: 1,
-//       icon: BadgeCheck,
-//       value: 0,
-//       suffix: "",
-//       label: "Certification approval",
-//     },
-//     {
-//       id: 2,
-//       icon: Search,
-//       value: 0,
-//       suffix: "",
-//       label: "Site Inspections",
-//     },
-//     {
-//       id: 3,
-//       icon: FileText,
-//       value: 0,
-//       suffix: "",
-//       label: "BCA Reports",
-//     },
-//     // {
-//     //   id: 4,
-//     //   icon: ClipboardCheck,
-//     //   value: 0,
-//     //   suffix: "",
-//     //   label: "Structural Reports",
-//     // },
-//     {
-//       id: 4,
-//       icon: ShieldAlert,
-//       value: 0,
-//       suffix: "",
-//       label: "Unauthorized Construction",
-//     },
-//     {
-//       id: 5,
-//       icon: Home,
-//       value: 0,
-//       suffix: "",
-//       label: "Building Reports",
-//     },
-//     {
-//       id: 6,
-//       icon: CheckCircle,
-//       value: 0,
-//       suffix: "",
-//       label: "Compliances Reports",
-//     },
-//   ];
-
-//   return (
-//     <>
-//       <div className="py-20">
-//         <div className="relative max-w-8xl overflow-hidden rounded-[32px] shadow-lg outline-2 outline-offset-2 outline-primary/30 mx-4 md:mx-12">
-//           {/* Perfect Gradient Background */}
-//           <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary via-primary/90 to-[#1c1c84]" />
-
-//           {/* Content Container */}
-//           <div className="relative z-10 max-w-8xl mx-auto h-full sm:px-6 md:px-12 py-10 ">
-//             <div className="h-full flex flex-col items-center justify-center">
-//               {/* Header Section */}
-//               <motion.div
-//                 className="text-center mb-8"
-//                 initial={{ opacity: 0, y: 30 }}
-//                 whileInView={{ opacity: 1, y: 0 }}
-//                 viewport={{ once: true }}
-//                 transition={{ duration: 0.8 }}
-//               >
-//                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-2">
-//                   Consulting and Reports
-//                 </h2>
-//               </motion.div>
-
-//               {/* One Line Services Layout */}
-//               <div className="flex justify-evenly items-center gap-2 sm:gap-4 lg:gap-6 xl:gap-2 overflow-x-auto w-full flex-wrap">
-//                 {stats.map((stat, index) => (
-//                   <StatCard key={stat.id} stat={stat} index={index} />
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//         <WhyChooseUs2 />
-//       </div>
-//     </>
-//   );
-// };
-
-// // Animated Counter Component
-// const AnimatedCounter = ({
-//   value,
-//   suffix,
-// }: {
-//   value: number;
-//   suffix: string;
-// }) => {
-//   const ref = useRef(null);
-//   const isInView = useInView(ref, { once: true, margin: "-100px" });
-//   const motionValue = useMotionValue(0);
-//   const springValue = useSpring(motionValue, {
-//     damping: 50,
-//     stiffness: 100,
-//   });
-//   const [displayValue, setDisplayValue] = React.useState(0);
-
-//   useEffect(() => {
-//     if (isInView) {
-//       motionValue.set(value);
-//     }
-//   }, [isInView, motionValue, value]);
-
-//   useEffect(() => {
-//     springValue.on("change", (latest: number) => {
-//       setDisplayValue(Math.floor(latest));
-//     });
-//   }, [springValue]);
-
-//   return (
-//     <span ref={ref}>
-//       {displayValue}
-//       {suffix}
-//     </span>
-//   );
-// };
-
-// // Individual Service Card Component - Large One Line Style
-// const StatCard = ({ stat, index }: { stat: StatItem; index: number }) => {
-//   const Icon = stat.icon;
-
-//   return (
-//     <motion.div
-//       className="group flex flex-col items-center justify-start min-w-[160px] max-w-[200px] p-4 hover:bg-white/3 rounded-3xl transition-all duration-300 flex-shrink-0"
-//       initial={{ opacity: 0, y: 30, scale: 0.9 }}
-//       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-//       viewport={{ once: true, margin: "-50px" }}
-//       transition={{
-//         duration: 0.7,
-//         delay: index * 0.1,
-//         ease: [0.34, 1.56, 0.64, 1],
-//       }}
-//     >
-//       {/* Modern Icon Container with Simple Hover */}
-//       <motion.div
-//         className="relative w-20 h-20 mb-4 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center group-hover:bg-white/15 transition-all duration-300 border border-white/20 shadow-lg"
-//         initial={{ scale: 0.8, opacity: 0 }}
-//         whileInView={{ scale: 1, opacity: 1 }}
-//         viewport={{ once: true }}
-//         transition={{
-//           duration: 0.6,
-//           delay: index * 0.1,
-//           ease: [0.34, 1.56, 0.64, 1],
-//         }}
-//       >
-//         {/* Smooth Up/Down Icon Animation */}
-//         <motion.div
-//           animate={{
-//             y: [0, -4, 0],
-//           }}
-//           transition={{
-//             duration: 3,
-//             repeat: Infinity,
-//             ease: "easeInOut",
-//             delay: index * 0.2,
-//           }}
-//           className="relative z-10 w-full h-full flex items-center justify-center"
-//         >
-//           <Icon
-//             className="w-12 h-12 text-white group-hover:text-white transition-colors duration-300 drop-shadow-lg flex-shrink-0"
-//             strokeWidth={1.5}
-//             style={{
-//               display: "block",
-//               margin: "auto",
-//             }}
-//           />
-//         </motion.div>
-//       </motion.div>
-
-//       {/* Simple Title */}
-//       <motion.h3
-//         className="text-sm font-medium text-white/85 text-center leading-tight group-hover:text-white transition-colors duration-300 whitespace-nowrap overflow-hidden text-ellipsis px-2"
-//         initial={{ opacity: 0, y: 10 }}
-//         whileInView={{ opacity: 1, y: 0 }}
-//         transition={{
-//           delay: index * 0.1 + 0.3,
-//           duration: 0.5,
-//           ease: [0.25, 0.46, 0.45, 0.94],
-//         }}
-//       >
-//         {stat.label}
-//       </motion.h3>
-//     </motion.div>
-//   );
-// };
-
-// export default StatsSection;
-
 "use client";
 
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FileCheck,
   HardHat,
@@ -233,9 +10,11 @@ import {
   AlertTriangle,
   Building2,
   ClipboardCheck,
-  ArrowRight,
+  ChevronDown,
+  CheckCircle2,
 } from "lucide-react";
 
+// --- Data Structure with your provided text ---
 const services = [
   {
     title: "Certification Approval",
@@ -243,53 +22,105 @@ const services = [
       "Streamlined processing for Complying Development and Construction Certificates.",
     icon: FileCheck,
     color: "from-blue-400 to-cyan-300",
+    details: {
+      subtitle: "Building Certification",
+      items: [
+        "Construction Certificates (CC)",
+        "Occupation Certificates (Interim and Final)",
+        "Appointment of Principal Certifier",
+        "Critical stage inspections",
+      ],
+    },
   },
   {
     title: "Site Inspections",
     description:
-      "Comprehensive on-site evaluations to ensure construction integrity and plan adherence.",
+      "Comprehensive on-site evaluations to ensure construction integrity.",
     icon: HardHat,
     color: "from-amber-400 to-orange-300",
+    details: {
+      subtitle: "Inspections & Reporting",
+      items: [
+        "Mandatory critical stage inspections",
+        "Final inspections prior to Occupation Certificate issue",
+        "Compliance reports and certification documentation",
+      ],
+    },
   },
   {
     title: "BCA Reports",
     description:
-      "Detailed analysis ensuring your design meets all Building Code of Australia standards.",
+      "Detailed analysis ensuring your design meets all Building Code standards.",
     icon: BookOpenCheck,
     color: "from-emerald-400 to-green-300",
+    details: {
+      content:
+        "Detailed analysis ensuring your design meets all Building Code of Australia (BCA) standards and National Construction Code (NCC) requirements for safety and performance.",
+    },
   },
   {
     title: "Unauthorized Construction",
     description:
-      "Expert assessment and regularization strategies for unapproved building works.",
+      "Expert assessment and regularization for unapproved building works.",
     icon: AlertTriangle,
     color: "from-red-400 to-rose-300",
+    details: {
+      content:
+        "We provide expert advice and professional support for unauthorized construction approvals, including the preparation and lodgment of Building Information Certificate (BIC) applications. Our team assesses existing structures against relevant planning controls, the National Construction Code (NCC), and applicable Australian Standards to determine compliance and identify any required rectification works.\n\nWe work closely with owners, councils, and consultants to guide clients through the approval process, minimize delays, and achieve compliant outcomes.",
+    },
   },
   {
     title: "Building Reports",
     description:
-      "Thorough condition reports identifying defects, safety hazards, and maintenance needs.",
+      "Thorough condition reports identifying defects and maintenance needs.",
     icon: Building2,
     color: "from-purple-400 to-indigo-300",
+    details: {
+      sections: [
+        {
+          title: "Compliance & Assessment Reports",
+          items: [
+            "National Construction Code (NCC/BCA) compliance reports",
+            "Development Consent & CC assessments",
+            "Planning compliance reports",
+            "Retrospective building compliance",
+          ],
+        },
+        {
+          title: "Inspection & Condition Reports",
+          items: [
+            "Building condition reports",
+            "Final inspection reports for OC",
+            "Defects and rectification reports",
+          ],
+        },
+      ],
+    },
   },
   {
     title: "Compliance Reports",
     description:
-      "Verification documentation to certify that completed works align with requirements.",
+      "Verification documentation to certify that works align with requirements.",
     icon: ClipboardCheck,
     color: "from-teal-400 to-cyan-300",
+    details: {
+      subtitle: "Building Code & Technical Compliance",
+      items: [
+        "National Construction Code (NCC/BCA) compliance reports",
+        "Australian Standards compliance assessments",
+        "Inspection reports",
+      ],
+    },
   },
 ];
 
 const SpotlightServices = () => {
   return (
     <section className="bg-slate-950 py-24 px-6 md:px-12 relative overflow-hidden">
-      {/* Background Ambient Glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[128px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[128px] pointer-events-none" />
+      {/* Background Glows */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
         <div className="mb-20 md:text-center max-w-3xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -302,22 +133,12 @@ const SpotlightServices = () => {
               Reports.
             </span>
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-slate-400 text-lg md:text-xl"
-          >
-            Precision engineering reports and certification services designed
-            for modern construction needs.
-          </motion.p>
         </div>
 
-        {/* Spotlight Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid uses items-start to allow cards to have different heights when expanded */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {services.map((service, index) => (
-            <SpotlightCard key={index} index={index} {...service} />
+            <ExpandableCard key={index} index={index} {...service} />
           ))}
         </div>
       </div>
@@ -325,100 +146,158 @@ const SpotlightServices = () => {
   );
 };
 
-// Individual Card Component
-const SpotlightCard = ({
+const ExpandableCard = ({
   title,
   description,
   icon: Icon,
   color,
   index,
+  details,
 }: any) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const divRef = useRef<HTMLDivElement>(null);
-  const [isFocused, setIsFocused] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!divRef.current) return;
-
-    const div = divRef.current;
-    const rect = div.getBoundingClientRect();
-
+    const rect = divRef.current.getBoundingClientRect();
     setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
-
-  const handleFocus = () => {
-    setIsFocused(true);
-    setOpacity(1);
-  };
-
-  const handleBlur = () => {
-    setIsFocused(false);
-    setOpacity(0);
   };
 
   return (
     <motion.div
+      layout
       ref={divRef}
       onMouseMove={handleMouseMove}
-      onMouseEnter={handleFocus}
-      onMouseLeave={handleBlur}
+      onMouseEnter={() => setOpacity(1)}
+      onMouseLeave={() => setOpacity(0)}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
-      className="relative h-full overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 p-8"
+      transition={{
+        layout: { duration: 0.4, ease: "circOut" },
+        delay: index * 0.05,
+      }}
+      className={`relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 p-8 transition-colors duration-300 ${
+        isExpanded ? "border-slate-600 bg-slate-900" : "hover:border-slate-700"
+      }`}
     >
-      {/* The Spotlight Effect Overlay */}
+      {/* Spotlight effect */}
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.1), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.06), transparent 40%)`,
         }}
       />
 
-      {/* Content Container */}
-      <div className="relative z-10 flex flex-col h-full">
-        {/* Icon with Glowing Background */}
-        <div className="mb-6 relative w-12 h-12">
-          <div
-            className={`absolute inset-0 bg-gradient-to-br ${color} blur-lg opacity-20`}
-          />
-          <div
-            className={`relative w-12 h-12 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}
-          >
-            <Icon size={24} strokeWidth={1.5} />
+      <motion.div layout="position" className="relative z-10">
+        <div className="flex items-start justify-between mb-6">
+          <div className="relative w-12 h-12">
+            <div
+              className={`absolute inset-0 bg-gradient-to-br ${color} blur-lg opacity-20`}
+            />
+            <div className="relative w-12 h-12 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-white">
+              <Icon size={24} strokeWidth={1.5} />
+            </div>
           </div>
         </div>
 
-        <h3 className="text-xl font-bold text-white mb-3 tracking-wide">
+        <motion.h3
+          layout="position"
+          className="text-xl font-bold text-white mb-3"
+        >
           {title}
-        </h3>
+        </motion.h3>
 
-        <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+        <motion.p
+          layout="position"
+          className="text-slate-400 text-sm leading-relaxed mb-6"
+        >
           {description}
-        </p>
+        </motion.p>
 
-        {/* Bottom Action */}
-        <div className="flex items-center gap-2 text-sm font-medium text-slate-500 group-hover:text-white transition-colors">
-          <span>Learn details</span>
-          <ArrowRight
-            size={16}
-            className="-ml-1 translate-x-0 group-hover:translate-x-1 transition-transform"
-          />
-        </div>
-      </div>
+        {/* Expandable Content Section */}
+        <AnimatePresence>
+          {isExpanded && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <div className="pt-4 pb-6 border-t border-slate-800 space-y-4">
+                {details.subtitle && (
+                  <h4 className="text-cyan-400 text-xs font-bold uppercase tracking-widest">
+                    {details.subtitle}
+                  </h4>
+                )}
 
-      {/* Border Spotlight (The thin glowing line) */}
-      <div
-        className="pointer-events-none absolute inset-0 transition duration-300"
-        style={{
-          opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.15), transparent 40%)`,
-        }}
-        aria-hidden="true"
-      />
+                {details.content && (
+                  <p className="text-slate-300 text-sm leading-relaxed whitespace-pre-line">
+                    {details.content}
+                  </p>
+                )}
+
+                {details.items && (
+                  <ul className="space-y-2">
+                    {details.items.map((item: string, i: number) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-2 text-slate-300 text-sm"
+                      >
+                        <CheckCircle2
+                          size={14}
+                          className="text-cyan-500 mt-1 flex-shrink-0"
+                        />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {details.sections &&
+                  details.sections.map((section: any, i: number) => (
+                    <div key={i} className="space-y-2">
+                      <h5 className="text-white text-sm font-semibold">
+                        {section.title}
+                      </h5>
+                      <ul className="space-y-1 ml-2">
+                        {section.items.map((item: string, j: number) => (
+                          <li
+                            key={j}
+                            className="text-slate-400 text-xs flex gap-2"
+                          >
+                            <span className="text-cyan-500">•</span> {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Action Button */}
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors group"
+        >
+          <span>{isExpanded ? "Show less" : "Learn details"}</span>
+          <motion.div
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ChevronDown
+              size={16}
+              className="group-hover:translate-y-0.5 transition-transform"
+            />
+          </motion.div>
+        </button>
+      </motion.div>
     </motion.div>
   );
 };

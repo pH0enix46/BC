@@ -27,27 +27,26 @@ const OurMission = () => {
             data-aos="fade-left"
             data-aos-delay="200"
           >
-            <div className="bg-white/60 p-8 lg:p-12 rounded-[30px] shadow-xl outline-1 outline-offset-[-1px] outline-primary">
+            <div className="bg-white/90 p-8 lg:p-12 rounded-[30px] shadow-xl outline-1 outline-offset-[-1px] outline-primary">
               <div className="flex flex-col gap-6">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">
-                  Our Mission & Vision
+                  Our mission and Vision
                 </h2>
 
                 <div className="text-black text-sm sm:text-base space-y-4 leading-snug tracking-tight text-shadow-2xs">
                   <p>
-                    At Planning and buildings approval, our mission is to
-                    deliver innovative, reliable, and sustainable engineering
-                    solutions that empower industries and enhance communities.
-                    We strive to exceed client expectations through technical
-                    excellence, quality workmanship, and a strong commitment to
-                    safety, integrity, and customer satisfaction.
+                    <span className="text-primary font-bold">Mission</span>{" "}
+                    <br />
+                    To deliver accurate, impartial, and timely certification
+                    services that ensure compliance with Australian legislation,
+                    promote public safety, and support sustainable development.
                   </p>
 
                   <p>
-                    To be a leading engineering partner recognized for shaping a
-                    smarter, safer, and more sustainable future — where
-                    technology, expertise, and human values come together to
-                    build progress and trust across every project we undertake.
+                    <span className="text-primary font-bold">Vision</span>{" "}
+                    <br /> To be a trusted leader in certification services
+                    across Australia, recognised for integrity, technical
+                    excellence, and commitment to regulatory best practice.
                   </p>
                 </div>
               </div>

@@ -103,9 +103,7 @@ export default function MapSection() {
                 <Marker position={position} icon={redIcon}>
                   <Popup className="custom-popup">
                     <div className="p-2">
-                      <p className="text-sm text-gray-600 mb-2">
-                        NSW, Australia
-                      </p>
+                      <p className="text-sm text-gray-600 mb-2">Sydney NSW.</p>
                       <div className="text-sm">
                         <p className="font-semibold">Phone: 0430 729 789</p>
                         <p className="font-semibold">
@@ -153,8 +151,8 @@ export default function MapSection() {
                 </div>
 
                 <div className="text-sm text-gray-700 mb-3 leading-relaxed">
-                  <p>NSW</p>
-                  <p>Australia</p>
+                  <p>Sydney </p>
+                  <p>NSW.</p>
                 </div>
 
                 <button
@@ -186,8 +184,8 @@ export default function MapSection() {
             Find Us On <span className="text-primary">Map</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Visit our office location in NSW, Australia. We&apos;re here to
-            serve you with excellence.
+            Visit our office location in Sydney NSW. We&apos;re here to serve
+            you with excellence.
           </p>
         </div>
 
